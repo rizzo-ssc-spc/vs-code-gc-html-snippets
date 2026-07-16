@@ -9,7 +9,6 @@ The snippet library includes:
 - WET working-example and plugin-style snippets for common patterns such as calendars, feedback forms, footnotes, overlays, lightboxes, tabs, toggles, share widgets, data-ajax, form validation, multimedia, and more
 - GCDS component and style snippets for buttons, links, cards, alerts, notices, forms, tables, tags, breadcrumbs, callouts, lists, quotes, and step lists
 - GCWeb component snippets for Canada.ca patterns such as skip links, breadcrumbs, page titles, containers, tables, panels, most requested links, services and information, step-by-step lists, search boxes, feedback, page details, contributors, and institutional patterns
-- Accessibility-focused placeholders and labels so the generated markup is more usable for WCAG-friendly implementation work
 
 ## Source references
 
