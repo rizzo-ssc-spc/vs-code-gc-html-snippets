@@ -176,7 +176,7 @@
   "GCWeb - Search box": {
     "prefix": "gcweb-search-box",
     "body": [
-      "<form role=\"search\" aria-label=\"${1:Site search}\">",
+      "<form aria-label=\"${1:Site search}\">",
       "\t<label class=\"wb-inv\" for=\"${2:site-search}\">${1:Site search}</label>",
       "\t<input id=\"${2:site-search}\" type=\"search\" name=\"q\" />",
       "\t<button type=\"submit\">${3:Search}</button>",
@@ -278,7 +278,7 @@
   "GCDS - Card": {
     "prefix": "gcds-card",
     "body": [
-      "<gcds-card href=\"${1:/path}\" role=\"article\" aria-label=\"${2:Card title}\">",
+      "<gcds-card href=\"${1:/path}\" aria-label=\"${2:Card title}\">",
       "\t<h3>${3:Card title}</h3>",
       "\t<p>${4:Short summary with clear action.}</p>",
       "</gcds-card>"
@@ -301,7 +301,7 @@
   "GCDS - Alert": {
     "prefix": "gcds-alert",
     "body": [
-      "<gcds-alert type=\"${1:success}\" role=\"status\" aria-live=\"polite\">",
+      "<gcds-alert type=\"${1:success}\" aria-live=\"polite\">",
       "\t<h2>${2:Success}</h2>",
       "\t<p>${3:Your request has been received.}</p>",
       "</gcds-alert>"
@@ -312,7 +312,7 @@
   "GCDS - Notice": {
     "prefix": "gcds-notice",
     "body": [
-      "<div class=\"gcds-notice\" role=\"note\">",
+      "<div class=\"gcds-notice\">",
       "\t<p>${1:Important information}</p>",
       "</div>"
     ],
@@ -423,7 +423,7 @@
   "GCDS - Callout": {
     "prefix": "gcds-callout",
     "body": [
-      "<div class=\"gcds-callout\" role=\"note\">",
+      "<div class=\"gcds-callout\">",
       "\t<h3>${1:Need help?}</h3>",
       "\t<p>${2:Provide additional context or next steps.}</p>",
       "</div>"
@@ -475,7 +475,7 @@
   "WET - Archived information": {
     "prefix": "wet-archived",
     "body": [
-      "<div class=\"alert alert-warning\" role=\"note\">",
+      "<div class=\"alert alert-warning\">",
       "\t<p>${1:This content is archived and may no longer be current.}</p>",
       "</div>"
     ],
@@ -650,7 +650,7 @@
   "WET - Dismissible content": {
     "prefix": "wet-dismissible-content",
     "body": [
-      "<section class=\"alert alert-info\" role=\"status\">",
+      "<section class=\"alert alert-info\">",
       "\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>",
       "\t<p>${1:Dismissible content}</p>",
       "</section>"
@@ -749,7 +749,7 @@
     "prefix": "wet-footnote",
     "body": [
       "<p>${1:Content}<sup id=\"fn1-rf\"><a class=\"fn-lnk\" href=\"#fn1\"><span class=\"wb-inv\">Footnote </span>1</a></sup></p>",
-      "<aside class=\"wb-fnote\" role=\"note\">",
+      "<aside class=\"wb-fnote\">",
       "\t<dl>",
       "\t\t<dt>Footnote 1</dt>",
       "\t\t<dd id=\"fn1\">${2:Footnote text}</dd>",
@@ -848,7 +848,7 @@
   "WET - Merge server-client errors": {
     "prefix": "wet-merge-errors",
     "body": [
-      "<div class=\"alert alert-danger\" role=\"alert\">",
+      "<div class=\"alert alert-danger\">",
       "\t<p>${1:Please review the form errors below.}</p>",
       "</div>"
     ],
@@ -887,8 +887,8 @@
     "prefix": "wet-overlay",
     "body": [
       "<button type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#${1:overlay-id}\">${2:Open dialog}</button>",
-      "<div class=\"modal fade\" id=\"${1:overlay-id}\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"${3:overlay-title}\">",
-      "\t<div class=\"modal-dialog\" role=\"document\">",
+      "<div class=\"modal fade\" id=\"${1:overlay-id}\" tabindex=\"-1\" aria-labelledby=\"${3:overlay-title}\">",
+      "\t<div class=\"modal-dialog\">",
       "\t\t<div class=\"modal-content\">",
       "\t\t\t<div class=\"modal-header\">",
       "\t\t\t\t<h2 id=\"${3:overlay-title}\" class=\"h3\">${4:Dialog title}</h2>",
@@ -1141,7 +1141,7 @@
   "WET - Alert info": {
     "prefix": "wet-alert-info",
     "body": [
-      "<div class=\"alert alert-info\" role=\"status\">",
+      "<div class=\"alert alert-info\">",
       "\t<p>${1:Helpful information for the user.}</p>",
       "</div>"
     ],
@@ -1151,7 +1151,7 @@
   "WET - Alert success": {
     "prefix": "wet-alert-success",
     "body": [
-      "<div class=\"alert alert-success\" role=\"status\">",
+      "<div class=\"alert alert-success\">",
       "\t<p>${1:Success message for completed actions.}</p>",
       "</div>"
     ],
@@ -1161,7 +1161,7 @@
   "WET - Alert warning": {
     "prefix": "wet-alert-warning",
     "body": [
-      "<div class=\"alert alert-warning\" role=\"alert\">",
+      "<div class=\"alert alert-warning\">",
       "\t<p>${1:Warning message requiring attention.}</p>",
       "</div>"
     ],
@@ -1444,8 +1444,8 @@
   "WET - Modal popup": {
     "prefix": "wet-modal-popup",
     "body": [
-      "<div class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"modalTitle\">",
-      "\t<div class=\"modal-dialog\" role=\"document\">",
+      "<div class=\"modal fade\" tabindex=\"-1\" aria-labelledby=\"modalTitle\">",
+      "\t<div class=\"modal-dialog\">",
       "\t\t<div class=\"modal-content\">",
       "\t\t\t<div class=\"modal-header\"><h2 id=\"modalTitle\">${1:Dialog title}</h2></div>",
       "\t\t\t<div class=\"modal-body\"><p>${2:Dialog content}</p></div>",
@@ -1535,7 +1535,7 @@
   "WET - Session timeout": {
     "prefix": "wet-session-timeout",
     "body": [
-      "<div class=\"alert alert-warning\" role=\"alert\">",
+      "<div class=\"alert alert-warning\">",
       "\t<p>${1:Your session will expire soon.}</p>",
       "</div>"
     ],
