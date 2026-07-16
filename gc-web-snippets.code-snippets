@@ -648,12 +648,12 @@
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
   "WET - Dismissible content": {
-    "prefix": "wet-dismissible",
+    "prefix": "wet-dismissible-content",
     "body": [
-      "<div class=\"alert alert-info\" role=\"status\">",
-      "\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">&times;</button>",
+      "<section class=\"alert alert-info\" role=\"status\">",
+      "\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>",
       "\t<p>${1:Dismissible content}</p>",
-      "</div>"
+      "</section>"
     ],
     "description": "Dismissible content pattern",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
@@ -970,24 +970,6 @@
     "description": "Session expired message",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
-  "WET - Session timeout": {
-    "prefix": "wet-session-timeout",
-    "body": [
-      "<div class=\"alert alert-warning\" role=\"alert\">",
-      "\t<p>${1:Your session will expire soon.}</p>",
-      "</div>"
-    ],
-    "description": "Session timeout warning pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Share widget": {
-    "prefix": "wet-share",
-    "body": [
-      "<div class=\"wb-share\" data-wb-share=\"{\"url\":\"${1:https://example.com}\",\"title\":\"${2:Share this page}\"}\"></div>"
-    ],
-    "description": "Share widget placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
   "WET - Steps form": {
     "prefix": "wet-steps-form",
     "body": [
@@ -999,23 +981,6 @@
       "</form>"
     ],
     "description": "Step-based form pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Tabbed interface": {
-    "prefix": "wet-tabs",
-    "body": [
-      "<div class=\"wb-tabs\">",
-      "\t<details>",
-      "\t\t<summary>${1:Tab one}</summary>",
-      "\t\t<p>${2:Content for tab one}</p>",
-      "\t</details>",
-      "\t<details>",
-      "\t\t<summary>${3:Tab two}</summary>",
-      "\t\t<p>${4:Content for tab two}</p>",
-      "\t</details>",
-      "</div>"
-    ],
-    "description": "Tabbed interface pattern",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
   "WET - Table filters": {
@@ -1391,21 +1356,10 @@
     "description": "WET datalist autocomplete example",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
-  "WET - Dismissible content": {
-    "prefix": "wet-dismissible-content",
-    "body": [
-      "<section class=\"alert alert-dismissable\" role=\"alert\">",
-      "\t<p>${1:Important message}</p>",
-      "\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>",
-      "</section>"
-    ],
-    "description": "WET dismissible content",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
   "WET - Equalize": {
     "prefix": "wet-equalize",
     "body": [
-      "<div class=\"row\" data-equalize=\"{\"target\":\".equal-item\"}\">",
+      "<div class=\"row\" data-equalize=\"{\\\"target\\\":\\\".equal-item\\\"}\">",
       "\t<div class=\"col-md-6 equal-item\">${1:Left content}</div>",
       "\t<div class=\"col-md-6 equal-item\">${2:Right content}</div>",
       "</div>"
@@ -1591,7 +1545,7 @@
   "WET - Share widget": {
     "prefix": "wet-share-widget",
     "body": [
-      "<div class=\"wb-share\" data-wb-share=\"{\"id\":\"${1:share}\"}\"></div>"
+      "<div class=\"wb-share\" data-wb-share=\"{\\\"id\\\":\\\"${1:share}\\\"}\"></div>"
     ],
     "description": "WET share widget",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
