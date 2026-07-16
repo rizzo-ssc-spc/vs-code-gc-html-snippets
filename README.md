@@ -32,13 +32,16 @@ Code snippets is a santard VS code feature. The easiest way to use these snippet
 
 1. Select all of the content in the [gc-web-snippets.code-snippets](https://github.com/rizzo-ssc-spc/vs-code-gc-html-snippets/blob/main/gc-web-snippets.code-snippets) file and copy it
 2. In VS Code, open the Command Palette with Ctrl+Shift+P
-3. Type Preferences: Configure User Snippets and press Enter
-4. Choose html from the list. This opens your HTML snippet configuration file
-5. Replace the default content with the content you copied from gc-web-snippets.code-snippets
-6. Save the file
-7. Close and reopen VS Code, or reload the window if prompted
-8. Open any HTML or templating file such as .html, .njk, .liquid, .vue, .jsx, or .tsx
-9. Start typing a prefix such as gcweb-skip-link, gcds-header, or wet-tabs and press Tab
+3. Type Snippets: Configure Snippets and press Enter
+4. Choose from the list
+   1. "New Snippets file for 'workspace' to install in your current workspace
+   2. "New Global Snippets file" to install and use it in all of your workspaces
+5. This opens your HTML snippet configuration file
+6. Replace the default content with the content you copied from [gc-web-snippets.code-snippets](https://github.com/rizzo-ssc-spc/vs-code-gc-html-snippets/blob/main/gc-web-snippets.code-snippets)
+7. Save the file
+8. Close and reopen VS Code, or reload the window if prompted
+9. Open any HTML or templating file such as .html
+10. Start typing a prefix such as `wet-panels` or  `gcds-card` gcweb-skip-link and press Tab
 
 ### Option B: replace the default HTML snippets file directly
 
@@ -74,6 +77,10 @@ A .code-snippets file in your workspace will not automatically appear in VS Code
 - gcweb-most-requested
 - gcweb-services-info
 - gcweb-step-by-step
+- gcweb-subway
+- gcweb-featured-link
+- gcweb-institutional-byline
+- gcweb-social-media
 - gcweb-toc
 - gcweb-search-box
 - gcweb-feedback
@@ -89,6 +96,7 @@ A .code-snippets file in your workspace will not automatically appear in VS Code
 - gcds-button-secondary
 - gcds-link
 - gcds-card
+- gcds-hero
 - gcds-alert
 - gcds-notice
 - gcds-input
@@ -108,6 +116,72 @@ A .code-snippets file in your workspace will not automatically appear in VS Code
 ### WET
 
 - wet-add-to-calendar
+- wet-archived
+- wet-background-image
+- wet-basic-html
+- wet-calendar
+- wet-chart
+- wet-mobile-a11y
+- wet-collapsible-alert
+- wet-conditional-template
+- wet-country-content
+- wet-data-ajax
+- wet-data-fusion
+- wet-data-inview
+- wet-data-json
+- wet-data-picture
+- wet-datalist
+- wet-details-closed
+- wet-details-polyfill
+- wet-dismissible-content
+- wet-do-action
+- wet-equal-height
+- wet-exit-script
+- wet-facebook
+- wet-favicon
+- wet-feedback-form
+- wet-feeds
+- wet-fieldflow
+- wet-filter
+- wet-footnote
+- wet-form-validation
+- wet-geomap
+- wet-hello-world
+- wet-date-input
+- wet-range-input
+- wet-json-manager
+- wet-lightbox
+- wet-mathml
+- wet-menu
+- wet-merge-errors
+- wet-audio
+- wet-video
+- wet-youtube
+- wet-overlay
+- wet-paginate
+- wet-pii-scrub
+- wet-postback
+- wet-prettify
+- wet-progress
+- wet-randomize
+- wet-session-expired
+- wet-steps-form
+- wet-table-filters
+- wet-table-validator
+- wet-tables
+- wet-tag-filter
+- wet-template-html5
+- wet-text-highlight
+- wet-toggle
+- wet-transitions
+- wet-twitter
+- wet-url-ajax
+- wet-url-table
+- wet-url-json
+- wet-utilities
+- wet-a11y-assessment
+- wet-core
+- wet-zebra
 - wet-alert-info
 - wet-alert-success
 - wet-alert-warning
@@ -117,54 +191,38 @@ A .code-snippets file in your workspace will not automatically appear in VS Code
 - wet-button-default
 - wet-button-link
 - wet-panel
-- wet-panels
 - wet-well
 - wet-list-inline
 - wet-list-spaced
 - wet-list-group
 - wet-table-basic
 - wet-table-responsive
-- wet-calendar
-- wet-collapsible-alert
+- wet-labels
 - wet-code
 - wet-code-prettify
 - wet-colour
-- wet-datalist
-- wet-datalist-polyfill
 - wet-datatables
-- wet-data-ajax
-- wet-dismissible-content
+- wet-datalist-polyfill
 - wet-equalize
 - wet-expand-hide
-- wet-feedback-form
-- wet-footnote
-- wet-form-validation
 - wet-grid-system
 - wet-headings
 - wet-images
 - wet-jumbotron
 - wet-keyboard
-- wet-labels
-- wet-lightbox
 - wet-margin-proximity
 - wet-meter
 - wet-modal-popup
 - wet-multimedia-player
 - wet-opacity
-- wet-overlay
-- wet-paginate
+- wet-panels
 - wet-pills
-- wet-prettify
-- wet-progress
 - wet-quotations
 - wet-reflowing
 - wet-secondary-menu
 - wet-session-timeout
-- wet-share
 - wet-share-widget
 - wet-tabbed-interface
-- wet-tabs
-- wet-toggle
 - wet-zebra
 
 ## How to use placeholders
