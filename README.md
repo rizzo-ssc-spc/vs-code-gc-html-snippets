@@ -179,15 +179,12 @@ Press Tab to move through the placeholders.
 
 ## Authoring guidance
 
-- Replace placeholder text with real content before publishing.
-- Keep link text, button text, and labels concise and useful.
-- Preserve accessibility by pairing labels with inputs, using descriptive link text, and keeping interactive controls keyboard accessible.
-- Prefer meaningful page headings and clear section structure.
-- Validate the final markup against the latest GCWeb, WET, and GCDS guidance before publication.
+- Replace placeholder text with real content before publishing
+- Validate the final markup against the latest GCWeb, WET and GCDS before publication
 
 ## Accessibility notes
 
-These snippets are designed with accessibility in mind and include patterns for:
+All web pages must met WCAG 2.1 Level AA standards. These snippets are designed with accessibility in mind and include patterns for:
 
 - skip links
 - ARIA labels and landmarks
@@ -195,4 +192,4 @@ These snippets are designed with accessibility in mind and include patterns for:
 - status messaging for alerts
 - keyboard-friendly disclosure and modal patterns
 
-For production use, review the final markup against WCAG guidance and the current Canada.ca implementation standards.
+For production use, review the final markup against WCAG guidance and the current Canada.ca Content Style Guide implementation standards.
