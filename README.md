@@ -181,6 +181,7 @@ Press Tab to move through the placeholders.
 
 - Replace placeholder text with real content before publishing
 - Validate the final markup against the latest GCWeb, WET and GCDS before publication
+- Use the [W3C HTML Validator](https://validator.w3.org/nu/#textarea) to make sure there are no errors in the HTML
 
 ## Accessibility notes
 
