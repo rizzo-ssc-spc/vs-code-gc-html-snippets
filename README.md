@@ -30,17 +30,15 @@ Code snippets is a santard VS code feature. The easiest way to use these snippet
 
 ### Option A: install into your VS Code user snippets folder (recommended)
 
-1. Open the workspace that contains the folder with the gc-web-snippets.code-snippets file in VS Code.
-2. In the Explorer, open the file named gc-web-snippets.code-snippets.
-3. Select all of the content in the file and copy it.
-4. Open the Command Palette with Ctrl+Shift+P.
-5. Type Preferences: Configure User Snippets and press Enter.
-6. Choose html from the list. This opens your HTML snippet configuration file.
-7. Replace the default content with the content you copied from gc-web-snippets.code-snippets.
-8. Save the file.
-9. Close and reopen VS Code, or reload the window if prompted.
-10. Open any HTML or templating file such as .html, .njk, .liquid, .vue, .jsx, or .tsx.
-11. Start typing a prefix such as gcweb-skip-link, gcds-header, or wet-tabs and press Tab.
+1. Select all of the content in the [gc-web-snippets.code-snippets](https://github.com/rizzo-ssc-spc/vs-code-gc-html-snippets/blob/main/gc-web-snippets.code-snippets) file and copy it.
+2. In VS Code, open the Command Palette with Ctrl+Shift+P.
+3. Type Preferences: Configure User Snippets and press Enter.
+4. Choose html from the list. This opens your HTML snippet configuration file.
+5. Replace the default content with the content you copied from gc-web-snippets.code-snippets.
+6. Save the file.
+7. Close and reopen VS Code, or reload the window if prompted.
+8. Open any HTML or templating file such as .html, .njk, .liquid, .vue, .jsx, or .tsx.
+9. Start typing a prefix such as gcweb-skip-link, gcds-header, or wet-tabs and press Tab.
 
 ### Option B: replace the default HTML snippets file directly
 
