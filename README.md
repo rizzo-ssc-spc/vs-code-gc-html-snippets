@@ -1,10 +1,10 @@
 # GCWeb, GCDS, and WET HTML snippets for VS Code
 
-This folder contains an expanded VS Code snippet collection for Government of Canada web patterns. It is based on the official GCWeb and GCDS guidance and the WET working examples inventory, with separate snippet families for each library so the collection is easier to browse and reuse.
+This repository contains an expanded VS Code snippet collection for Government of Canada web patterns. It is based on the official GCWeb and GCDS guidance and the WET working examples inventory, with separate snippet families for each library, making it easier to browse and reuse.
 
-## What changed in this update
+## Snippet library
 
-The snippet library now includes:
+The snippet library includes:
 
 - WET working-example and plugin-style snippets for common patterns such as calendars, feedback forms, footnotes, overlays, lightboxes, tabs, toggles, share widgets, data-ajax, form validation, multimedia, and more
 - GCDS component and style snippets for buttons, links, cards, alerts, notices, forms, tables, tags, breadcrumbs, callouts, lists, quotes, and step lists
@@ -26,11 +26,11 @@ The snippets were shaped from the following authoritative guidance:
 
 ## How to install in VS Code
 
-The easiest way to use these snippets is to load them into VS Code as an HTML snippet file. This is a standard VS Code feature, and the steps below are written for someone who has not used snippets before.
+Code snippets is a santard VS code feature. The easiest way to use these snippets is to load them into VS Code as an HTML snippet file.
 
 ### Option A: install into your VS Code user snippets folder (recommended)
 
-1. Open the workspace that contains this folder in VS Code.
+1. Open the workspace that contains the folder with the gc-web-snippets.code-snippets file in VS Code.
 2. In the Explorer, open the file named gc-web-snippets.code-snippets.
 3. Select all of the content in the file and copy it.
 4. Open the Command Palette with Ctrl+Shift+P.
@@ -55,17 +55,18 @@ If you prefer a simpler path, you can copy the contents of gc-web-snippets.code-
 ### How to test that the snippets are working
 
 1. Create or open a new .html file.
-2. Type one of the prefixes such as gcweb-skip-link or gcds-button.
+2. Type one of the prefixes such as wet-panel or gcds-button.
 3. Press Tab.
 4. If the snippet appears, installation was successful.
 
-### Important note for beginners
+### Important note
 
 A .code-snippets file in your workspace will not automatically appear in VS Code just because it is open in the folder. It must be loaded into the VS Code snippets system using one of the steps above.
 
 ## Common snippet prefixes
 
 ### GCWeb
+
 - gcweb-skip-link
 - gcweb-breadcrumb
 - gcweb-page-title
@@ -83,6 +84,7 @@ A .code-snippets file in your workspace will not automatically appear in VS Code
 - gcweb-minister
 
 ### GCDS
+
 - gcds-header
 - gcds-footer
 - gcds-button
@@ -106,6 +108,7 @@ A .code-snippets file in your workspace will not automatically appear in VS Code
 - gcds-steps
 
 ### WET
+
 - wet-add-to-calendar
 - wet-alert-info
 - wet-alert-success
