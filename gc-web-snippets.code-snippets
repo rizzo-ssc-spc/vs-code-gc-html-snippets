@@ -1,4 +1,4 @@
-{
+﻿{
   "GCWeb - Skip link": {
     "prefix": "gcweb-skip-link",
     "body": [
@@ -67,85 +67,6 @@
     "description": "GCWeb basic table with caption and accessible headers",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
-  "GCWeb - Responsive table": {
-    "prefix": "gcweb-table-responsive",
-    "body": [
-      "<div class=\"table-responsive\">",
-      "\t<table class=\"table table-striped\">",
-      "\t\t<thead>",
-      "\t\t\t<tr><th scope=\"col\">${1:Header}</th></tr>",
-      "\t\t</thead>",
-      "\t\t<tbody>",
-      "\t\t\t<tr><td>${2:Value}</td></tr>",
-      "\t\t</tbody>",
-      "\t</table>",
-      "</div>"
-    ],
-    "description": "Responsive GCWeb table for smaller screens",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCWeb - Zebra striping": {
-    "prefix": "gcweb-zebra",
-    "body": [
-      "<table class=\"table table-striped\">",
-      "\t<thead>",
-      "\t\t<tr><th scope=\"col\">${1:Header}</th></tr>",
-      "\t</thead>",
-      "\t<tbody>",
-      "\t\t<tr><td>${2:Value}</td></tr>",
-      "\t</tbody>",
-      "</table>"
-    ],
-    "description": "Zebra-striped table pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCWeb - Accordion": {
-    "prefix": "gcweb-accordion",
-    "body": [
-      "<details class=\"brdr-0\">",
-      "\t<summary class=\"btn btn-default text-left\">${1:Section title}</summary>",
-      "\t<div class=\"p-2\">",
-      "\t\t${2:Accordion content}",
-      "\t</div>",
-      "</details>"
-    ],
-    "description": "WET/GCWeb accordion pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCWeb - Details and summary": {
-    "prefix": "gcweb-details",
-    "body": [
-      "<details open>",
-      "\t<summary>${1:Show more}</summary>",
-      "\t<p>${2:Additional content}</p>",
-      "</details>"
-    ],
-    "description": "Accessible details/summary disclosure pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCWeb - Pagination": {
-    "prefix": "gcweb-pagination",
-    "body": [
-      "<nav aria-label=\"Pagination\" class=\"text-center\">",
-      "\t<ul class=\"pagination\">",
-      "\t\t<li><a href=\"${1:#}\" aria-label=\"Previous\">Previous</a></li>",
-      "\t\t<li class=\"active\"><a href=\"${2:#}\">1</a></li>",
-      "\t\t<li><a href=\"${3:#}\">2</a></li>",
-      "\t\t<li><a href=\"${4:#}\" aria-label=\"Next\">Next</a></li>",
-      "\t</ul>",
-      "</nav>"
-    ],
-    "description": "Accessible pagination",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCWeb - Badge": {
-    "prefix": "gcweb-badge",
-    "body": [
-      "<span class=\"label label-info\">${1:New}</span>"
-    ],
-    "description": "GCWeb badge for status or highlight",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
   "GCWeb - Panel": {
     "prefix": "gcweb-panel",
     "body": [
@@ -154,39 +75,7 @@
       "\t<p>${3:Panel content}</p>",
       "</section>"
     ],
-    "description": "GCWeb well panel for grouped content",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCWeb - Modal dialog": {
-    "prefix": "gcweb-modal",
-    "body": [
-      "<div class=\"modal fade\" id=\"${1:modal-id}\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"${2:modal-title}\" aria-hidden=\"true\">",
-      "\t<div class=\"modal-dialog\" role=\"document\">",
-      "\t\t<div class=\"modal-content\">",
-      "\t\t\t<div class=\"modal-header\">",
-      "\t\t\t\t<h2 id=\"${2:modal-title}\" class=\"h3\">${3:Dialog title}</h2>",
-      "\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>",
-      "\t\t\t</div>",
-      "\t\t\t<div class=\"modal-body\">",
-      "\t\t\t\t${4:Modal content}",
-      "\t\t\t</div>",
-      "\t\t</div>",
-      "\t</div>",
-      "</div>"
-    ],
-    "description": "Accessible modal dialog pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCWeb - Search form": {
-    "prefix": "gcweb-search",
-    "body": [
-      "<form class=\"form-inline\" role=\"search\" aria-label=\"${1:Site search}\">",
-      "\t<label class=\"wb-inv\" for=\"${2:site-search}\">${1:Site search}</label>",
-      "\t<input id=\"${2:site-search}\" name=\"q\" type=\"search\" class=\"form-control\" placeholder=\"${3:Search Canada.ca}\" />",
-      "\t<button type=\"submit\" class=\"btn btn-default\">${4:Search}</button>",
-      "</form>"
-    ],
-    "description": "GCWeb search form with accessible labelling",
+    "description": "GCWeb well panel",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
   "GCWeb - Most requested": {
@@ -215,6 +104,129 @@
     "description": "Services and information pattern",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
+  "GCWeb - Step by step": {
+    "prefix": "gcweb-step-by-step",
+    "body": [
+      "<ol class=\"lst-stps\">",
+      "\t<li>",
+      "\t\t<h3>${1:Step one}</h3>",
+      "\t\t<p>${2:Describe the step clearly.}</p>",
+      "\t</li>",
+      "</ol>"
+    ],
+    "description": "Step by step navigation pattern",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "GCWeb - Subway navigation": {
+    "prefix": "gcweb-subway",
+    "body": [
+      "<nav aria-label=\"Subway navigation\">",
+      "\t<ol class=\"subway-nav\">",
+      "\t\t<li class=\"active\">${1:Current step}</li>",
+      "\t\t<li><a href=\"${2:/next}\">${3:Next step}</a></li>",
+      "\t</ol>",
+      "</nav>"
+    ],
+    "description": "Subway navigation pattern",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "GCWeb - Featured link": {
+    "prefix": "gcweb-featured-link",
+    "body": [
+      "<div class=\"featured-link\">",
+      "\t<a href=\"${1:/featured}\">${2:Featured link}</a>",
+      "</div>"
+    ],
+    "description": "Featured link pattern",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "GCWeb - Institutional byline": {
+    "prefix": "gcweb-institutional-byline",
+    "body": [
+      "<p class=\"institutional-byline\"><a href=\"${1:/institution}\">${2:Institution name}</a></p>"
+    ],
+    "description": "Institutional byline pattern",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "GCWeb - Social media channels": {
+    "prefix": "gcweb-social-media",
+    "body": [
+      "<section aria-labelledby=\"${1:social-media-title}\">",
+      "\t<h2 id=\"${1:social-media-title}\" class=\"h3\">${2:Social media}</h2>",
+      "\t<ul class=\"list-inline\">",
+      "\t\t<li><a href=\"${3:https://x.com/username}\">X</a></li>",
+      "\t</ul>",
+      "</section>"
+    ],
+    "description": "Social media channels pattern",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "GCWeb - In-page TOC": {
+    "prefix": "gcweb-toc",
+    "body": [
+      "<nav aria-label=\"On this page\">",
+      "\t<ul>",
+      "\t\t<li><a href=\"#${1:section-one}\">${2:Section one}</a></li>",
+      "\t</ul>",
+      "</nav>"
+    ],
+    "description": "In-page table of contents pattern",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "GCWeb - Search box": {
+    "prefix": "gcweb-search-box",
+    "body": [
+      "<form role=\"search\" aria-label=\"${1:Site search}\">",
+      "\t<label class=\"wb-inv\" for=\"${2:site-search}\">${1:Site search}</label>",
+      "\t<input id=\"${2:site-search}\" type=\"search\" name=\"q\" />",
+      "\t<button type=\"submit\">${3:Search}</button>",
+      "</form>"
+    ],
+    "description": "Site search box pattern",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "GCWeb - Feedback area": {
+    "prefix": "gcweb-feedback",
+    "body": [
+      "<section class=\"feedback\" aria-label=\"Feedback\">",
+      "\t<p><a href=\"${1:/feedback}\">${2:Report a problem or provide feedback}</a></p>",
+      "</section>"
+    ],
+    "description": "Feedback area pattern",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "GCWeb - Page details": {
+    "prefix": "gcweb-page-details",
+    "body": [
+      "<div class=\"page-details\">",
+      "\t<p><strong>${1:Date modified}:</strong> ${2:2026-07-16}</p>",
+      "</div>"
+    ],
+    "description": "Date modified and page details pattern",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "GCWeb - Contributors": {
+    "prefix": "gcweb-contributors",
+    "body": [
+      "<section class=\"contributors\" aria-labelledby=\"${1:contributors-title}\">",
+      "\t<h2 id=\"${1:contributors-title}\" class=\"h3\">${2:Contributors}</h2>",
+      "\t<p>${3:Department or agency name}</p>",
+      "</section>"
+    ],
+    "description": "Contributors pattern",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "GCWeb - Minister or institutional head": {
+    "prefix": "gcweb-minister",
+    "body": [
+      "<section class=\"minister\" aria-labelledby=\"${1:minister-title}\">",
+      "\t<h2 id=\"${1:minister-title}\" class=\"h3\">${2:Minister or institutional head}</h2>",
+      "\t<p>${3:Name and role}</p>",
+      "</section>"
+    ],
+    "description": "Minister or institutional head pattern",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
   "GCDS - Header": {
     "prefix": "gcds-header",
     "body": [
@@ -225,7 +237,7 @@
       "\t</nav>",
       "</gcds-header>"
     ],
-    "description": "GCDS header pattern with accessible navigation",
+    "description": "GCDS header pattern",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
   "GCDS - Footer": {
@@ -236,7 +248,7 @@
       "\t<a href=\"${4:/terms}\">${5:Terms and conditions}</a>",
       "</gcds-footer>"
     ],
-    "description": "GCDS footer pattern with accessibility-friendly links",
+    "description": "GCDS footer pattern",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
   "GCDS - Button": {
@@ -244,7 +256,23 @@
     "body": [
       "<gcds-button href=\"${1:/path}\" type=\"${2:link}\">${3:Learn more}</gcds-button>"
     ],
-    "description": "Accessible GCDS button component",
+    "description": "GCDS button component",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "GCDS - Secondary button": {
+    "prefix": "gcds-button-secondary",
+    "body": [
+      "<gcds-button href=\"${1:/path}\" type=\"secondary\">${2:Learn more}</gcds-button>"
+    ],
+    "description": "Secondary GCDS button",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "GCDS - Link": {
+    "prefix": "gcds-link",
+    "body": [
+      "<a href=\"${1:/path}\" class=\"gcds-link\">${2:Read more}</a>"
+    ],
+    "description": "GCDS link styling",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
   "GCDS - Card": {
@@ -255,7 +283,19 @@
       "\t<p>${4:Short summary with clear action.}</p>",
       "</gcds-card>"
     ],
-    "description": "GCDS card component for featured content",
+    "description": "GCDS card component",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "GCDS - Hero banner": {
+    "prefix": "gcds-hero",
+    "body": [
+      "<section class=\"gcds-hero\" aria-labelledby=\"${1:hero-title}\">",
+      "\t<h2 id=\"${1:hero-title}\">${2:Welcome}</h2>",
+      "\t<p>${3:Short introductory message.}</p>",
+      "\t<a href=\"${4:/start}\" class=\"gcds-button\">${5:Get started}</a>",
+      "</section>"
+    ],
+    "description": "GCDS hero banner",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
   "GCDS - Alert": {
@@ -266,7 +306,17 @@
       "\t<p>${3:Your request has been received.}</p>",
       "</gcds-alert>"
     ],
-    "description": "Accessible GCDS alert for status messaging",
+    "description": "GCDS alert component",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "GCDS - Notice": {
+    "prefix": "gcds-notice",
+    "body": [
+      "<div class=\"gcds-notice\" role=\"note\">",
+      "\t<p>${1:Important information}</p>",
+      "</div>"
+    ],
+    "description": "GCDS notice pattern",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
   "GCDS - Input": {
@@ -276,7 +326,7 @@
       "<input id=\"${1:field-id}\" name=\"${3:name}\" type=\"${4:text}\" required aria-describedby=\"${5:hint-id}\" />",
       "<p id=\"${5:hint-id}\" class=\"gcds-hint\">${6:Helpful instructions}</p>"
     ],
-    "description": "Accessible GCDS input field with hint text",
+    "description": "GCDS input field",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
   "GCDS - Textarea": {
@@ -286,7 +336,18 @@
       "<textarea id=\"${1:message-id}\" name=\"${3:message}\" rows=\"${4:4}\" required aria-describedby=\"${5:hint-id}\"></textarea>",
       "<p id=\"${5:hint-id}\" class=\"gcds-hint\">${6:Provide a brief summary.}</p>"
     ],
-    "description": "Accessible GCDS textarea component",
+    "description": "GCDS textarea component",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "GCDS - Select": {
+    "prefix": "gcds-select",
+    "body": [
+      "<label for=\"${1:select-id}\">${2:Choose an option}</label>",
+      "<select id=\"${1:select-id}\" name=\"${3:option}\">",
+      "\t<option value=\"${4:one}\">${5:Option one}</option>",
+      "</select>"
+    ],
+    "description": "GCDS select field",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
   "GCDS - Checkbox": {
@@ -297,7 +358,7 @@
       "\t${3:I agree to the terms and conditions}",
       "</label>"
     ],
-    "description": "Accessible checkbox pattern aligned to GCDS guidance",
+    "description": "GCDS checkbox",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
   "GCDS - Radio group": {
@@ -309,92 +370,335 @@
       "\t<label><input type=\"radio\" name=\"${2:option}\" value=\"${5:two}\" /> ${6:Option two}</label>",
       "</fieldset>"
     ],
-    "description": "Accessible radio button group for form choices",
+    "description": "GCDS radio button group",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
-  "GCDS - Hero banner": {
-    "prefix": "gcds-hero",
+  "GCDS - Table": {
+    "prefix": "gcds-table",
     "body": [
-      "<section class=\"well well-sm\" aria-labelledby=\"${1:hero-title}\">",
-      "\t<h2 id=\"${1:hero-title}\" class=\"h3\">${2:Welcome}</h2>",
-      "\t<p>${3:Short introductory message for the audience.}</p>",
-      "\t<a href=\"${4:/start}\" class=\"btn btn-primary\">${5:Get started}</a>",
-      "</section>"
+      "<table class=\"gcds-table\">",
+      "\t<thead>",
+      "\t\t<tr><th scope=\"col\">${1:Header}</th></tr>",
+      "\t</thead>",
+      "\t<tbody>",
+      "\t\t<tr><td>${2:Value}</td></tr>",
+      "\t</tbody>",
+      "</table>"
     ],
-    "description": "Hero banner pattern aligned to GC design guidance",
+    "description": "GCDS table pattern",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "GCDS - Tag": {
+    "prefix": "gcds-tag",
+    "body": [
+      "<span class=\"gcds-tag\">${1:New}</span>"
+    ],
+    "description": "GCDS tag component",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "GCDS - Details": {
+    "prefix": "gcds-details",
+    "body": [
+      "<details>",
+      "\t<summary>${1:Show more}</summary>",
+      "\t<p>${2:Additional content}</p>",
+      "</details>"
+    ],
+    "description": "GCDS details and summary",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "GCDS - Breadcrumb": {
+    "prefix": "gcds-breadcrumb",
+    "body": [
+      "<nav aria-label=\"Breadcrumb\">",
+      "\t<ol>",
+      "\t\t<li><a href=\"${1:/}\">Home</a></li>",
+      "\t\t<li class=\"current\">${2:Current page}</li>",
+      "\t</ol>",
+      "</nav>"
+    ],
+    "description": "GCDS breadcrumb pattern",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
   "GCDS - Callout": {
     "prefix": "gcds-callout",
     "body": [
-      "<div class=\"alert alert-info\" role=\"note\">",
+      "<div class=\"gcds-callout\" role=\"note\">",
       "\t<h3>${1:Need help?}</h3>",
       "\t<p>${2:Provide additional context or next steps.}</p>",
       "</div>"
     ],
-    "description": "Informational callout block with accessible structure",
+    "description": "GCDS informational callout",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "GCDS - List": {
+    "prefix": "gcds-list",
+    "body": [
+      "<ul class=\"gcds-list\">",
+      "\t<li>${1:First item}</li>",
+      "\t<li>${2:Second item}</li>",
+      "</ul>"
+    ],
+    "description": "GCDS list styling",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "GCDS - Quote": {
+    "prefix": "gcds-quote",
+    "body": [
+      "<blockquote>",
+      "\t<p>${1:Use clear, direct language.}</p>",
+      "\t<footer>${2:Source}</footer>",
+      "</blockquote>"
+    ],
+    "description": "GCDS quote block",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
   "GCDS - Step list": {
     "prefix": "gcds-steps",
     "body": [
-      "<ol class=\"lst-stps\">",
-      "\t<li>",
-      "\t\t<h3>${1:Step one}</h3>",
-      "\t\t<p>${2:Describe the step clearly.}</p>",
-      "\t</li>",
-      "\t<li>",
-      "\t\t<h3>${3:Step two}</h3>",
-      "\t\t<p>${4:Describe the next step clearly.}</p>",
-      "\t</li>",
+      "<ol class=\"gcds-steps\">",
+      "\t<li><h3>${1:Step one}</h3><p>${2:Describe the step clearly.}</p></li>",
+      "\t<li><h3>${3:Step two}</h3><p>${4:Describe the next step clearly.}</p></li>",
       "</ol>"
     ],
-    "description": "Step-by-step list for task-oriented guidance",
+    "description": "GCDS step list",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
-  "WET - Download link": {
-    "prefix": "wet-download-link",
+  "WET - Add to calendar": {
+    "prefix": "wet-add-to-calendar",
     "body": [
-      "<a href=\"${1:/files/example.pdf}\" class=\"btn btn-default\" download aria-label=\"${2:Download PDF file}\">",
-      "\t<span class=\"glyphicon glyphicon-download-alt\" aria-hidden=\"true\"></span> ${3:Download PDF}",
-      "</a>"
+      "<a href=\"${1:/calendar}\" class=\"btn btn-default\">${2:Add to calendar}</a>"
     ],
-    "description": "WET download link with accessible label",
+    "description": "Add to calendar placeholder",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
-  "WET - Image with caption": {
-    "prefix": "wet-image-caption",
+  "WET - Archived information": {
+    "prefix": "wet-archived",
     "body": [
-      "<figure class=\"mrgn-bttm-md\">",
-      "\t<img src=\"${1:/img/example.jpg}\" class=\"img-responsive\" alt=\"${2:Descriptive alt text}\" />",
-      "\t<figcaption>${3:Image caption}</figcaption>",
-      "</figure>"
+      "<div class=\"alert alert-warning\" role=\"note\">",
+      "\t<p>${1:This content is archived and may no longer be current.}</p>",
+      "</div>"
     ],
-    "description": "Accessible WET image pattern with caption",
+    "description": "Archived information notice",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
-  "WET - Figure with credit": {
-    "prefix": "wet-figure-credit",
+  "WET - Background image": {
+    "prefix": "wet-background-image",
     "body": [
-      "<figure class=\"mrgn-bttm-md\">",
-      "\t<img src=\"${1:/img/example.jpg}\" alt=\"${2:Descriptive alt text}\" class=\"img-responsive\" />",
-      "\t<figcaption>${3:Caption}<br /><small>${4:Photo credit}</small></figcaption>",
-      "</figure>"
+      "<section style=\"background-image: url('${1:/img/banner.jpg}');\">",
+      "\t<p>${2:Background image content}</p>",
+      "</section>"
     ],
-    "description": "Figure component with caption and credit",
+    "description": "Background image section",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
-  "WET - Social media links": {
-    "prefix": "wet-social-links",
+  "WET - Basic HTML": {
+    "prefix": "wet-basic-html",
     "body": [
-      "<section class=\"social-media\" aria-labelledby=\"${1:social-title}\">",
-      "\t<h2 id=\"${1:social-title}\" class=\"h3\">${2:Follow us}</h2>",
-      "\t<ul class=\"list-inline\">",
-      "\t\t<li><a href=\"${3:https://x.com/username}\" aria-label=\"${4:Follow us on X}\">X</a></li>",
+      "<article>",
+      "\t<h2>${1:Heading}</h2>",
+      "\t<p>${2:Paragraph}</p>",
+      "</article>"
+    ],
+    "description": "Basic HTML content structure",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Calendar of events": {
+    "prefix": "wet-calendar",
+    "body": [
+      "<section aria-labelledby=\"${1:calendar-title}\">",
+      "\t<h2 id=\"${1:calendar-title}\">${2:Calendar of events}</h2>",
+      "\t<ul>",
+      "\t\t<li><strong>${3:Date}</strong> — ${4:Event title}</li>",
       "\t</ul>",
       "</section>"
     ],
-    "description": "Accessible social media links section",
+    "description": "Calendar of events pattern",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Charts and graphs": {
+    "prefix": "wet-chart",
+    "body": [
+      "<table class=\"table\">",
+      "\t<thead><tr><th>${1:Category}</th><th>${2:Value}</th></tr></thead>",
+      "\t<tbody><tr><td>${3:One}</td><td>${4:10}</td></tr></tbody>",
+      "</table>"
+    ],
+    "description": "Data table used for charts",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Mobile accessibility checklist": {
+    "prefix": "wet-mobile-a11y",
+    "body": [
+      "<ul>",
+      "\t<li>Keyboard access is available.</li>",
+      "\t<li>Contrast is sufficient.</li>",
+      "\t<li>Images have meaningful alt text.</li>",
+      "</ul>"
+    ],
+    "description": "Accessibility checklist snippet",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Collapsible alert": {
+    "prefix": "wet-collapsible-alert",
+    "body": [
+      "<details class=\"alert alert-warning\">",
+      "\t<summary>${1:Show details}</summary>",
+      "\t<p>${2:Additional information}</p>",
+      "</details>"
+    ],
+    "description": "Collapsible alert component",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Conditional template": {
+    "prefix": "wet-conditional-template",
+    "body": [
+      "<div data-wb-conditional=\"${1:condition}\">",
+      "\t<p>${2:Conditional content}</p>",
+      "</div>"
+    ],
+    "description": "Conditional template placeholder",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Country content": {
+    "prefix": "wet-country-content",
+    "body": [
+      "<section data-ajax-replace=\"${1:/content/fragment.html}\"></section>"
+    ],
+    "description": "Country-specific content placeholder",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Data Ajax": {
+    "prefix": "wet-data-ajax",
+    "body": [
+      "<section data-ajax-replace=\"${1:/content/fragment.html}\" data-ajax-after=\"${2:body}\"></section>"
+    ],
+    "description": "AJAX content placeholder",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Data fusion query": {
+    "prefix": "wet-data-fusion",
+    "body": [
+      "<div data-wb-fusion=\"${1:query}\">",
+      "\t<p>${2:Dynamic content}</p>",
+      "</div>"
+    ],
+    "description": "Data fusion query placeholder",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Data inview": {
+    "prefix": "wet-data-inview",
+    "body": [
+      "<div data-inview=\"${1:trigger}\">",
+      "\t<p>${2:Content that appears when visible}</p>",
+      "</div>"
+    ],
+    "description": "Data inview placeholder",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Data JSON": {
+    "prefix": "wet-data-json",
+    "body": [
+      "<div data-json=\"${1:/data/example.json}\"></div>"
+    ],
+    "description": "Data JSON injection placeholder",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Data picture": {
+    "prefix": "wet-data-picture",
+    "body": [
+      "<img srcset=\"${1:/img/small.jpg} 1x, ${2:/img/large.jpg} 2x\" alt=\"${3:Illustrative image}\" />"
+    ],
+    "description": "Responsive image markup",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Datalist autocomplete": {
+    "prefix": "wet-datalist",
+    "body": [
+      "<label for=\"${1:autocomplete}\">${2:Choose a value}</label>",
+      "<input id=\"${1:autocomplete}\" name=\"${3:autocomplete}\" list=\"${4:options}\" />",
+      "<datalist id=\"${4:options}\">",
+      "\t<option value=\"${5:Option one}\"></option>",
+      "\t<option value=\"${6:Option two}\"></option>",
+      "</datalist>"
+    ],
+    "description": "Datalist autocomplete pattern",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Details closed": {
+    "prefix": "wet-details-closed",
+    "body": [
+      "<details open>",
+      "\t<summary>${1:Show details}</summary>",
+      "\t<p>${2:Content}</p>",
+      "</details>"
+    ],
+    "description": "Details closed pattern",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Details summary polyfill": {
+    "prefix": "wet-details-polyfill",
+    "body": [
+      "<details>",
+      "\t<summary>${1:Show more}</summary>",
+      "\t<p>${2:Additional content}</p>",
+      "</details>"
+    ],
+    "description": "Details/summary polyfill pattern",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Dismissible content": {
+    "prefix": "wet-dismissible",
+    "body": [
+      "<div class=\"alert alert-info\" role=\"status\">",
+      "\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">&times;</button>",
+      "\t<p>${1:Dismissible content}</p>",
+      "</div>"
+    ],
+    "description": "Dismissible content pattern",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Do action": {
+    "prefix": "wet-do-action",
+    "body": [
+      "<button type=\"button\" class=\"btn btn-primary\">${1:Do action}</button>"
+    ],
+    "description": "Do action button placeholder",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Equal height": {
+    "prefix": "wet-equal-height",
+    "body": [
+      "<div class=\"row\">",
+      "\t<div class=\"col-md-6 well\">${1:First card}</div>",
+      "\t<div class=\"col-md-6 well\">${2:Second card}</div>",
+      "</div>"
+    ],
+    "description": "Equal-height card layout",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Exit script": {
+    "prefix": "wet-exit-script",
+    "body": [
+      "<a href=\"${1:https://example.com}\" rel=\"external\">${2:Continue to external site}</a>"
+    ],
+    "description": "Exit script link pattern",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Facebook embedded pages": {
+    "prefix": "wet-facebook",
+    "body": [
+      "<div class=\"fb-page\" data-href=\"${1:https://www.facebook.com/example}\"></div>"
+    ],
+    "description": "Facebook embed placeholder",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Favicon": {
+    "prefix": "wet-favicon",
+    "body": [
+      "<link rel=\"icon\" href=\"${1:/img/favicon.ico}\" />"
+    ],
+    "description": "Favicon link",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
   "WET - Feedback form": {
@@ -409,6 +713,52 @@
     "description": "Feedback form pattern",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
+  "WET - Feeds": {
+    "prefix": "wet-feeds",
+    "body": [
+      "<section aria-labelledby=\"${1:feeds-title}\">",
+      "\t<h2 id=\"${1:feeds-title}\">${2:News feed}</h2>",
+      "\t<ul>",
+      "\t\t<li><a href=\"${3:/feed}\">${4:Feed item}</a></li>",
+      "\t</ul>",
+      "</section>"
+    ],
+    "description": "Feed listing pattern",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Field flow": {
+    "prefix": "wet-fieldflow",
+    "body": [
+      "<fieldset>",
+      "\t<legend>${1:Choose a path}</legend>",
+      "\t<label><input type=\"radio\" name=\"path\" value=\"a\" /> ${2:Option A}</label>",
+      "</fieldset>"
+    ],
+    "description": "Field flow pattern",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Filter": {
+    "prefix": "wet-filter",
+    "body": [
+      "<input type=\"search\" placeholder=\"${1:Filter items}\" />"
+    ],
+    "description": "Filterable content placeholder",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Footnotes": {
+    "prefix": "wet-footnote",
+    "body": [
+      "<p>${1:Content}<sup id=\"fn1-rf\"><a class=\"fn-lnk\" href=\"#fn1\"><span class=\"wb-inv\">Footnote </span>1</a></sup></p>",
+      "<aside class=\"wb-fnote\" role=\"note\">",
+      "\t<dl>",
+      "\t\t<dt>Footnote 1</dt>",
+      "\t\t<dd id=\"fn1\">${2:Footnote text}</dd>",
+      "\t</dl>",
+      "</aside>"
+    ],
+    "description": "Accessible footnote pattern",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
   "WET - Form validation": {
     "prefix": "wet-form-validation",
     "body": [
@@ -421,6 +771,22 @@
       "</form>"
     ],
     "description": "Accessible form validation example",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Geomap": {
+    "prefix": "wet-geomap",
+    "body": [
+      "<div class=\"wb-geomap\" data-geomap=\"${1:map-data}\"></div>"
+    ],
+    "description": "Geographic map placeholder",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Hello world plugin": {
+    "prefix": "wet-hello-world",
+    "body": [
+      "<div class=\"hello-world\">${1:Hello world}</div>"
+    ],
+    "description": "Hello world plugin example",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
   "WET - Date input": {
@@ -441,52 +807,12 @@
     "description": "Range slider input",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
-  "WET - Autocomplete list": {
-    "prefix": "wet-datalist",
+  "WET - JSON Manager": {
+    "prefix": "wet-json-manager",
     "body": [
-      "<label for=\"${1:autocomplete}\">${2:Choose a value}</label>",
-      "<input id=\"${1:autocomplete}\" name=\"${3:autocomplete}\" list=\"${4:options}\" />",
-      "<datalist id=\"${4:options}\">",
-      "\t<option value=\"${5:Option one}\"></option>",
-      "\t<option value=\"${6:Option two}\"></option>",
-      "</datalist>"
+      "<div data-wb-jsonmanager=\"${1:json-data}\"></div>"
     ],
-    "description": "Datalist autocomplete pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Alert": {
-    "prefix": "wet-alert",
-    "body": [
-      "<div class=\"alert alert-info\" role=\"status\">",
-      "\t<p>${1:Important information}</p>",
-      "</div>"
-    ],
-    "description": "Basic alert block",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Collapsible alert": {
-    "prefix": "wet-collapsible-alert",
-    "body": [
-      "<details class=\"alert alert-warning\">",
-      "\t<summary>${1:Show details}</summary>",
-      "\t<p>${2:Additional information}</p>",
-      "</details>"
-    ],
-    "description": "Collapsible alert component",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Footnote": {
-    "prefix": "wet-footnote",
-    "body": [
-      "<p>${1:Content}<sup id=\"fn1-rf\"><a class=\"fn-lnk\" href=\"#fn1\"><span class=\"wb-inv\">Footnote </span>1</a></sup></p>",
-      "<aside class=\"wb-fnote\" role=\"note\">",
-      "\t<dl>",
-      "\t\t<dt>Footnote 1</dt>",
-      "\t\t<dd id=\"fn1\">${2:Footnote text}</dd>",
-      "\t</dl>",
-      "</aside>"
-    ],
-    "description": "Accessible footnote pattern",
+    "description": "JSON Manager placeholder",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
   "WET - Lightbox": {
@@ -497,6 +823,64 @@
       "</a>"
     ],
     "description": "Lightbox gallery trigger",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - MathML": {
+    "prefix": "wet-mathml",
+    "body": [
+      "<math xmlns=\"http://www.w3.org/1998/Math/MathML\"><mi>x</mi><mo>+</mo><mn>1</mn></math>"
+    ],
+    "description": "MathML example",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Menu": {
+    "prefix": "wet-menu",
+    "body": [
+      "<nav aria-label=\"Menu\">",
+      "\t<ul>",
+      "\t\t<li><a href=\"${1:/}\">Home</a></li>",
+      "\t</ul>",
+      "</nav>"
+    ],
+    "description": "Menu pattern",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Merge server-client errors": {
+    "prefix": "wet-merge-errors",
+    "body": [
+      "<div class=\"alert alert-danger\" role=\"alert\">",
+      "\t<p>${1:Please review the form errors below.}</p>",
+      "</div>"
+    ],
+    "description": "Error summary placeholder",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Multimedia audio": {
+    "prefix": "wet-audio",
+    "body": [
+      "<audio controls>",
+      "\t<source src=\"${1:/media/audio.mp3}\" type=\"audio/mpeg\" />",
+      "</audio>"
+    ],
+    "description": "Accessible audio player",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Multimedia video": {
+    "prefix": "wet-video",
+    "body": [
+      "<video controls width=\"${1:640}\">",
+      "\t<source src=\"${2:/media/video.mp4}\" type=\"video/mp4\" />",
+      "</video>"
+    ],
+    "description": "Accessible video player",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Multimedia YouTube": {
+    "prefix": "wet-youtube",
+    "body": [
+      "<iframe title=\"${1:YouTube video}\" src=\"${2:https://www.youtube.com/embed/ID}\" allowfullscreen></iframe>"
+    ],
+    "description": "Embedded YouTube video",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
   "WET - Overlay": {
@@ -517,7 +901,107 @@
     "description": "Accessible overlay or modal pattern",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
-  "WET - Tabs": {
+  "WET - Paginate": {
+    "prefix": "wet-paginate",
+    "body": [
+      "<nav aria-label=\"Pagination\">",
+      "\t<ul class=\"pager\">",
+      "\t\t<li><a href=\"${1:#}\">Previous</a></li>",
+      "\t\t<li><a href=\"${2:#}\">Next</a></li>",
+      "\t</ul>",
+      "</nav>"
+    ],
+    "description": "Simple paginated navigation",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - PII scrub": {
+    "prefix": "wet-pii-scrub",
+    "body": [
+      "<p>${1:Personal information has been redacted.}</p>"
+    ],
+    "description": "PII scrub placeholder",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Postback": {
+    "prefix": "wet-postback",
+    "body": [
+      "<form method=\"post\">",
+      "\t<button type=\"submit\">${1:Submit}</button>",
+      "</form>"
+    ],
+    "description": "Postback form example",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Prettify": {
+    "prefix": "wet-prettify",
+    "body": [
+      "<pre><code class=\"language-html\">",
+      "${1:<div class=\"example\">Example</div>}",
+      "</code></pre>"
+    ],
+    "description": "Code block placeholder",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Progress polyfill": {
+    "prefix": "wet-progress",
+    "body": [
+      "<progress value=\"${1:50}\" max=\"${2:100}\">${1:50}%</progress>"
+    ],
+    "description": "Progress indicator",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Randomize": {
+    "prefix": "wet-randomize",
+    "body": [
+      "<ul>",
+      "\t<li>${1:Item one}</li>",
+      "\t<li>${2:Item two}</li>",
+      "\t<li>${3:Item three}</li>",
+      "</ul>"
+    ],
+    "description": "Randomized content placeholder",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Session expired": {
+    "prefix": "wet-session-expired",
+    "body": [
+      "<p>${1:Your session has expired. Please sign in again.}</p>"
+    ],
+    "description": "Session expired message",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Session timeout": {
+    "prefix": "wet-session-timeout",
+    "body": [
+      "<div class=\"alert alert-warning\" role=\"alert\">",
+      "\t<p>${1:Your session will expire soon.}</p>",
+      "</div>"
+    ],
+    "description": "Session timeout warning pattern",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Share widget": {
+    "prefix": "wet-share",
+    "body": [
+      "<div class=\"wb-share\" data-wb-share=\"{\"url\":\"${1:https://example.com}\",\"title\":\"${2:Share this page}\"}\"></div>"
+    ],
+    "description": "Share widget placeholder",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Steps form": {
+    "prefix": "wet-steps-form",
+    "body": [
+      "<form>",
+      "\t<div>",
+      "\t\t<label for=\"${1:step-one}\">${2:Step one}</label>",
+      "\t\t<input id=\"${1:step-one}\" type=\"text\" />",
+      "\t</div>",
+      "</form>"
+    ],
+    "description": "Step-based form pattern",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Tabbed interface": {
     "prefix": "wet-tabs",
     "body": [
       "<div class=\"wb-tabs\">",
@@ -534,6 +1018,68 @@
     "description": "Tabbed interface pattern",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
+  "WET - Table filters": {
+    "prefix": "wet-table-filters",
+    "body": [
+      "<table class=\"table table-striped\">",
+      "\t<thead><tr><th>${1:Name}</th></tr></thead>",
+      "\t<tbody><tr><td>${2:Value}</td></tr></tbody>",
+      "</table>"
+    ],
+    "description": "Table filter placeholder",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Table validator": {
+    "prefix": "wet-table-validator",
+    "body": [
+      "<table>",
+      "\t<caption>${1:Table summary}</caption>",
+      "\t<tr><th scope=\"col\">${2:Column}</th></tr>",
+      "\t<tr><td>${3:Value}</td></tr>",
+      "</table>"
+    ],
+    "description": "Accessible table validator pattern",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Tables": {
+    "prefix": "wet-tables",
+    "body": [
+      "<table class=\"table table-bordered\">",
+      "\t<thead><tr><th>${1:Header}</th></tr></thead>",
+      "\t<tbody><tr><td>${2:Cell}</td></tr></tbody>",
+      "</table>"
+    ],
+    "description": "WET table example",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Tag filter": {
+    "prefix": "wet-tag-filter",
+    "body": [
+      "<ul class=\"list-inline\">",
+      "\t<li><a href=\"${1:#}\">${2:Tag one}</a></li>",
+      "</ul>"
+    ],
+    "description": "Tag filter placeholder",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Template HTML5": {
+    "prefix": "wet-template-html5",
+    "body": [
+      "<template>",
+      "\t<div>${1:Reusable content}</div>",
+      "</template>"
+    ],
+    "description": "HTML5 template placeholder",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Text highlighting": {
+    "prefix": "wet-text-highlight",
+    "body": [
+      "<p>${1:Search results for <mark>${2:keyword}</mark> appear here.}</p>"
+    ],
+    "description": "Text highlighting pattern",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
   "WET - Toggle": {
     "prefix": "wet-toggle",
     "body": [
@@ -545,84 +1091,491 @@
     "description": "Toggle/collapse content pattern",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
-  "WET - Progress bar": {
-    "prefix": "wet-progress",
+  "WET - Transitions": {
+    "prefix": "wet-transitions",
     "body": [
-      "<progress value=\"${1:50}\" max=\"${2:100}\">${1:50}%</progress>"
+      "<div style=\"transition: all 0.3s ease;\">${1:Animated content}</div>"
     ],
-    "description": "Progress indicator",
+    "description": "CSS transition placeholder",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Twitter embedded timeline": {
+    "prefix": "wet-twitter",
+    "body": [
+      "<a class=\"twitter-timeline\" href=\"${1:https://twitter.com/username}\">${2:Latest updates}</a>"
+    ],
+    "description": "Twitter timeline placeholder",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - URL mapping ajax": {
+    "prefix": "wet-url-ajax",
+    "body": [
+      "<div data-url-map=\"${1:/path}\"></div>"
+    ],
+    "description": "URL mapping ajax placeholder",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - URL mapping table": {
+    "prefix": "wet-url-table",
+    "body": [
+      "<table data-url-map=\"${1:/path}\"><tr><td>${2:Content}</td></tr></table>"
+    ],
+    "description": "URL mapping table filtering placeholder",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - URL mapping JSON": {
+    "prefix": "wet-url-json",
+    "body": [
+      "<div data-url-map-json=\"${1:/data.json}\"></div>"
+    ],
+    "description": "URL mapping JSON placeholder",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Utilities": {
+    "prefix": "wet-utilities",
+    "body": [
+      "<div class=\"well\">${1:Utility content}</div>"
+    ],
+    "description": "Utilities wrapper placeholder",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Accessibility assessment": {
+    "prefix": "wet-a11y-assessment",
+    "body": [
+      "<ul>",
+      "\t<li>Keyboard accessibility checked.</li>",
+      "\t<li>Color contrast reviewed.</li>",
+      "\t<li>Images reviewed for alt text.</li>",
+      "</ul>"
+    ],
+    "description": "Accessibility assessment checklist",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - WET core": {
+    "prefix": "wet-core",
+    "body": [
+      "<main>",
+      "\t<h1>${1:Page title}</h1>",
+      "\t<p>${2:Core content}</p>",
+      "</main>"
+    ],
+    "description": "WET core content scaffold",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Zebra striping": {
+    "prefix": "wet-zebra",
+    "body": [
+      "<table class=\"table table-striped\">",
+      "\t<thead><tr><th>${1:Header}</th></tr></thead>",
+      "\t<tbody><tr><td>${2:Value}</td></tr></tbody>",
+      "</table>"
+    ],
+    "description": "Zebra-striped table pattern",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Alert info": {
+    "prefix": "wet-alert-info",
+    "body": [
+      "<div class=\"alert alert-info\" role=\"status\">",
+      "\t<p>${1:Helpful information for the user.}</p>",
+      "</div>"
+    ],
+    "description": "WET informational alert",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Alert success": {
+    "prefix": "wet-alert-success",
+    "body": [
+      "<div class=\"alert alert-success\" role=\"status\">",
+      "\t<p>${1:Success message for completed actions.}</p>",
+      "</div>"
+    ],
+    "description": "WET success alert",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Alert warning": {
+    "prefix": "wet-alert-warning",
+    "body": [
+      "<div class=\"alert alert-warning\" role=\"alert\">",
+      "\t<p>${1:Warning message requiring attention.}</p>",
+      "</div>"
+    ],
+    "description": "WET warning alert",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Badge info": {
+    "prefix": "wet-badge-info",
+    "body": [
+      "<span class=\"label label-info\">${1:New}</span>"
+    ],
+    "description": "WET informational badge",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Badge success": {
+    "prefix": "wet-badge-success",
+    "body": [
+      "<span class=\"label label-success\">${1:Complete}</span>"
+    ],
+    "description": "WET success badge",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Button primary": {
+    "prefix": "wet-button-primary",
+    "body": [
+      "<button type=\"button\" class=\"btn btn-primary\">${1:Primary action}</button>"
+    ],
+    "description": "WET primary button",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Button default": {
+    "prefix": "wet-button-default",
+    "body": [
+      "<button type=\"button\" class=\"btn btn-default\">${1:Default action}</button>"
+    ],
+    "description": "WET default button",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Button link": {
+    "prefix": "wet-button-link",
+    "body": [
+      "<a href=\"${1:/path}\" class=\"btn btn-link\">${2:Learn more}</a>"
+    ],
+    "description": "WET link-style button",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Panel": {
+    "prefix": "wet-panel",
+    "body": [
+      "<section class=\"panel panel-default\" aria-labelledby=\"${1:panel-title}\">",
+      "\t<div class=\"panel-heading\">",
+      "\t\t<h2 id=\"${1:panel-title}\" class=\"h3\">${2:Panel title}</h2>",
+      "\t</div>",
+      "\t<div class=\"panel-body\">",
+      "\t\t<p>${3:Panel content}</p>",
+      "\t</div>",
+      "</section>"
+    ],
+    "description": "WET panel component",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Well": {
+    "prefix": "wet-well",
+    "body": [
+      "<div class=\"well\">",
+      "\t<p>${1:Grouped content with visual emphasis.}</p>",
+      "</div>"
+    ],
+    "description": "WET well container",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - List inline": {
+    "prefix": "wet-list-inline",
+    "body": [
+      "<ul class=\"list-inline\">",
+      "\t<li><a href=\"${1:/item-1}\">${2:Item one}</a></li>",
+      "\t<li><a href=\"${3:/item-2}\">${4:Item two}</a></li>",
+      "</ul>"
+    ],
+    "description": "WET inline list",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - List spaced": {
+    "prefix": "wet-list-spaced",
+    "body": [
+      "<ul class=\"lst-spcd\">",
+      "\t<li><a href=\"${1:/item-1}\">${2:Item one}</a></li>",
+      "\t<li><a href=\"${3:/item-2}\">${4:Item two}</a></li>",
+      "</ul>"
+    ],
+    "description": "WET spaced list",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - List group": {
+    "prefix": "wet-list-group",
+    "body": [
+      "<ul class=\"list-group\">",
+      "\t<li class=\"list-group-item\"><a href=\"${1:/item-1}\">${2:Item one}</a></li>",
+      "\t<li class=\"list-group-item\"><a href=\"${3:/item-2}\">${4:Item two}</a></li>",
+      "</ul>"
+    ],
+    "description": "WET list group",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Table basic": {
+    "prefix": "wet-table-basic",
+    "body": [
+      "<table class=\"table table-bordered\">",
+      "\t<caption>${1:Table summary}</caption>",
+      "\t<thead>",
+      "\t\t<tr><th scope=\"col\">${2:Header}</th></tr>",
+      "\t</thead>",
+      "\t<tbody>",
+      "\t\t<tr><td>${3:Value}</td></tr>",
+      "\t</tbody>",
+      "</table>"
+    ],
+    "description": "WET basic table",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Table responsive": {
+    "prefix": "wet-table-responsive",
+    "body": [
+      "<div class=\"table-responsive\">",
+      "\t<table class=\"table table-striped\">",
+      "\t\t<thead><tr><th scope=\"col\">${1:Header}</th></tr></thead>",
+      "\t\t<tbody><tr><td>${2:Value}</td></tr></tbody>",
+      "\t</table>",
+      "</div>"
+    ],
+    "description": "WET responsive table",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Labels": {
+    "prefix": "wet-labels",
+    "body": [
+      "<span class=\"label label-default\">${1:Default}</span>",
+      "<span class=\"label label-info\">${2:Info}</span>"
+    ],
+    "description": "WET labels",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Code": {
+    "prefix": "wet-code",
+    "body": [
+      "<pre><code class=\"language-html\">${1:<div class=\"example\">Content</div>}</code></pre>"
+    ],
+    "description": "WET code example",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Code prettify": {
+    "prefix": "wet-code-prettify",
+    "body": [
+      "<pre><code class=\"prettyprint\">${1:console.log('Hello');}</code></pre>"
+    ],
+    "description": "WET prettified code sample",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Colour swatches": {
+    "prefix": "wet-colour",
+    "body": [
+      "<div class=\"well\">",
+      "\t<span class=\"label label-primary\">Primary</span>",
+      "\t<span class=\"label label-success\">Success</span>",
+      "\t<span class=\"label label-warning\">Warning</span>",
+      "</div>"
+    ],
+    "description": "WET colour example",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - DataTables": {
+    "prefix": "wet-datatables",
+    "body": [
+      "<table class=\"table table-striped table-bordered\" id=\"dataTable\">",
+      "\t<thead><tr><th scope=\"col\">${1:Name}</th><th scope=\"col\">${2:Value}</th></tr></thead>",
+      "\t<tbody><tr><td>${3:Example}</td><td>${4:123}</td></tr></tbody>",
+      "</table>"
+    ],
+    "description": "WET DataTables-style table",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Datalist polyfill": {
+    "prefix": "wet-datalist-polyfill",
+    "body": [
+      "<label for=\"${1:autocomplete}\">${2:Choose a value}</label>",
+      "<input id=\"${1:autocomplete}\" name=\"${1:autocomplete}\" list=\"${3:suggestions}\" class=\"form-control\" />",
+      "<datalist id=\"${3:suggestions}\">",
+      "\t<option value=\"${4:Alpha}\"></option>",
+      "\t<option value=\"${5:Beta}\"></option>",
+      "</datalist>"
+    ],
+    "description": "WET datalist autocomplete example",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Dismissible content": {
+    "prefix": "wet-dismissible-content",
+    "body": [
+      "<section class=\"alert alert-dismissable\" role=\"alert\">",
+      "\t<p>${1:Important message}</p>",
+      "\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>",
+      "</section>"
+    ],
+    "description": "WET dismissible content",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Equalize": {
+    "prefix": "wet-equalize",
+    "body": [
+      "<div class=\"row\" data-equalize=\"{\"target\":\".equal-item\"}\">",
+      "\t<div class=\"col-md-6 equal-item\">${1:Left content}</div>",
+      "\t<div class=\"col-md-6 equal-item\">${2:Right content}</div>",
+      "</div>"
+    ],
+    "description": "WET equalize example",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Expand and hide": {
+    "prefix": "wet-expand-hide",
+    "body": [
+      "<details>",
+      "\t<summary>${1:Show more}</summary>",
+      "\t<p>${2:Additional content shown when expanded.}</p>",
+      "</details>"
+    ],
+    "description": "WET expand and hide details summary",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Grid system": {
+    "prefix": "wet-grid-system",
+    "body": [
+      "<div class=\"row\">",
+      "\t<div class=\"col-md-6\">${1:Column one}</div>",
+      "\t<div class=\"col-md-6\">${2:Column two}</div>",
+      "</div>"
+    ],
+    "description": "WET grid system example",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Headings": {
+    "prefix": "wet-headings",
+    "body": [
+      "<h2>${1:Main heading} <small>${2:Secondary text}</small></h2>",
+      "<h3 class=\"h3 underline\">${3:Underlined heading}</h3>"
+    ],
+    "description": "WET heading styles",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Images": {
+    "prefix": "wet-images",
+    "body": [
+      "<img src=\"${1:/img/example.jpg}\" alt=\"${2:Descriptive alt text}\" class=\"img-responsive\" />"
+    ],
+    "description": "WET image example",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Jumbotron": {
+    "prefix": "wet-jumbotron",
+    "body": [
+      "<div class=\"jumbotron\">",
+      "\t<h1>${1:Welcome}</h1>",
+      "\t<p>${2:Large introductory callout.}</p>",
+      "</div>"
+    ],
+    "description": "WET jumbotron",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Keyboard": {
+    "prefix": "wet-keyboard",
+    "body": [
+      "<kbd>${1:Ctrl+S}</kbd>"
+    ],
+    "description": "WET keyboard example",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Margin proximity": {
+    "prefix": "wet-margin-proximity",
+    "body": [
+      "<div class=\"mrgn-tp-md mrgn-bttm-md\">${1:Content with margin spacing}</div>"
+    ],
+    "description": "WET margin proximity spacing",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
   "WET - Meter": {
     "prefix": "wet-meter",
     "body": [
-      "<meter min=\"0\" max=\"100\" value=\"${1:65}\">${1:65}%</meter>"
+      "<meter min=\"0\" max=\"100\" value=\"${1:75}\">${1:75}%</meter>"
     ],
-    "description": "Meter element",
+    "description": "WET meter",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
-  "WET - Share widget": {
-    "prefix": "wet-share",
+  "WET - Modal popup": {
+    "prefix": "wet-modal-popup",
     "body": [
-      "<div class=\"wb-share\" data-wb-share=\"{\"url\":\"${1:https://example.com}\",\"title\":\"${2:Share this page}\"}\"></div>"
+      "<div class=\"modal fade\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"modalTitle\">",
+      "\t<div class=\"modal-dialog\" role=\"document\">",
+      "\t\t<div class=\"modal-content\">",
+      "\t\t\t<div class=\"modal-header\"><h2 id=\"modalTitle\">${1:Dialog title}</h2></div>",
+      "\t\t\t<div class=\"modal-body\"><p>${2:Dialog content}</p></div>",
+      "\t\t</div>",
+      "\t</div>",
+      "</div>"
     ],
-    "description": "Share widget placeholder",
+    "description": "WET modal popup",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
-  "WET - Pagination list": {
-    "prefix": "wet-paginate",
+  "WET - Multimedia player": {
+    "prefix": "wet-multimedia-player",
     "body": [
-      "<nav aria-label=\"Pagination\">",
-      "\t<ul class=\"pager\">",
-      "\t\t<li><a href=\"${1:#}\">Previous</a></li>",
-      "\t\t<li><a href=\"${2:#}\">Next</a></li>",
+      "<video controls class=\"img-responsive\">",
+      "\t<source src=\"${1:/media/example.mp4}\" type=\"video/mp4\" />",
+      "\t${2:Your browser does not support the video tag.}",
+      "</video>"
+    ],
+    "description": "WET multimedia player",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Opacity": {
+    "prefix": "wet-opacity",
+    "body": [
+      "<div style=\"opacity:${1:0.5};\">${2:Content}</div>"
+    ],
+    "description": "WET opacity example",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Panels": {
+    "prefix": "wet-panels",
+    "body": [
+      "<section class=\"panel panel-default\">",
+      "\t<div class=\"panel-heading\"><h3 class=\"panel-title\">${1:Panel title}</h3></div>",
+      "\t<div class=\"panel-body\">${2:Panel content}</div>",
+      "</section>"
+    ],
+    "description": "WET panels",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Pills": {
+    "prefix": "wet-pills",
+    "body": [
+      "<ul class=\"nav nav-pills\">",
+      "\t<li class=\"active\"><a href=\"#\">${1:Home}</a></li>",
+      "\t<li><a href=\"#\">${2:About}</a></li>",
+      "</ul>"
+    ],
+    "description": "WET pills navigation",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Quotations": {
+    "prefix": "wet-quotations",
+    "body": [
+      "<blockquote>",
+      "\t<p>${1:Quotable content}</p>",
+      "\t<footer>${2:Author}</footer>",
+      "</blockquote>"
+    ],
+    "description": "WET quotations",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Reflowing": {
+    "prefix": "wet-reflowing",
+    "body": [
+      "<div class=\"row\">",
+      "\t<div class=\"col-xs-12 col-sm-6\">${1:Primary}</div>",
+      "\t<div class=\"col-xs-12 col-sm-6\">${2:Secondary}</div>",
+      "</div>"
+    ],
+    "description": "WET reflowing layout",
+    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+  },
+  "WET - Secondary menu": {
+    "prefix": "wet-secondary-menu",
+    "body": [
+      "<nav aria-label=\"Secondary\">",
+      "\t<ul class=\"list-group\">",
+      "\t\t<li class=\"list-group-item\"><a href=\"${1:/page-one}\">${2:Page one}</a></li>",
+      "\t\t<li class=\"list-group-item\"><a href=\"${3:/page-two}\">${4:Page two}</a></li>",
       "\t</ul>",
       "</nav>"
     ],
-    "description": "Simple paginated navigation",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Code block": {
-    "prefix": "wet-code",
-    "body": [
-      "<pre><code class=\"language-html\">",
-      "${1:<div class=\"example\">Example</div>}",
-      "</code></pre>"
-    ],
-    "description": "Accessible code block placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Calendar of events": {
-    "prefix": "wet-calendar",
-    "body": [
-      "<section aria-labelledby=\"${1:calendar-title}\">",
-      "\t<h2 id=\"${1:calendar-title}\">${2:Calendar of events}</h2>",
-      "\t<ul>",
-      "\t\t<li><strong>${3:Date}</strong> — ${4:Event title}</li>",
-      "\t</ul>",
-      "</section>"
-    ],
-    "description": "Calendar of events pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Data ajax": {
-    "prefix": "wet-data-ajax",
-    "body": [
-      "<section data-ajax-replace=\"${1:/content/fragment.html}\" data-ajax-after=\"${2:body}\"></section>"
-    ],
-    "description": "AJAX content placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Randomize": {
-    "prefix": "wet-randomize",
-    "body": [
-      "<ul>",
-      "\t<li>${1:Item one}</li>",
-      "\t<li>${2:Item two}</li>",
-      "\t<li>${3:Item three}</li>",
-      "</ul>"
-    ],
-    "description": "Simple randomized content placeholder",
+    "description": "WET secondary menu",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
   "WET - Session timeout": {
@@ -632,49 +1585,34 @@
       "\t<p>${1:Your session will expire soon.}</p>",
       "</div>"
     ],
-    "description": "Session timeout warning pattern",
+    "description": "WET session timeout notice",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
-  "WET - Text highlighting": {
-    "prefix": "wet-text-highlight",
+  "WET - Share widget": {
+    "prefix": "wet-share-widget",
     "body": [
-      "<p>${1:Search results for <mark>${2:keyword}</mark> appear here.}</p>"
+      "<div class=\"wb-share\" data-wb-share=\"{\"id\":\"${1:share}\"}\"></div>"
     ],
-    "description": "Text highlighting pattern",
+    "description": "WET share widget",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   },
-  "WET - Dismissible content": {
-    "prefix": "wet-dismissible",
+  "WET - Tabbed interface": {
+    "prefix": "wet-tabbed-interface",
     "body": [
-      "<div class=\"alert alert-info\" role=\"status\">",
-      "\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">&times;</button>",
-      "\t<p>${1:Dismissible content}</p>",
+      "<div class=\"wb-tabs\">",
+      "\t<div class=\"tabpanels\">",
+      "\t\t<details open>",
+      "\t\t\t<summary>${1:Tab 1}</summary>",
+      "\t\t\t<p>${2:Content for tab 1.}</p>",
+      "\t\t</details>",
+      "\t\t<details>",
+      "\t\t\t<summary>${3:Tab 2}</summary>",
+      "\t\t\t<p>${4:Content for tab 2.}</p>",
+      "\t\t</details>",
+      "\t</div>",
       "</div>"
     ],
-    "description": "Dismissible content pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Equal height": {
-    "prefix": "wet-equal-height",
-    "body": [
-      "<div class=\"row\">",
-      "\t<div class=\"col-md-6 well\">${1:First card}</div>",
-      "\t<div class=\"col-md-6 well\">${2:Second card}</div>",
-      "</div>"
-    ],
-    "description": "Equal-height card layout",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Accessibility checklist": {
-    "prefix": "wet-a11y-checklist",
-    "body": [
-      "<ul>",
-      "\t<li>Keyboard access is available.</li>",
-      "\t<li>Contrast is sufficient.</li>",
-      "\t<li>Images have meaningful alt text.</li>",
-      "</ul>"
-    ],
-    "description": "Accessibility checklist snippet",
+    "description": "WET tabbed interface",
     "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
   }
 }
