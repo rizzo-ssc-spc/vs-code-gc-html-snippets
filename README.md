@@ -30,15 +30,15 @@ Code snippets is a santard VS code feature. The easiest way to use these snippet
 
 ### Option A: install into your VS Code user snippets folder (recommended)
 
-1. Select all of the content in the [gc-web-snippets.code-snippets](https://github.com/rizzo-ssc-spc/vs-code-gc-html-snippets/blob/main/gc-web-snippets.code-snippets) file and copy it.
-2. In VS Code, open the Command Palette with Ctrl+Shift+P.
-3. Type Preferences: Configure User Snippets and press Enter.
-4. Choose html from the list. This opens your HTML snippet configuration file.
-5. Replace the default content with the content you copied from gc-web-snippets.code-snippets.
-6. Save the file.
-7. Close and reopen VS Code, or reload the window if prompted.
-8. Open any HTML or templating file such as .html, .njk, .liquid, .vue, .jsx, or .tsx.
-9. Start typing a prefix such as gcweb-skip-link, gcds-header, or wet-tabs and press Tab.
+1. Select all of the content in the [gc-web-snippets.code-snippets](https://github.com/rizzo-ssc-spc/vs-code-gc-html-snippets/blob/main/gc-web-snippets.code-snippets) file and copy it
+2. In VS Code, open the Command Palette with Ctrl+Shift+P
+3. Type Preferences: Configure User Snippets and press Enter
+4. Choose html from the list. This opens your HTML snippet configuration file
+5. Replace the default content with the content you copied from gc-web-snippets.code-snippets
+6. Save the file
+7. Close and reopen VS Code, or reload the window if prompted
+8. Open any HTML or templating file such as .html, .njk, .liquid, .vue, .jsx, or .tsx
+9. Start typing a prefix such as gcweb-skip-link, gcds-header, or wet-tabs and press Tab
 
 ### Option B: replace the default HTML snippets file directly
 
@@ -46,16 +46,16 @@ If you prefer a simpler path, you can copy the contents of gc-web-snippets.code-
 
 1. Open the file path below in File Explorer:
    - Windows: %APPDATA%\Code\User\snippets\html.code-snippets
-2. Paste the contents of gc-web-snippets.code-snippets into that file.
-3. Save the file.
-4. Reload VS Code.
+2. Paste the contents of gc-web-snippets.code-snippets into that file
+3. Save the file
+4. Reload VS Code
 
 ### How to test that the snippets are working
 
-1. Create or open a new .html file.
-2. Type one of the prefixes such as wet-panel or gcds-button.
-3. Press Tab.
-4. If the snippet appears, installation was successful.
+1. Create or open a new .html file
+2. Type one of the prefixes such as wet-panel or gcds-button
+3. Press Tab
+4. If the snippet appears, installation was successful
 
 ### Important note
 
@@ -182,6 +182,7 @@ Press Tab to move through the placeholders.
 - Replace placeholder text with real content before publishing
 - Validate the final markup against the latest GCWeb, WET and GCDS before publication
 - Use the [W3C HTML Validator](https://validator.w3.org/nu/#textarea) to make sure there are no errors in the HTML
+- Feel free to customize the HTML snippets however you like. It's also appreciated if you want to collaborate with the file in this project! :)
 
 ## Accessibility notes
 
