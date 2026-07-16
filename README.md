@@ -40,7 +40,7 @@ Code snippets is a santard VS code feature. The easiest way to use these snippet
 7. Save the file
 8. Close and reopen VS Code, or reload the window if prompted
 9. Open any HTML or templating file such as .html
-10. Start typing a prefix such as `wet-panels` or  `gcds-card` gcweb-skip-link and press Tab
+10. Start typing a prefix such as `wet-panels` or  `gcds-card` and press Tab
 
 ### Option B: replace the default HTML snippets file directly
 
