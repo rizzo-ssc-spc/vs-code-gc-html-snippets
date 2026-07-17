@@ -1,254 +1,169 @@
-# GCWeb, GCDS, and WET HTML snippets for VS Code
+# GCWeb, GCDS, and WET HTML snippets
 
-This repository contains an expanded VS Code snippet collection for Government of Canada web patterns. It is based on the official GCWeb and GCDS guidance and the WET working examples inventory, with separate snippet families for each library, making it easier to browse and reuse.
+A reusable snippet library for Government of Canada web development patterns across GCWeb, GCDS, and WET.
 
-## Snippet library
+This project is optimized for VS Code and VS Code-based editors, and can also be used in other IDEs with conversion or manual setup.
 
-The snippet library includes:
+## What this repo includes
 
-- WET working-example and plugin-style snippets for common patterns such as calendars, feedback forms, footnotes, overlays, lightboxes, tabs, toggles, share widgets, data-ajax, form validation, multimedia, and more
-- GCDS component and style snippets for buttons, links, cards, alerts, notices, forms, tables, tags, breadcrumbs, callouts, lists, quotes, and step lists
-- GCWeb component snippets for Canada.ca patterns such as skip links, breadcrumbs, page titles, containers, tables, panels, most requested links, services and information, step-by-step lists, search boxes, feedback, page details, contributors, and institutional patterns
+- WET snippets for common components and plugin patterns
+- GCWeb snippets for Canada.ca page structures and UI patterns
+- GCDS snippets for design-system-based components
+
+## Repository files
+
+- gc-web-snippets.code-snippets: the main snippet library in VS Code JSON format
+- README.md: installation and usage guide
+
+## Quick start (VS Code)
+
+1. Open [gc-web-snippets.code-snippets](https://github.com/rizzo-ssc-spc/vs-code-gc-html-snippets/blob/main/gc-web-snippets.code-snippets)
+2. Copy all content
+3. In VS Code, press Ctrl+Shift+P and run Snippets: Configure Snippets
+4. Choose HTML (global or workspace)
+5. Paste the snippet JSON and save
+6. Open an HTML file and test a prefix such as wet-datatables
+
+## Installation details
+
+### Option A (recommended): configure snippets from VS Code UI
+
+1. Press Ctrl+Shift+P
+2. Run Snippets: Configure Snippets
+3. Choose either:
+   - New Global Snippets file
+   - New Snippets file for workspace
+4. Select HTML
+5. Paste the content of gc-web-snippets.code-snippets
+6. Save and reload VS Code if prompted
+
+### Option B: copy directly to the snippets file
+
+Windows path:
+
+%APPDATA%\Code\User\snippets\html.code-snippets
+
+Steps:
+
+1. Open the file above
+2. Paste the content of gc-web-snippets.code-snippets
+3. Save
+4. Reload VS Code
+
+## Use in other IDEs and editors
+
+Yes, with format-specific setup.
+
+### Compatibility at a glance
+
+- Cursor, VSCodium, Windsurf, Theia-based editors: direct support
+- JetBrains IDEs (WebStorm, IntelliJ IDEA, PhpStorm): convert to Live Templates XML
+- Sublime Text: convert to .sublime-completions or .sublime-snippet
+- Adobe Dreamweaver: create snippets manually in the Snippets panel
+
+### VS Code-based editors (Cursor, VSCodium, Windsurf)
+
+1. Copy the full content of gc-web-snippets.code-snippets
+2. Open the editor snippet configuration command
+3. Open HTML snippets
+4. Paste, save, and reload
+5. Test using a prefix such as gcweb-page-title
+
+### JetBrains IDEs
+
+JetBrains does not read VS Code snippet JSON directly.
+
+1. Convert VS Code snippets JSON to Live Templates XML
+2. In the IDE, open Settings > Editor > Live Templates
+3. Create a group such as GCWeb-WET-GCDS
+4. Import the converted XML
+5. Set the template context to HTML
+6. Save and test abbreviations
+
+### Sublime Text
+
+1. Convert snippets to Sublime format
+2. Open Preferences > Browse Packages
+3. Create a folder such as User/GCWebSnippets
+4. Add converted snippet file(s)
+5. Restart Sublime Text and test triggers
+
+### Adobe Dreamweaver
+
+Dreamweaver does not import VS Code JSON snippets directly.
+
+1. Open Window > Snippets
+2. Create a folder, for example GCWeb-WET-GCDS
+3. Choose New Snippet
+4. Enter a snippet name
+5. Select type:
+   - Insert Block
+   - Wrap Selection
+6. Paste the HTML snippet body
+7. Save and repeat for high-use snippets
+
+Dreamweaver notes:
+
+- Snippets are inserted from the Snippets panel
+- VS Code placeholders such as ${1:Header} are not interpreted; replace them with plain sample text
+- Start with high-use snippets first for faster setup
+
+## Verify installation
+
+1. Open or create an HTML file
+2. Type a prefix such as wet-panel, wet-datatables, or gcds-button
+3. Trigger snippet insertion (usually Tab or Enter depending on editor)
+4. Confirm the HTML block is inserted
+
+## Common prefixes (quick reference)
+
+GCWeb examples:
+
+- gcweb-alert-info
+- gcweb-alert-warning
+- gcweb-alert-danger
+
+GCDS examples:
+
+- gcds-lang-toggle
+- gcds-sr-only
+
+WET examples:
+
+- wet-datatables
+- wet-datatables-options
+- wet-panel
+- wet-feedback-form
+- wet-overlay
+- wet-tabbed-interface
+- wet-prettify
+- wet-code-prettify
+
+Tip: use your editor's snippet search to browse all prefixes in gc-web-snippets.code-snippets.
+
+## Placeholder syntax
+
+The snippet file uses VS Code tab stops:
+
+- ${1:placeholder}: first editable field
+- ${2:placeholder}: second editable field
+- $0: final cursor position
+
+## Authoring and maintenance guidance
+
+- Keep gc-web-snippets.code-snippets as the source of truth
+- Validate generated HTML before publishing
+- Re-check patterns against current GCWeb, WET, and GCDS documentation
+- Keep prefixes stable across tools when converting to other IDE formats
+
+## Accessibility and content quality
+
+- Snippets are designed to support accessible markup patterns
+- Final pages must still be reviewed for WCAG conformance and policy compliance
+- Validate output with the Nu HTML checker: https://validator.w3.org/nu/#textarea
 
 ## Source references
 
-The snippets were shaped from the following authoritative guidance:
-
-- GCWeb and WET: https://wet-boew.github.io/GCWeb/index-en.html
+- GCWeb and WET index: https://wet-boew.github.io/GCWeb/index-en.html
 - WET working examples: https://wet-boew.github.io/v4.0-ci/demos/index-en.html
 - GC Design System: https://design-system.canada.ca/en/
-
-## Files
-
-- gc-web-snippets.code-snippets — reusable VS Code snippets in JSON format
-- README.md — installation and quick-reference documentation
-
-## How to install in VS Code
-
-Code snippets is a santard VS code feature. The easiest way to use these snippets is to load them into VS Code as an HTML snippet file.
-
-### Option A: install into your VS Code user snippets folder (recommended)
-
-1. Select all of the content in the [gc-web-snippets.code-snippets](https://github.com/rizzo-ssc-spc/vs-code-gc-html-snippets/blob/main/gc-web-snippets.code-snippets) file and copy it
-2. In VS Code, open the Command Palette with Ctrl+Shift+P
-3. Type Snippets: Configure Snippets and press Enter
-4. Choose from the list
-   1. "New Snippets file for 'workspace' to install in your current workspace
-   2. "New Global Snippets file" to install and use it in all of your workspaces
-5. This opens your HTML snippet configuration file
-6. Replace the default content with the content you copied from [gc-web-snippets.code-snippets](https://github.com/rizzo-ssc-spc/vs-code-gc-html-snippets/blob/main/gc-web-snippets.code-snippets)
-7. Save the file
-8. Close and reopen VS Code, or reload the window if prompted
-9. Open any HTML or templating file such as .html
-10. Start typing a prefix such as `wet-panels` or  `gcds-card` and press Tab
-
-### Option B: replace the default HTML snippets file directly
-
-If you prefer a simpler path, you can copy the contents of gc-web-snippets.code-snippets into your existing HTML snippets file:
-
-1. Open the file path below in File Explorer:
-   - Windows: %APPDATA%\Code\User\snippets\html.code-snippets
-2. Paste the contents of gc-web-snippets.code-snippets into that file
-3. Save the file
-4. Reload VS Code
-
-### How to test that the snippets are working
-
-1. Create or open a new .html file
-2. Type one of the prefixes such as wet-panel or gcds-button
-3. Press Tab
-4. If the snippet appears, installation was successful
-
-### Important note
-
-A .code-snippets file in your workspace will not automatically appear in VS Code just because it is open in the folder. It must be loaded into the VS Code snippets system using one of the steps above.
-
-## Common snippet prefixes
-
-### GCWeb
-
-- gcweb-skip-link
-- gcweb-breadcrumb
-- gcweb-page-title
-- gcweb-container
-- gcweb-table
-- gcweb-panel
-- gcweb-most-requested
-- gcweb-services-info
-- gcweb-step-by-step
-- gcweb-subway
-- gcweb-featured-link
-- gcweb-institutional-byline
-- gcweb-social-media
-- gcweb-toc
-- gcweb-search-box
-- gcweb-feedback
-- gcweb-page-details
-- gcweb-contributors
-- gcweb-minister
-
-### GCDS
-
-- gcds-header
-- gcds-footer
-- gcds-button
-- gcds-button-secondary
-- gcds-link
-- gcds-card
-- gcds-hero
-- gcds-alert
-- gcds-notice
-- gcds-input
-- gcds-textarea
-- gcds-select
-- gcds-checkbox
-- gcds-radio
-- gcds-table
-- gcds-tag
-- gcds-details
-- gcds-breadcrumb
-- gcds-callout
-- gcds-list
-- gcds-quote
-- gcds-steps
-
-### WET
-
-- wet-add-to-calendar
-- wet-archived
-- wet-background-image
-- wet-basic-html
-- wet-calendar
-- wet-chart
-- wet-mobile-a11y
-- wet-collapsible-alert
-- wet-conditional-template
-- wet-country-content
-- wet-data-ajax
-- wet-data-fusion
-- wet-data-inview
-- wet-data-json
-- wet-data-picture
-- wet-datalist
-- wet-details-closed
-- wet-details-polyfill
-- wet-dismissible-content
-- wet-do-action
-- wet-equal-height
-- wet-exit-script
-- wet-facebook
-- wet-favicon
-- wet-feedback-form
-- wet-feeds
-- wet-fieldflow
-- wet-filter
-- wet-footnote
-- wet-form-validation
-- wet-geomap
-- wet-hello-world
-- wet-date-input
-- wet-range-input
-- wet-json-manager
-- wet-lightbox
-- wet-mathml
-- wet-menu
-- wet-merge-errors
-- wet-audio
-- wet-video
-- wet-youtube
-- wet-overlay
-- wet-paginate
-- wet-pii-scrub
-- wet-postback
-- wet-prettify
-- wet-progress
-- wet-randomize
-- wet-session-expired
-- wet-steps-form
-- wet-table-filters
-- wet-table-validator
-- wet-tables
-- wet-tag-filter
-- wet-template-html5
-- wet-text-highlight
-- wet-toggle
-- wet-transitions
-- wet-twitter
-- wet-url-ajax
-- wet-url-table
-- wet-url-json
-- wet-utilities
-- wet-a11y-assessment
-- wet-core
-- wet-zebra
-- wet-alert-info
-- wet-alert-success
-- wet-alert-warning
-- wet-badge-info
-- wet-badge-success
-- wet-button-primary
-- wet-button-default
-- wet-button-link
-- wet-panel
-- wet-well
-- wet-list-inline
-- wet-list-spaced
-- wet-list-group
-- wet-table-basic
-- wet-table-responsive
-- wet-labels
-- wet-code
-- wet-code-prettify
-- wet-colour
-- wet-datatables
-- wet-datalist-polyfill
-- wet-equalize
-- wet-expand-hide
-- wet-grid-system
-- wet-headings
-- wet-images
-- wet-jumbotron
-- wet-keyboard
-- wet-margin-proximity
-- wet-meter
-- wet-modal-popup
-- wet-multimedia-player
-- wet-opacity
-- wet-panels
-- wet-pills
-- wet-quotations
-- wet-reflowing
-- wet-secondary-menu
-- wet-session-timeout
-- wet-share-widget
-- wet-tabbed-interface
-- wet-zebra
-
-## How to use placeholders
-
-Each snippet uses Tab-stops so you can quickly fill in content:
-
-- ${1:placeholder} — first editable field
-- ${2:placeholder} — second editable field
-- $0 — final cursor position
-
-Press Tab to move through the placeholders.
-
-## Authoring guidance
-
-- Replace placeholder text with real content before publishing
-- Validate the final markup against the latest GCWeb, WET and GCDS before publication
-- Use the [W3C HTML Validator](https://validator.w3.org/nu/#textarea) to make sure there are no errors in the HTML
-- Feel free to customize the HTML snippets however you like. It's also appreciated if you want to collaborate with the file in this project! :)
-
-## Accessibility notes
-
-All web pages must met WCAG 2.1 Level AA standards. These snippets are designed with accessibility in mind and include patterns for:
-
-- skip links
-- ARIA labels and landmarks
-- descriptive labels for forms and search
-- status messaging for alerts
-- keyboard-friendly disclosure and modal patterns
-
-For production use, review the final markup against WCAG guidance and the current Canada.ca Content Style Guide implementation standards.
