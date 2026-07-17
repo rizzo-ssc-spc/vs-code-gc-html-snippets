@@ -1,554 +1,255 @@
 ﻿{
-  "GCWeb - Skip link": {
-    "prefix": "gcweb-skip-link",
-    "body": [
-      "\u003cul id=\"wb-tphp\"\u003e",
-      "\t\u003cli class=\"wb-slc\"\u003e\u003ca class=\"wb-sl\" href=\"#wb-cont\"\u003e${1:Skip to main content}\u003c/a\u003e\u003c/li\u003e",
-      "\t\u003cli class=\"wb-slc\"\u003e\u003ca class=\"wb-sl\" href=\"#wb-info\"\u003e${2:Skip to About this site}\u003c/a\u003e\u003c/li\u003e",
-      "\u003c/ul\u003e"
-    ],
-    "description": "Accessible skip links for GCWeb pages",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCWeb - Breadcrumb": {
-    "prefix": "gcweb-breadcrumb",
-    "body": [
-      "\u003cnav class=\"breadcrumb\"\u003e",
-      "\t\u003col class=\"breadcrumb\"\u003e",
-      "\t\t\u003cli\u003e\u003ca href=\"${1:/}\"\u003eHome\u003c/a\u003e\u003c/li\u003e",
-      "\t\t\u003cli\u003e\u003ca href=\"${2:/section}\"\u003e${3:Section}\u003c/a\u003e\u003c/li\u003e",
-      "\t\t\u003cli class=\"active\"\u003e${4:Current page}\u003c/li\u003e",
-      "\t\u003c/ol\u003e",
-      "\u003c/nav\u003e"
-    ],
-    "description": "Accessible breadcrumb trail for Canada.ca pages",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCWeb - Page title": {
-    "prefix": "gcweb-page-title",
-    "body": [
-      "\u003chgroup id=\"wb-cont\"\u003e",
-      "\t\u003cp\u003e${1:Subtitle}\u003c/p\u003e",
-      "\t\u003ch1\u003e${2:Page title}\u003c/h1\u003e",
-      "\u003c/hgroup\u003e"
-    ],
-    "description": "Canada.ca stacked page title pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCWeb - Main container": {
-    "prefix": "gcweb-container",
-    "body": [
-      "\u003cmain class=\"container\" property=\"mainContentOfPage\"\u003e",
-      "\t${1:Page content}",
-      "\u003c/main\u003e"
-    ],
-    "description": "GCWeb main content container",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCWeb - Basic table": {
-    "prefix": "gcweb-table",
+  "WET - Tables": {
+    "prefix": "wet-tables",
     "body": [
       "\u003ctable class=\"table table-bordered\"\u003e",
-      "\t\u003ccaption id=\"${1:table-caption}\"\u003e${2:Summary of data}\u003c/caption\u003e",
+      "\t\u003ccaption\u003e${1:Table summary}\u003c/caption\u003e",
       "\t\u003cthead\u003e",
-      "\t\t\u003ctr\u003e",
-      "\t\t\t\u003cth scope=\"col\"\u003e${3:Column 1}\u003c/th\u003e",
-      "\t\t\t\u003cth scope=\"col\"\u003e${4:Column 2}\u003c/th\u003e",
-      "\t\t\u003c/tr\u003e",
+      "\t\t\u003ctr\u003e\u003cth scope=\"col\"\u003e${2:Header}\u003c/th\u003e\u003c/tr\u003e",
       "\t\u003c/thead\u003e",
       "\t\u003ctbody\u003e",
-      "\t\t\u003ctr\u003e",
-      "\t\t\t\u003ctd\u003e${5:Value 1}\u003c/td\u003e",
-      "\t\t\t\u003ctd\u003e${6:Value 2}\u003c/td\u003e",
-      "\t\t\u003c/tr\u003e",
+      "\t\t\u003ctr\u003e\u003ctd\u003e${3:Cell}\u003c/td\u003e\u003c/tr\u003e",
       "\t\u003c/tbody\u003e",
       "\u003c/table\u003e"
     ],
-    "description": "GCWeb basic table with caption and accessible headers",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "description": "WET table example",
+    "scope": "html"
   },
-  "GCWeb - Panel": {
-    "prefix": "gcweb-panel",
+    "GCDS - Language toggle": {
+      "prefix": "gcds-lang-toggle",
+      "body": [
+        "<gcds-lang-toggle href=\"${1:/fr}\"></gcds-lang-toggle>"
+      ],
+      "description": "GCDS language toggle",
+      "scope": "html"
+    },
+    "GCDS - Screenreader only": {
+      "prefix": "gcds-sr-only",
+      "body": [
+        "<gcds-sr-only tag=\"${1:span}\">${2:Screen reader only text}</gcds-sr-only>"
+      ],
+      "description": "GCDS screenreader-only text",
+      "scope": "html"
+    },
+  "GCWeb - Alert info": {
+    "prefix": "gcweb-alert-info",
     "body": [
-      "\u003csection class=\"well\"\u003e",
-      "\t\u003ch2 id=\"${1:panel-title}\" class=\"h3\"\u003e${2:Panel title}\u003c/h2\u003e",
-      "\t\u003cp\u003e${3:Panel content}\u003c/p\u003e",
+      "\u003csection class=\"alert alert-info\"\u003e",
+      "\t\u003ch2\u003e${1:Alert title}\u003c/h2\u003e",
+      "\t\u003cp\u003e${2:Informational message.}\u003c/p\u003e",
       "\u003c/section\u003e"
     ],
-    "description": "GCWeb well panel",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "description": "GCWeb informational alert",
+    "scope": "html"
   },
-  "GCWeb - Most requested": {
-    "prefix": "gcweb-most-requested",
+  "GCWeb - Alert success": {
+    "prefix": "gcweb-alert-success",
     "body": [
-      "\u003csection class=\"most-requested\"\u003e",
-      "\t\u003ch2 id=\"${1:most-requested-title}\" class=\"h3\"\u003e${2:Most requested}\u003c/h2\u003e",
-      "\t\u003cul class=\"lst-spcd\"\u003e",
-      "\t\t\u003cli\u003e\u003ca href=\"${3:/service}\"\u003e${4:Service name}\u003c/a\u003e\u003c/li\u003e",
-      "\t\u003c/ul\u003e",
+      "\u003csection class=\"alert alert-success\"\u003e",
+      "\t\u003ch2\u003e${1:Success}\u003c/h2\u003e",
+      "\t\u003cp\u003e${2:Your request has been received.}\u003c/p\u003e",
       "\u003c/section\u003e"
     ],
-    "description": "Most requested links section",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "description": "GCWeb success alert",
+    "scope": "html"
   },
-  "GCWeb - Services and information": {
-    "prefix": "gcweb-services-info",
+  "GCWeb - Alert warning": {
+    "prefix": "gcweb-alert-warning",
     "body": [
-      "\u003csection class=\"gc-srvinfo\"\u003e",
-      "\t\u003ch2 id=\"${1:services-title}\" class=\"h3\"\u003e${2:Services and information}\u003c/h2\u003e",
-      "\t\u003cul class=\"list-group\"\u003e",
-      "\t\t\u003cli class=\"list-group-item\"\u003e\u003ca href=\"${3:/service}\"\u003e${4:Service link}\u003c/a\u003e\u003c/li\u003e",
-      "\t\u003c/ul\u003e",
+      "\u003csection class=\"alert alert-warning\"\u003e",
+      "\t\u003ch2\u003e${1:Warning}\u003c/h2\u003e",
+      "\t\u003cp\u003e${2:Please review the information before continuing.}\u003c/p\u003e",
       "\u003c/section\u003e"
     ],
-    "description": "Services and information pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "description": "GCWeb warning alert",
+    "scope": "html"
   },
-  "GCWeb - Step by step": {
-    "prefix": "gcweb-step-by-step",
+  "GCWeb - Alert danger": {
+    "prefix": "gcweb-alert-danger",
     "body": [
-      "\u003col class=\"lst-stps\"\u003e",
-      "\t\u003cli\u003e",
-      "\t\t\u003ch3\u003e${1:Step one}\u003c/h3\u003e",
-      "\t\t\u003cp\u003e${2:Describe the step clearly.}\u003c/p\u003e",
-      "\t\u003c/li\u003e",
-      "\u003c/ol\u003e"
-    ],
-    "description": "Step by step navigation pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCWeb - Subway navigation": {
-    "prefix": "gcweb-subway",
-    "body": [
-      "\u003cnav\u003e",
-      "\t\u003col class=\"subway-nav\"\u003e",
-      "\t\t\u003cli class=\"active\"\u003e${1:Current step}\u003c/li\u003e",
-      "\t\t\u003cli\u003e\u003ca href=\"${2:/next}\"\u003e${3:Next step}\u003c/a\u003e\u003c/li\u003e",
-      "\t\u003c/ol\u003e",
-      "\u003c/nav\u003e"
-    ],
-    "description": "Subway navigation pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCWeb - Featured link": {
-    "prefix": "gcweb-featured-link",
-    "body": [
-      "\u003cdiv class=\"featured-link\"\u003e",
-      "\t\u003ca href=\"${1:/featured}\"\u003e${2:Featured link}\u003c/a\u003e",
-      "\u003c/div\u003e"
-    ],
-    "description": "Featured link pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCWeb - Institutional byline": {
-    "prefix": "gcweb-institutional-byline",
-    "body": [
-      "\u003cp class=\"institutional-byline\"\u003e\u003ca href=\"${1:/institution}\"\u003e${2:Institution name}\u003c/a\u003e\u003c/p\u003e"
-    ],
-    "description": "Institutional byline pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCWeb - Social media channels": {
-    "prefix": "gcweb-social-media",
-    "body": [
-      "\u003csection\u003e",
-      "\t\u003ch2 id=\"${1:social-media-title}\" class=\"h3\"\u003e${2:Social media}\u003c/h2\u003e",
-      "\t\u003cul class=\"list-inline\"\u003e",
-      "\t\t\u003cli\u003e\u003ca href=\"${3:https://x.com/username}\"\u003eX\u003c/a\u003e\u003c/li\u003e",
-      "\t\u003c/ul\u003e",
+      "\u003csection class=\"alert alert-danger\"\u003e",
+      "\t\u003ch2\u003e${1:Important}\u003c/h2\u003e",
+      "\t\u003cp\u003e${2:There was a problem with your request.}\u003c/p\u003e",
       "\u003c/section\u003e"
     ],
-    "description": "Social media channels pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "description": "GCWeb danger alert",
+    "scope": "html"
   },
-  "GCWeb - In-page TOC": {
-    "prefix": "gcweb-toc",
+  "GCWeb - Alert link": {
+    "prefix": "gcweb-alert-link",
     "body": [
-      "\u003cnav\u003e",
-      "\t\u003cul\u003e",
-      "\t\t\u003cli\u003e\u003ca href=\"#${1:section-one}\"\u003e${2:Section one}\u003c/a\u003e\u003c/li\u003e",
-      "\t\u003c/ul\u003e",
-      "\u003c/nav\u003e"
-    ],
-    "description": "In-page table of contents pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCWeb - Search box": {
-    "prefix": "gcweb-search-box",
-    "body": [
-      "\u003cform\u003e",
-      "\t\u003clabel class=\"wb-inv\" for=\"${2:site-search}\"\u003e${1:Site search}\u003c/label\u003e",
-      "\t\u003cinput id=\"${2:site-search}\" type=\"search\" name=\"q\" /\u003e",
-      "\t\u003cbutton type=\"submit\"\u003e${3:Search}\u003c/button\u003e",
-      "\u003c/form\u003e"
-    ],
-    "description": "Site search box pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCWeb - Feedback area": {
-    "prefix": "gcweb-feedback",
-    "body": [
-      "\u003csection class=\"feedback\"\u003e",
-      "\t\u003cp\u003e\u003ca href=\"${1:/feedback}\"\u003e${2:Report a problem or provide feedback}\u003c/a\u003e\u003c/p\u003e",
+      "\u003csection class=\"alert alert-info\"\u003e",
+      "\t\u003cp\u003e${1:For more information, visit}\u003c/a\u003e \u003ca href=\"${2:https://www.canada.ca}\" class=\"alert-link\"\u003e${3:Canada.ca}\u003c/a\u003e.\u003c/p\u003e",
       "\u003c/section\u003e"
     ],
-    "description": "Feedback area pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "description": "GCWeb alert with link",
+    "scope": "html"
   },
-  "GCWeb - Page details": {
-    "prefix": "gcweb-page-details",
+  "WET - Archived information EN": {
+    "prefix": "wet-archived-en",
     "body": [
-      "\u003cdiv class=\"page-details\"\u003e",
-      "\t\u003cp\u003e\u003cstrong\u003e${1:Date modified}:\u003c/strong\u003e ${2:2026-07-16}\u003c/p\u003e",
-      "\u003c/div\u003e"
-    ],
-    "description": "Date modified and page details pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCWeb - Contributors": {
-    "prefix": "gcweb-contributors",
-    "body": [
-      "\u003csection class=\"contributors\"\u003e",
-      "\t\u003ch2 id=\"${1:contributors-title}\" class=\"h3\"\u003e${2:Contributors}\u003c/h2\u003e",
-      "\t\u003cp\u003e${3:Department or agency name}\u003c/p\u003e",
-      "\u003c/section\u003e"
-    ],
-    "description": "Contributors pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCWeb - Minister or institutional head": {
-    "prefix": "gcweb-minister",
-    "body": [
-      "\u003csection class=\"minister\"\u003e",
-      "\t\u003ch2 id=\"${1:minister-title}\" class=\"h3\"\u003e${2:Minister or institutional head}\u003c/h2\u003e",
-      "\t\u003cp\u003e${3:Name and role}\u003c/p\u003e",
-      "\u003c/section\u003e"
-    ],
-    "description": "Minister or institutional head pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCDS - Header": {
-    "prefix": "gcds-header",
-    "body": [
-      "\u003cgcds-header lang=\"${1:en}\"\u003e",
-      "\t\u003ca slot=\"home-link\" href=\"${2:/}\"\u003e${4:Government of Canada}\u003c/a\u003e",
-      "\t\u003cnav\u003e",
-      "\t\t\u003ca href=\"${6:/services}\"\u003e${7:Services}\u003c/a\u003e",
-      "\t\u003c/nav\u003e",
-      "\u003c/gcds-header\u003e"
-    ],
-    "description": "GCDS header pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCDS - Footer": {
-    "prefix": "gcds-footer",
-    "body": [
-      "\u003cgcds-footer lang=\"${1:en}\"\u003e",
-      "\t\u003ca href=\"${2:/privacy}\"\u003e${3:Privacy}\u003c/a\u003e",
-      "\t\u003ca href=\"${4:/terms}\"\u003e${5:Terms and conditions}\u003c/a\u003e",
-      "\u003c/gcds-footer\u003e"
-    ],
-    "description": "GCDS footer pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCDS - Button": {
-    "prefix": "gcds-button",
-    "body": [
-      "\u003cgcds-button href=\"${1:/path}\" type=\"${2:link}\"\u003e${3:Learn more}\u003c/gcds-button\u003e"
-    ],
-    "description": "GCDS button component",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCDS - Secondary button": {
-    "prefix": "gcds-button-secondary",
-    "body": [
-      "\u003cgcds-button href=\"${1:/path}\" type=\"secondary\"\u003e${2:Learn more}\u003c/gcds-button\u003e"
-    ],
-    "description": "Secondary GCDS button",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCDS - Link": {
-    "prefix": "gcds-link",
-    "body": [
-      "\u003ca href=\"${1:/path}\" class=\"gcds-link\"\u003e${2:Read more}\u003c/a\u003e"
-    ],
-    "description": "GCDS link styling",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCDS - Card": {
-    "prefix": "gcds-card",
-    "body": [
-      "\u003cgcds-card href=\"${1:/path}\"\u003e",
-      "\t\u003ch3\u003e${3:Card title}\u003c/h3\u003e",
-      "\t\u003cp\u003e${4:Short summary with clear action.}\u003c/p\u003e",
-      "\u003c/gcds-card\u003e"
-    ],
-    "description": "GCDS card component",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCDS - Hero banner": {
-    "prefix": "gcds-hero",
-    "body": [
-      "\u003csection class=\"gcds-hero\"\u003e",
-      "\t\u003ch2 id=\"${1:hero-title}\"\u003e${2:Welcome}\u003c/h2\u003e",
-      "\t\u003cp\u003e${3:Short introductory message.}\u003c/p\u003e",
-      "\t\u003ca href=\"${4:/start}\" class=\"gcds-button\"\u003e${5:Get started}\u003c/a\u003e",
-      "\u003c/section\u003e"
-    ],
-    "description": "GCDS hero banner",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCDS - Alert": {
-    "prefix": "gcds-alert",
-    "body": [
-      "\u003cgcds-alert type=\"${1:success}\"\u003e",
-      "\t\u003ch2\u003e${2:Success}\u003c/h2\u003e",
-      "\t\u003cp\u003e${3:Your request has been received.}\u003c/p\u003e",
-      "\u003c/gcds-alert\u003e"
-    ],
-    "description": "GCDS alert component",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCDS - Notice": {
-    "prefix": "gcds-notice",
-    "body": [
-      "\u003cdiv class=\"gcds-notice\"\u003e",
-      "\t\u003cp\u003e${1:Important information}\u003c/p\u003e",
-      "\u003c/div\u003e"
-    ],
-    "description": "GCDS notice pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCDS - Input": {
-    "prefix": "gcds-input",
-    "body": [
-      "\u003clabel for=\"${1:field-id}\"\u003e${2:Label}\u003c/label\u003e",
-      "\u003cinput id=\"${1:field-id}\" name=\"${3:name}\" type=\"${4:text}\" required /\u003e",
-      "\u003cp id=\"${5:hint-id}\" class=\"gcds-hint\"\u003e${6:Helpful instructions}\u003c/p\u003e"
-    ],
-    "description": "GCDS input field",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCDS - Textarea": {
-    "prefix": "gcds-textarea",
-    "body": [
-      "\u003clabel for=\"${1:message-id}\"\u003e${2:Message}\u003c/label\u003e",
-      "\u003ctextarea id=\"${1:message-id}\" name=\"${3:message}\" rows=\"${4:4}\" required\u003e\u003c/textarea\u003e",
-      "\u003cp id=\"${5:hint-id}\" class=\"gcds-hint\"\u003e${6:Provide a brief summary.}\u003c/p\u003e"
-    ],
-    "description": "GCDS textarea component",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCDS - Select": {
-    "prefix": "gcds-select",
-    "body": [
-      "\u003clabel for=\"${1:select-id}\"\u003e${2:Choose an option}\u003c/label\u003e",
-      "\u003cselect id=\"${1:select-id}\" name=\"${3:option}\"\u003e",
-      "\t\u003coption value=\"${4:one}\"\u003e${5:Option one}\u003c/option\u003e",
-      "\u003c/select\u003e"
-    ],
-    "description": "GCDS select field",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCDS - Checkbox": {
-    "prefix": "gcds-checkbox",
-    "body": [
-      "\u003clabel\u003e",
-      "\t\u003cinput type=\"checkbox\" name=\"${1:consent}\" value=\"${2:yes}\" /\u003e",
-      "\t${3:I agree to the terms and conditions}",
-      "\u003c/label\u003e"
-    ],
-    "description": "GCDS checkbox",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCDS - Radio group": {
-    "prefix": "gcds-radio",
-    "body": [
-      "\u003cfieldset\u003e",
-      "\t\u003clegend\u003e${1:Choose an option}\u003c/legend\u003e",
-      "\t\u003clabel\u003e\u003cinput type=\"radio\" name=\"${2:option}\" value=\"${3:one}\" /\u003e ${4:Option one}\u003c/label\u003e",
-      "\t\u003clabel\u003e\u003cinput type=\"radio\" name=\"${2:option}\" value=\"${5:two}\" /\u003e ${6:Option two}\u003c/label\u003e",
-      "\u003c/fieldset\u003e"
-    ],
-    "description": "GCDS radio button group",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCDS - Table": {
-    "prefix": "gcds-table",
-    "body": [
-      "\u003ctable class=\"gcds-table\"\u003e",
-      "\t\u003cthead\u003e",
-      "\t\t\u003ctr\u003e\u003cth scope=\"col\"\u003e${1:Header}\u003c/th\u003e\u003c/tr\u003e",
-      "\t\u003c/thead\u003e",
-      "\t\u003ctbody\u003e",
-      "\t\t\u003ctr\u003e\u003ctd\u003e${2:Value}\u003c/td\u003e\u003c/tr\u003e",
-      "\t\u003c/tbody\u003e",
-      "\u003c/table\u003e"
-    ],
-    "description": "GCDS table pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCDS - Tag": {
-    "prefix": "gcds-tag",
-    "body": [
-      "\u003cspan class=\"gcds-tag\"\u003e${1:New}\u003c/span\u003e"
-    ],
-    "description": "GCDS tag component",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCDS - Details": {
-    "prefix": "gcds-details",
-    "body": [
-      "\u003cdetails\u003e",
-      "\t\u003csummary\u003e${1:Show more}\u003c/summary\u003e",
-      "\t\u003cp\u003e${2:Additional content}\u003c/p\u003e",
-      "\u003c/details\u003e"
-    ],
-    "description": "GCDS details and summary",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCDS - Breadcrumb": {
-    "prefix": "gcds-breadcrumb",
-    "body": [
-      "\u003cnav\u003e",
-      "\t\u003col\u003e",
-      "\t\t\u003cli\u003e\u003ca href=\"${1:/}\"\u003eHome\u003c/a\u003e\u003c/li\u003e",
-      "\t\t\u003cli class=\"current\"\u003e${2:Current page}\u003c/li\u003e",
-      "\t\u003c/ol\u003e",
-      "\u003c/nav\u003e"
-    ],
-    "description": "GCDS breadcrumb pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCDS - Callout": {
-    "prefix": "gcds-callout",
-    "body": [
-      "\u003cdiv class=\"gcds-callout\"\u003e",
-      "\t\u003ch3\u003e${1:Need help?}\u003c/h3\u003e",
-      "\t\u003cp\u003e${2:Provide additional context or next steps.}\u003c/p\u003e",
-      "\u003c/div\u003e"
-    ],
-    "description": "GCDS informational callout",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCDS - List": {
-    "prefix": "gcds-list",
-    "body": [
-      "\u003cul class=\"gcds-list\"\u003e",
-      "\t\u003cli\u003e${1:First item}\u003c/li\u003e",
-      "\t\u003cli\u003e${2:Second item}\u003c/li\u003e",
-      "\u003c/ul\u003e"
-    ],
-    "description": "GCDS list styling",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCDS - Quote": {
-    "prefix": "gcds-quote",
-    "body": [
-      "\u003cblockquote\u003e",
-      "\t\u003cp\u003e${1:Use clear, direct language.}\u003c/p\u003e",
-      "\t\u003cfooter\u003e${2:Source}\u003c/footer\u003e",
-      "\u003c/blockquote\u003e"
-    ],
-    "description": "GCDS quote block",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "GCDS - Step list": {
-    "prefix": "gcds-steps",
-    "body": [
-      "\u003col class=\"gcds-steps\"\u003e",
-      "\t\u003cli\u003e\u003ch3\u003e${1:Step one}\u003c/h3\u003e\u003cp\u003e${2:Describe the step clearly.}\u003c/p\u003e\u003c/li\u003e",
-      "\t\u003cli\u003e\u003ch3\u003e${3:Step two}\u003c/h3\u003e\u003cp\u003e${4:Describe the next step clearly.}\u003c/p\u003e\u003c/li\u003e",
-      "\u003c/ol\u003e"
-    ],
-    "description": "GCDS step list",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Add to calendar": {
-    "prefix": "wet-add-to-calendar",
-    "body": [
-      "\u003ca href=\"${1:/calendar}\" class=\"btn btn-default\"\u003e${2:Add to calendar}\u003c/a\u003e"
-    ],
-    "description": "Add to calendar placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Archived information": {
-    "prefix": "wet-archived",
-    "body": [
-      "\u003cdiv class=\"alert alert-warning\"\u003e",
-      "\t\u003cp\u003e${1:This content is archived and may no longer be current.}\u003c/p\u003e",
-      "\u003c/div\u003e"
+      "\u003csection class=\"gc-archv wb-inview modal-content show-none bar-demo mrgn-tp-lg mrgn-bttm-lg\" data-inview=\"top-bar\"\u003e",
+      "\t\u003cdiv class=\"container\"\u003e",
+      "\t\t\u003ch2\u003eWe have archived this page and will not be updating it.\u003c/h2\u003e",
+      "\t\t\u003cp\u003eYou can use it for research or reference.\u003c/p\u003e",
+      "\t\u003c/div\u003e",
+      "\u003c/section\u003e",
+      "",
+      "\u003csection id=\"top-bar\" class=\"gc-archv wb-overlay modal-content overlay-def wb-bar-t\"\u003e",
+      "\t\u003cdiv class=\"container\"\u003e",
+      "\t\t\u003ch2\u003eWe have archived this page and will not be updating it.\u003c/h2\u003e",
+      "\t\t\u003cp\u003eYou can use it for research or reference.\u003c/p\u003e",
+      "\t\u003c/div\u003e",
+      "\u003c/section\u003e",
     ],
     "description": "Archived information notice",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
-  "WET - Background image": {
-    "prefix": "wet-background-image",
+  "WET - Archived information FR": {
+    "prefix": "wet-archived-fr",
     "body": [
-      "\u003csection style=\"background-image: url(\u0027${1:/img/banner.jpg}\u0027);\"\u003e",
-      "\t\u003cp\u003e${2:Background image content}\u003c/p\u003e",
+      "\u003csection class=\"gc-archv wb-inview modal-content show-none bar-demo mrgn-tp-lg mrgn-bttm-lg\" data-inview=\"top-bar\"\u003e",
+      "\t\u003cdiv class=\"container\"\u003e",
+      "\t\t\u003ch2\u003eNous avons archivé cette page et elle ne sera plus mise à jour.\u003c/h2\u003e",
+      "\t\t\u003cp\u003eVous pouvez la consulter à des fins de recherche ou à titre de référence.\u003c/p\u003e",
+      "\t\u003c/div\u003e",
+      "\u003c/section\u003e",
+      "",
+      "\u003csection id=\"top-bar\" class=\"gc-archv wb-overlay modal-content overlay-def wb-bar-t\"\u003e",
+      "\t\u003cdiv class=\"container\"\u003e",
+      "\t\t\u003ch2\u003eNous avons archivé cette page et elle ne sera plus mise à jour.\u003c/h2\u003e",
+      "\t\t\u003cp\u003eVous pouvez la consulter à des fins de recherche ou à titre de référence.\u003c/p\u003e",
+      "\t\u003c/div\u003e",
       "\u003c/section\u003e"
     ],
-    "description": "Background image section",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Basic HTML": {
-    "prefix": "wet-basic-html",
-    "body": [
-      "\u003carticle\u003e",
-      "\t\u003ch2\u003e${1:Heading}\u003c/h2\u003e",
-      "\t\u003cp\u003e${2:Paragraph}\u003c/p\u003e",
-      "\u003c/article\u003e"
-    ],
-    "description": "Basic HTML content structure",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "description": "Archived information notice",
+    "scope": "html"
   },
   "WET - Calendar of events": {
     "prefix": "wet-calendar",
     "body": [
-      "\u003csection\u003e",
-      "\t\u003ch2 id=\"${1:calendar-title}\"\u003e${2:Calendar of events}\u003c/h2\u003e",
+      "\u003cdiv id=\"calendar1\"\u003e\u003c/div\u003e",
+      "",
+      "\u003cdiv class=\"wb-calevt\" data-calevt-src=\"calendar1\"\u003e",
       "\t\u003cul\u003e",
-      "\t\t\u003cli\u003e\u003cstrong\u003e${3:Date}\u003c/strong\u003e — ${4:Event title}\u003c/li\u003e",
+      "\t\t\u003cli\u003e",
+      "\t\t\t\u003csection\u003e",
+      "\t\t\t\t\u003ch4\u003e\u003ca href=\"https://www.canada.ca\" rel=\"external\"\u003eSingle-Day Event\u003c/a\u003e\u003c/h4\u003e",
+      "\t\t\t\t\u003cp\u003e\u003ctime datetime=\"2013-03-11\"\u003eMarch 11th, 2013\u003c/time\u003e\u003c/p\u003e",
+      "\t\t\t\t\u003cp\u003eEvent Description\u003c/p\u003e",
+      "\t\t\t\u003c/section\u003e",
+      "\t\t\u003c/li\u003e",
+      "\t\t\u003cli\u003e",
+      "\t\t\t...",
+      "\t\t\u003c/li\u003e",
+      "\t\t...",
       "\t\u003c/ul\u003e",
-      "\u003c/section\u003e"
+      "\u003c/div\u003e"
     ],
     "description": "Calendar of events pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Charts and graphs": {
     "prefix": "wet-chart",
     "body": [
-      "\u003ctable class=\"table\"\u003e",
-      "\t\u003cthead\u003e\u003ctr\u003e\u003cth\u003e${1:Category}\u003c/th\u003e\u003cth\u003e${2:Value}\u003c/th\u003e\u003c/tr\u003e\u003c/thead\u003e",
-      "\t\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003e${3:One}\u003c/td\u003e\u003ctd\u003e${4:10}\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e",
+      "\u003ctable class=\"wb-charts table\"\u003e",
+      "\t\u003ccaption\u003e${1:Chart title}\u003c/caption\u003e",
+      "\t\u003ctr\u003e",
+      "\t\t\u003ctd\u003e\u003c/td\u003e",
+      "\t\t\u003cth\u003e${2:Category 1}\u003c/th\u003e",
+      "\t\t\u003cth\u003e${3:Category 2}\u003c/th\u003e",
+      "\t\u003c/tr\u003e",
+      "\t\u003ctr\u003e",
+      "\t\t\u003cth\u003e${4:Series 1}\u003c/th\u003e",
+      "\t\t\u003ctd\u003e${5:10}\u003c/td\u003e",
+      "\t\t\u003ctd\u003e${6:20}\u003c/td\u003e",
+      "\t\u003c/tr\u003e",
       "\u003c/table\u003e"
     ],
-    "description": "Data table used for charts",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "description": "WET chart table",
+    "scope": "html"
   },
-  "WET - Mobile accessibility checklist": {
-    "prefix": "wet-mobile-a11y",
+  "WET - Charts bar": {
+    "prefix": "wet-chart-bar",
     "body": [
-      "\u003cul\u003e",
-      "\t\u003cli\u003eKeyboard access is available.\u003c/li\u003e",
-      "\t\u003cli\u003eContrast is sufficient.\u003c/li\u003e",
-      "\t\u003cli\u003eImages have meaningful alt text.\u003c/li\u003e",
-      "\u003c/ul\u003e"
+      "\u003ctable class=\"wb-charts wb-charts-bar table\"\u003e",
+      "\t\u003ccaption\u003e${1:Chart title}\u003c/caption\u003e",
+      "\t\u003ctr\u003e",
+      "\t\t\u003ctd\u003e\u003c/td\u003e",
+      "\t\t\u003cth\u003e${2:Category 1}\u003c/th\u003e",
+      "\t\t\u003cth\u003e${3:Category 2}\u003c/th\u003e",
+      "\t\u003c/tr\u003e",
+      "\t\u003ctr\u003e",
+      "\t\t\u003cth\u003e${4:Series 1}\u003c/th\u003e",
+      "\t\t\u003ctd\u003e${5:10}\u003c/td\u003e",
+      "\t\t\u003ctd\u003e${6:20}\u003c/td\u003e",
+      "\t\u003c/tr\u003e",
+      "\u003c/table\u003e"
     ],
-    "description": "Accessibility checklist snippet",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "description": "WET bar chart table",
+    "scope": "html"
   },
-  "WET - Collapsible alert": {
-    "prefix": "wet-collapsible-alert",
+  "WET - Charts line": {
+    "prefix": "wet-chart-line",
     "body": [
-      "\u003cdetails class=\"alert alert-warning\"\u003e",
-      "\t\u003csummary\u003e${1:Show details}\u003c/summary\u003e",
-      "\t\u003cp\u003e${2:Additional information}\u003c/p\u003e",
-      "\u003c/details\u003e"
+      "\u003ctable class=\"wb-charts wb-charts-line table\"\u003e",
+      "\t\u003ccaption\u003e${1:Chart title}\u003c/caption\u003e",
+      "\t\u003ctr\u003e",
+      "\t\t\u003ctd\u003e\u003c/td\u003e",
+      "\t\t\u003cth\u003e${2:Category 1}\u003c/th\u003e",
+      "\t\t\u003cth\u003e${3:Category 2}\u003c/th\u003e",
+      "\t\u003c/tr\u003e",
+      "\t\u003ctr\u003e",
+      "\t\t\u003cth\u003e${4:Series 1}\u003c/th\u003e",
+      "\t\t\u003ctd\u003e${5:10}\u003c/td\u003e",
+      "\t\t\u003ctd\u003e${6:20}\u003c/td\u003e",
+      "\t\u003c/tr\u003e",
+      "\u003c/table\u003e"
     ],
-    "description": "Collapsible alert component",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "description": "WET line chart table",
+    "scope": "html"
+  },
+  "WET - Charts area": {
+    "prefix": "wet-chart-area",
+    "body": [
+      "\u003ctable class=\"wb-charts wb-charts-area table\"\u003e",
+      "\t\u003ccaption\u003e${1:Chart title}\u003c/caption\u003e",
+      "\t\u003ctr\u003e",
+      "\t\t\u003ctd\u003e\u003c/td\u003e",
+      "\t\t\u003cth\u003e${2:Category 1}\u003c/th\u003e",
+      "\t\t\u003cth\u003e${3:Category 2}\u003c/th\u003e",
+      "\t\u003c/tr\u003e",
+      "\t\u003ctr\u003e",
+      "\t\t\u003cth\u003e${4:Series 1}\u003c/th\u003e",
+      "\t\t\u003ctd\u003e${5:10}\u003c/td\u003e",
+      "\t\t\u003ctd\u003e${6:20}\u003c/td\u003e",
+      "\t\u003c/tr\u003e",
+      "\u003c/table\u003e"
+    ],
+    "description": "WET area chart table",
+    "scope": "html"
+  },
+  "WET - Charts pie": {
+    "prefix": "wet-chart-pie",
+    "body": [
+      "\u003ctable class=\"wb-charts wb-charts-pie table\"\u003e",
+      "\t\u003ccaption\u003e${1:Chart title}\u003c/caption\u003e",
+      "\t\u003ctr\u003e",
+      "\t\t\u003cth\u003e${2:Category}\u003c/th\u003e",
+      "\t\t\u003cth\u003e${3:Value}\u003c/th\u003e",
+      "\t\u003c/tr\u003e",
+      "\t\u003ctr\u003e",
+      "\t\t\u003ctd\u003e${4:Item one}\u003c/td\u003e",
+      "\t\t\u003ctd\u003e${5:10}\u003c/td\u003e",
+      "\t\u003c/tr\u003e",
+      "\t\u003ctr\u003e",
+      "\t\t\u003ctd\u003e${6:Item two}\u003c/td\u003e",
+      "\t\t\u003ctd\u003e${7:20}\u003c/td\u003e",
+      "\t\u003c/tr\u003e",
+      "\u003c/table\u003e"
+    ],
+    "description": "WET pie chart table",
+    "scope": "html"
   },
   "WET - Conditional template": {
     "prefix": "wet-conditional-template",
@@ -558,7 +259,7 @@
       "\u003c/div\u003e"
     ],
     "description": "Conditional template placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Country content": {
     "prefix": "wet-country-content",
@@ -566,7 +267,7 @@
       "\u003csection data-ajax-replace=\"${1:/content/fragment.html}\"\u003e\u003c/section\u003e"
     ],
     "description": "Country-specific content placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Data Ajax": {
     "prefix": "wet-data-ajax",
@@ -574,7 +275,7 @@
       "\u003csection data-ajax-replace=\"${1:/content/fragment.html}\" data-ajax-after=\"${2:body}\"\u003e\u003c/section\u003e"
     ],
     "description": "AJAX content placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Data fusion query": {
     "prefix": "wet-data-fusion",
@@ -584,7 +285,7 @@
       "\u003c/div\u003e"
     ],
     "description": "Data fusion query placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Data inview": {
     "prefix": "wet-data-inview",
@@ -594,7 +295,7 @@
       "\u003c/div\u003e"
     ],
     "description": "Data inview placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Data JSON": {
     "prefix": "wet-data-json",
@@ -602,7 +303,7 @@
       "\u003cdiv data-json=\"${1:/data/example.json}\"\u003e\u003c/div\u003e"
     ],
     "description": "Data JSON injection placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Data picture": {
     "prefix": "wet-data-picture",
@@ -610,7 +311,7 @@
       "\u003cimg srcset=\"${1:/img/small.jpg} 1x, ${2:/img/large.jpg} 2x\" alt=\"${3:Illustrative image}\" /\u003e"
     ],
     "description": "Responsive image markup",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Datalist autocomplete": {
     "prefix": "wet-datalist",
@@ -623,7 +324,7 @@
       "\u003c/datalist\u003e"
     ],
     "description": "Datalist autocomplete pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Details closed": {
     "prefix": "wet-details-closed",
@@ -634,7 +335,7 @@
       "\u003c/details\u003e"
     ],
     "description": "Details closed pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Details summary polyfill": {
     "prefix": "wet-details-polyfill",
@@ -645,7 +346,7 @@
       "\u003c/details\u003e"
     ],
     "description": "Details/summary polyfill pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Dismissible content": {
     "prefix": "wet-dismissible-content",
@@ -656,15 +357,7 @@
       "\u003c/section\u003e"
     ],
     "description": "Dismissible content pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Do action": {
-    "prefix": "wet-do-action",
-    "body": [
-      "\u003cbutton type=\"button\" class=\"btn btn-primary\"\u003e${1:Do action}\u003c/button\u003e"
-    ],
-    "description": "Do action button placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Equal height": {
     "prefix": "wet-equal-height",
@@ -675,7 +368,7 @@
       "\u003c/div\u003e"
     ],
     "description": "Equal-height card layout",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Exit script": {
     "prefix": "wet-exit-script",
@@ -683,7 +376,7 @@
       "\u003ca href=\"${1:https://example.com}\" rel=\"external\"\u003e${2:Continue to external site}\u003c/a\u003e"
     ],
     "description": "Exit script link pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Facebook embedded pages": {
     "prefix": "wet-facebook",
@@ -691,7 +384,7 @@
       "\u003cdiv class=\"fb-page\" data-href=\"${1:https://www.facebook.com/example}\"\u003e\u003c/div\u003e"
     ],
     "description": "Facebook embed placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Favicon": {
     "prefix": "wet-favicon",
@@ -699,7 +392,7 @@
       "\u003clink rel=\"icon\" href=\"${1:/img/favicon.ico}\" /\u003e"
     ],
     "description": "Favicon link",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Feedback form": {
     "prefix": "wet-feedback-form",
@@ -711,7 +404,7 @@
       "\u003c/form\u003e"
     ],
     "description": "Feedback form pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Feeds": {
     "prefix": "wet-feeds",
@@ -724,7 +417,7 @@
       "\u003c/section\u003e"
     ],
     "description": "Feed listing pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Field flow": {
     "prefix": "wet-fieldflow",
@@ -735,7 +428,7 @@
       "\u003c/fieldset\u003e"
     ],
     "description": "Field flow pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Filter": {
     "prefix": "wet-filter",
@@ -743,7 +436,7 @@
       "\u003cinput type=\"search\" placeholder=\"${1:Filter items}\" /\u003e"
     ],
     "description": "Filterable content placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Footnotes": {
     "prefix": "wet-footnote",
@@ -757,7 +450,7 @@
       "\u003c/aside\u003e"
     ],
     "description": "Accessible footnote pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Form validation": {
     "prefix": "wet-form-validation",
@@ -771,7 +464,7 @@
       "\u003c/form\u003e"
     ],
     "description": "Accessible form validation example",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Geomap": {
     "prefix": "wet-geomap",
@@ -779,15 +472,7 @@
       "\u003cdiv class=\"wb-geomap\" data-geomap=\"${1:map-data}\"\u003e\u003c/div\u003e"
     ],
     "description": "Geographic map placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Hello world plugin": {
-    "prefix": "wet-hello-world",
-    "body": [
-      "\u003cdiv class=\"hello-world\"\u003e${1:Hello world}\u003c/div\u003e"
-    ],
-    "description": "Hello world plugin example",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Date input": {
     "prefix": "wet-date-input",
@@ -796,7 +481,7 @@
       "\u003cinput id=\"${1:date}\" name=\"${3:date}\" type=\"date\" /\u003e"
     ],
     "description": "Date picker input",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Range input": {
     "prefix": "wet-range-input",
@@ -805,7 +490,49 @@
       "\u003cinput id=\"${1:range}\" name=\"${3:range}\" type=\"range\" min=\"0\" max=\"100\" value=\"50\" /\u003e"
     ],
     "description": "Range slider input",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
+  },
+  "WET - DataTables": {
+    "prefix": "wet-datatables",
+    "body": [
+      "\u003ctable class=\"wb-tables table table-striped table-hover\"\u003e",
+      "\t\u003cthead\u003e",
+      "\t\t\u003ctr\u003e",
+      "\t\t\t\u003cth scope=\"col\"\u003e${1:Header 1}\u003c/th\u003e",
+      "\t\t\t\u003cth scope=\"col\"\u003e${2:Header 2}\u003c/th\u003e",
+      "\t\t\u003c/tr\u003e",
+      "\t\u003c/thead\u003e",
+      "\t\u003ctbody\u003e",
+      "\t\t\u003ctr\u003e",
+      "\t\t\t\u003ctd\u003e${3:Row 1, column 1}\u003c/td\u003e",
+      "\t\t\t\u003ctd\u003e${4:Row 1, column 2}\u003c/td\u003e",
+      "\t\t\u003c/tr\u003e",
+      "\t\u003c/tbody\u003e",
+      "\u003c/table\u003e"
+    ],
+    "description": "WET DataTables starter table",
+    "scope": "html"
+  },
+  "WET - DataTables options": {
+    "prefix": "wet-datatables-options",
+    "body": [
+      "\u003ctable class=\"wb-tables table table-striped table-hover\" data-wb-tables='{ \"ordering\": false }'\u003e",
+      "\t\u003cthead\u003e",
+      "\t\t\u003ctr\u003e",
+      "\t\t\t\u003cth scope=\"col\"\u003e${1:Header 1}\u003c/th\u003e",
+      "\t\t\t\u003cth scope=\"col\"\u003e${2:Header 2}\u003c/th\u003e",
+      "\t\t\u003c/tr\u003e",
+      "\t\u003c/thead\u003e",
+      "\t\u003ctbody\u003e",
+      "\t\t\u003ctr\u003e",
+      "\t\t\t\u003ctd\u003e${3:Row 1, column 1}\u003c/td\u003e",
+      "\t\t\t\u003ctd\u003e${4:Row 1, column 2}\u003c/td\u003e",
+      "\t\t\u003c/tr\u003e",
+      "\t\u003c/tbody\u003e",
+      "\u003c/table\u003e"
+    ],
+    "description": "WET DataTables with options",
+    "scope": "html"
   },
   "WET - JSON Manager": {
     "prefix": "wet-json-manager",
@@ -813,7 +540,7 @@
       "\u003cdiv data-wb-jsonmanager=\"${1:json-data}\"\u003e\u003c/div\u003e"
     ],
     "description": "JSON Manager placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Lightbox": {
     "prefix": "wet-lightbox",
@@ -823,7 +550,7 @@
       "\u003c/a\u003e"
     ],
     "description": "Lightbox gallery trigger",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - MathML": {
     "prefix": "wet-mathml",
@@ -831,7 +558,7 @@
       "\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\"\u003e\u003cmi\u003ex\u003c/mi\u003e\u003cmo\u003e+\u003c/mo\u003e\u003cmn\u003e1\u003c/mn\u003e\u003c/math\u003e"
     ],
     "description": "MathML example",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Menu": {
     "prefix": "wet-menu",
@@ -843,7 +570,7 @@
       "\u003c/nav\u003e"
     ],
     "description": "Menu pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Merge server-client errors": {
     "prefix": "wet-merge-errors",
@@ -853,7 +580,7 @@
       "\u003c/div\u003e"
     ],
     "description": "Error summary placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Multimedia audio": {
     "prefix": "wet-audio",
@@ -863,7 +590,7 @@
       "\u003c/audio\u003e"
     ],
     "description": "Accessible audio player",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Multimedia video": {
     "prefix": "wet-video",
@@ -873,7 +600,7 @@
       "\u003c/video\u003e"
     ],
     "description": "Accessible video player",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Multimedia YouTube": {
     "prefix": "wet-youtube",
@@ -881,7 +608,7 @@
       "\u003ciframe title=\"${1:YouTube video}\" src=\"${2:https://www.youtube.com/embed/ID}\" allowfullscreen\u003e\u003c/iframe\u003e"
     ],
     "description": "Embedded YouTube video",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Overlay": {
     "prefix": "wet-overlay",
@@ -899,7 +626,7 @@
       "\u003c/div\u003e"
     ],
     "description": "Accessible overlay or modal pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Paginate": {
     "prefix": "wet-paginate",
@@ -912,209 +639,15 @@
       "\u003c/nav\u003e"
     ],
     "description": "Simple paginated navigation",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - PII scrub": {
-    "prefix": "wet-pii-scrub",
-    "body": [
-      "\u003cp\u003e${1:Personal information has been redacted.}\u003c/p\u003e"
-    ],
-    "description": "PII scrub placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Postback": {
-    "prefix": "wet-postback",
-    "body": [
-      "\u003cform method=\"post\"\u003e",
-      "\t\u003cbutton type=\"submit\"\u003e${1:Submit}\u003c/button\u003e",
-      "\u003c/form\u003e"
-    ],
-    "description": "Postback form example",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Prettify": {
     "prefix": "wet-prettify",
     "body": [
-      "\u003cpre\u003e\u003ccode class=\"language-html\"\u003e",
-      "${1:\u003cdiv class=\"example\"\u003eExample\u003c/div\u003e}",
-      "\u003c/code\u003e\u003c/pre\u003e"
+      "\u003cdiv class=\"wb-prettify all-pre hide\"\u003e\u003c/div\u003e"
     ],
-    "description": "Code block placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Progress polyfill": {
-    "prefix": "wet-progress",
-    "body": [
-      "\u003cprogress value=\"${1:50}\" max=\"${2:100}\"\u003e${1:50}%\u003c/progress\u003e"
-    ],
-    "description": "Progress indicator",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Randomize": {
-    "prefix": "wet-randomize",
-    "body": [
-      "\u003cul\u003e",
-      "\t\u003cli\u003e${1:Item one}\u003c/li\u003e",
-      "\t\u003cli\u003e${2:Item two}\u003c/li\u003e",
-      "\t\u003cli\u003e${3:Item three}\u003c/li\u003e",
-      "\u003c/ul\u003e"
-    ],
-    "description": "Randomized content placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Session expired": {
-    "prefix": "wet-session-expired",
-    "body": [
-      "\u003cp\u003e${1:Your session has expired. Please sign in again.}\u003c/p\u003e"
-    ],
-    "description": "Session expired message",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Steps form": {
-    "prefix": "wet-steps-form",
-    "body": [
-      "\u003cform\u003e",
-      "\t\u003cdiv\u003e",
-      "\t\t\u003clabel for=\"${1:step-one}\"\u003e${2:Step one}\u003c/label\u003e",
-      "\t\t\u003cinput id=\"${1:step-one}\" type=\"text\" /\u003e",
-      "\t\u003c/div\u003e",
-      "\u003c/form\u003e"
-    ],
-    "description": "Step-based form pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Table filters": {
-    "prefix": "wet-table-filters",
-    "body": [
-      "\u003ctable class=\"table table-striped\"\u003e",
-      "\t\u003cthead\u003e\u003ctr\u003e\u003cth\u003e${1:Name}\u003c/th\u003e\u003c/tr\u003e\u003c/thead\u003e",
-      "\t\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003e${2:Value}\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e",
-      "\u003c/table\u003e"
-    ],
-    "description": "Table filter placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Table validator": {
-    "prefix": "wet-table-validator",
-    "body": [
-      "\u003ctable\u003e",
-      "\t\u003ccaption\u003e${1:Table summary}\u003c/caption\u003e",
-      "\t\u003ctr\u003e\u003cth scope=\"col\"\u003e${2:Column}\u003c/th\u003e\u003c/tr\u003e",
-      "\t\u003ctr\u003e\u003ctd\u003e${3:Value}\u003c/td\u003e\u003c/tr\u003e",
-      "\u003c/table\u003e"
-    ],
-    "description": "Accessible table validator pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Tables": {
-    "prefix": "wet-tables",
-    "body": [
-      "\u003ctable class=\"table table-bordered\"\u003e",
-      "\t\u003cthead\u003e\u003ctr\u003e\u003cth\u003e${1:Header}\u003c/th\u003e\u003c/tr\u003e\u003c/thead\u003e",
-      "\t\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003e${2:Cell}\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e",
-      "\u003c/table\u003e"
-    ],
-    "description": "WET table example",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Tag filter": {
-    "prefix": "wet-tag-filter",
-    "body": [
-      "\u003cul class=\"list-inline\"\u003e",
-      "\t\u003cli\u003e\u003ca href=\"${1:#}\"\u003e${2:Tag one}\u003c/a\u003e\u003c/li\u003e",
-      "\u003c/ul\u003e"
-    ],
-    "description": "Tag filter placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Template HTML5": {
-    "prefix": "wet-template-html5",
-    "body": [
-      "\u003ctemplate\u003e",
-      "\t\u003cdiv\u003e${1:Reusable content}\u003c/div\u003e",
-      "\u003c/template\u003e"
-    ],
-    "description": "HTML5 template placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Text highlighting": {
-    "prefix": "wet-text-highlight",
-    "body": [
-      "\u003cp\u003e${1:Search results for \u003cmark\u003e${2:keyword}\u003c/mark\u003e appear here.}\u003c/p\u003e"
-    ],
-    "description": "Text highlighting pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Toggle": {
-    "prefix": "wet-toggle",
-    "body": [
-      "\u003cbutton type=\"button\" class=\"btn btn-default\" data-toggle=\"collapse\" data-target=\"#${1:toggle-pane}\"\u003e${2:Show more}\u003c/button\u003e",
-      "\u003cdiv id=\"${1:toggle-pane}\" class=\"collapse\"\u003e",
-      "\t\u003cp\u003e${3:Hidden content}\u003c/p\u003e",
-      "\u003c/div\u003e"
-    ],
-    "description": "Toggle/collapse content pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Transitions": {
-    "prefix": "wet-transitions",
-    "body": [
-      "\u003cdiv style=\"transition: all 0.3s ease;\"\u003e${1:Animated content}\u003c/div\u003e"
-    ],
-    "description": "CSS transition placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Twitter embedded timeline": {
-    "prefix": "wet-twitter",
-    "body": [
-      "\u003ca class=\"twitter-timeline\" href=\"${1:https://twitter.com/username}\"\u003e${2:Latest updates}\u003c/a\u003e"
-    ],
-    "description": "Twitter timeline placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - URL mapping ajax": {
-    "prefix": "wet-url-ajax",
-    "body": [
-      "\u003cdiv data-url-map=\"${1:/path}\"\u003e\u003c/div\u003e"
-    ],
-    "description": "URL mapping ajax placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - URL mapping table": {
-    "prefix": "wet-url-table",
-    "body": [
-      "\u003ctable data-url-map=\"${1:/path}\"\u003e\u003ctr\u003e\u003ctd\u003e${2:Content}\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e"
-    ],
-    "description": "URL mapping table filtering placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - URL mapping JSON": {
-    "prefix": "wet-url-json",
-    "body": [
-      "\u003cdiv data-url-map-json=\"${1:/data.json}\"\u003e\u003c/div\u003e"
-    ],
-    "description": "URL mapping JSON placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Utilities": {
-    "prefix": "wet-utilities",
-    "body": [
-      "\u003cdiv class=\"well\"\u003e${1:Utility content}\u003c/div\u003e"
-    ],
-    "description": "Utilities wrapper placeholder",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Accessibility assessment": {
-    "prefix": "wet-a11y-assessment",
-    "body": [
-      "\u003cul\u003e",
-      "\t\u003cli\u003eKeyboard accessibility checked.\u003c/li\u003e",
-      "\t\u003cli\u003eColor contrast reviewed.\u003c/li\u003e",
-      "\t\u003cli\u003eImages reviewed for alt text.\u003c/li\u003e",
-      "\u003c/ul\u003e"
-    ],
-    "description": "Accessibility assessment checklist",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "description": "WET prettify loader",
+    "scope": "html"
   },
   "WET - WET core": {
     "prefix": "wet-core",
@@ -1125,7 +658,7 @@
       "\u003c/main\u003e"
     ],
     "description": "WET core content scaffold",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Zebra striping": {
     "prefix": "wet-zebra",
@@ -1136,7 +669,7 @@
       "\u003c/table\u003e"
     ],
     "description": "Zebra-striped table pattern",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Alert info": {
     "prefix": "wet-alert-info",
@@ -1146,7 +679,7 @@
       "\u003c/div\u003e"
     ],
     "description": "WET informational alert",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Alert success": {
     "prefix": "wet-alert-success",
@@ -1156,7 +689,7 @@
       "\u003c/div\u003e"
     ],
     "description": "WET success alert",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Alert warning": {
     "prefix": "wet-alert-warning",
@@ -1166,23 +699,15 @@
       "\u003c/div\u003e"
     ],
     "description": "WET warning alert",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
-  "WET - Badge info": {
-    "prefix": "wet-badge-info",
+  "WET - Badge": {
+    "prefix": "wet-badge",
     "body": [
-      "\u003cspan class=\"label label-info\"\u003e${1:New}\u003c/span\u003e"
+      "\u003cspan class=\"badge\"\u003e${1:New}\u003c/span\u003e"
     ],
-    "description": "WET informational badge",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
-  },
-  "WET - Badge success": {
-    "prefix": "wet-badge-success",
-    "body": [
-      "\u003cspan class=\"label label-success\"\u003e${1:Complete}\u003c/span\u003e"
-    ],
-    "description": "WET success badge",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "description": "WET  badge",
+    "scope": "html"
   },
   "WET - Button primary": {
     "prefix": "wet-button-primary",
@@ -1190,7 +715,7 @@
       "\u003cbutton type=\"button\" class=\"btn btn-primary\"\u003e${1:Primary action}\u003c/button\u003e"
     ],
     "description": "WET primary button",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Button default": {
     "prefix": "wet-button-default",
@@ -1198,15 +723,76 @@
       "\u003cbutton type=\"button\" class=\"btn btn-default\"\u003e${1:Default action}\u003c/button\u003e"
     ],
     "description": "WET default button",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Button link": {
     "prefix": "wet-button-link",
     "body": [
-      "\u003ca href=\"${1:/path}\" class=\"btn btn-link\"\u003e${2:Learn more}\u003c/a\u003e"
+      "\u003cbutton type=\"reset\" class=\"btn btn-link btn-sm p-0\"\u003e${1:Reset to defaults}\u003c/button\u003e"
     ],
     "description": "WET link-style button",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
+  },
+  "WET - Button success": {
+    "prefix": "wet-button-success",
+    "body": [
+      "\u003cbutton type=\"button\" class=\"btn btn-success\"\u003e${1:Success action}\u003c/button\u003e"
+    ],
+    "description": "WET success button",
+    "scope": "html"
+  },
+  "WET - Button info": {
+    "prefix": "wet-button-info",
+    "body": [
+      "\u003cbutton type=\"button\" class=\"btn btn-info\"\u003e${1:Info action}\u003c/button\u003e"
+    ],
+    "description": "WET info button",
+    "scope": "html"
+  },
+  "WET - Button warning": {
+    "prefix": "wet-button-warning",
+    "body": [
+      "\u003cbutton type=\"button\" class=\"btn btn-warning\"\u003e${1:Warning action}\u003c/button\u003e"
+    ],
+    "description": "WET warning button",
+    "scope": "html"
+  },
+  "WET - Button danger": {
+    "prefix": "wet-button-danger",
+    "body": [
+      "\u003cbutton type=\"button\" class=\"btn btn-danger\"\u003e${1:Danger action}\u003c/button\u003e"
+    ],
+    "description": "WET danger button",
+    "scope": "html"
+  },
+  "WET - Button group": {
+    "prefix": "wet-btn-group",
+    "body": [
+      "\u003cdiv class=\"btn-group\" role=\"group\" aria-label=\"${1:Button group}\"\u003e",
+      "\t\u003cbutton type=\"button\" class=\"btn btn-default\"\u003e${2:Left}\u003c/button\u003e",
+      "\t\u003cbutton type=\"button\" class=\"btn btn-default\"\u003e${3:Middle}\u003c/button\u003e",
+      "\t\u003cbutton type=\"button\" class=\"btn btn-default\"\u003e${4:Right}\u003c/button\u003e",
+      "\u003c/div\u003e"
+    ],
+    "description": "WET button group",
+    "scope": "html"
+  },
+  "WET - Button toolbar": {
+    "prefix": "wet-btn-toolbar",
+    "body": [
+      "\u003cdiv class=\"btn-toolbar\" role=\"toolbar\" aria-label=\"${1:Toolbar}\"\u003e",
+      "\t\u003cdiv class=\"btn-group\" role=\"group\" aria-label=\"${2:First group}\"\u003e",
+      "\t\t\u003cbutton type=\"button\" class=\"btn btn-default\"\u003e${3:1}\u003c/button\u003e",
+      "\t\t\u003cbutton type=\"button\" class=\"btn btn-default\"\u003e${4:2}\u003c/button\u003e",
+      "\t\u003c/div\u003e",
+      "\t\u003cdiv class=\"btn-group\" role=\"group\" aria-label=\"${5:Second group}\"\u003e",
+      "\t\t\u003cbutton type=\"button\" class=\"btn btn-default\"\u003e${6:3}\u003c/button\u003e",
+      "\t\t\u003cbutton type=\"button\" class=\"btn btn-default\"\u003e${7:4}\u003c/button\u003e",
+      "\t\u003c/div\u003e",
+      "\u003c/div\u003e"
+    ],
+    "description": "WET button toolbar",
+    "scope": "html"
   },
   "WET - Panel": {
     "prefix": "wet-panel",
@@ -1221,7 +807,7 @@
       "\u003c/section\u003e"
     ],
     "description": "WET panel component",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Well": {
     "prefix": "wet-well",
@@ -1231,7 +817,7 @@
       "\u003c/div\u003e"
     ],
     "description": "WET well container",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - List inline": {
     "prefix": "wet-list-inline",
@@ -1242,7 +828,7 @@
       "\u003c/ul\u003e"
     ],
     "description": "WET inline list",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - List spaced": {
     "prefix": "wet-list-spaced",
@@ -1253,7 +839,7 @@
       "\u003c/ul\u003e"
     ],
     "description": "WET spaced list",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - List group": {
     "prefix": "wet-list-group",
@@ -1264,7 +850,7 @@
       "\u003c/ul\u003e"
     ],
     "description": "WET list group",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Table basic": {
     "prefix": "wet-table-basic",
@@ -1280,7 +866,7 @@
       "\u003c/table\u003e"
     ],
     "description": "WET basic table",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Table responsive": {
     "prefix": "wet-table-responsive",
@@ -1293,7 +879,7 @@
       "\u003c/div\u003e"
     ],
     "description": "WET responsive table",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Labels": {
     "prefix": "wet-labels",
@@ -1302,23 +888,24 @@
       "\u003cspan class=\"label label-info\"\u003e${2:Info}\u003c/span\u003e"
     ],
     "description": "WET labels",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Code": {
     "prefix": "wet-code",
     "body": [
-      "\u003cpre\u003e\u003ccode class=\"language-html\"\u003e${1:\u003cdiv class=\"example\"\u003eContent\u003c/div\u003e}\u003c/code\u003e\u003c/pre\u003e"
+      "\u003cpre\u003e\u003ccode\u003e${1:&amp;lt;div class=&quot;example&quot;&amp;gt;Content&amp;lt;/div&amp;gt;}\u003c/code\u003e\u003c/pre\u003e"
     ],
     "description": "WET code example",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Code prettify": {
     "prefix": "wet-code-prettify",
     "body": [
-      "\u003cpre\u003e\u003ccode class=\"prettyprint\"\u003e${1:console.log(\u0027Hello\u0027);}\u003c/code\u003e\u003c/pre\u003e"
+      "\u003cdiv class=\"wb-prettify all-pre hide\"\u003e\u003c/div\u003e",
+      "\u003cpre\u003e\u003ccode class=\"prettyprint\"\u003e${1:&amp;lt;div class=&quot;example&quot;&amp;gt;Content&amp;lt;/div&amp;gt;}\u003c/code\u003e\u003c/pre\u003e"
     ],
     "description": "WET prettified code sample",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Colour swatches": {
     "prefix": "wet-colour",
@@ -1330,18 +917,47 @@
       "\u003c/div\u003e"
     ],
     "description": "WET colour example",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
-  "WET - DataTables": {
-    "prefix": "wet-datatables",
+  "WET - Text colour primary": {
+    "prefix": "wet-text-colour-primary",
     "body": [
-      "\u003ctable class=\"table table-striped table-bordered\" id=\"dataTable\"\u003e",
-      "\t\u003cthead\u003e\u003ctr\u003e\u003cth scope=\"col\"\u003e${1:Name}\u003c/th\u003e\u003cth scope=\"col\"\u003e${2:Value}\u003c/th\u003e\u003c/tr\u003e\u003c/thead\u003e",
-      "\t\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003e${3:Example}\u003c/td\u003e\u003ctd\u003e${4:123}\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e",
-      "\u003c/table\u003e"
+      "\u003cspan class=\"text-primary\"\u003e${1:Primary text}\u003c/span\u003e"
     ],
-    "description": "WET DataTables-style table",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "description": "WET primary text colour",
+    "scope": "html"
+  },
+  "WET - Text colour success": {
+    "prefix": "wet-text-colour-success",
+    "body": [
+      "\u003cspan class=\"text-success\"\u003e${1:Success text}\u003c/span\u003e"
+    ],
+    "description": "WET success text colour",
+    "scope": "html"
+  },
+  "WET - Text colour info": {
+    "prefix": "wet-text-colour-info",
+    "body": [
+      "\u003cspan class=\"text-info\"\u003e${1:Info text}\u003c/span\u003e"
+    ],
+    "description": "WET info text colour",
+    "scope": "html"
+  },
+  "WET - Text colour warning": {
+    "prefix": "wet-text-colour-warning",
+    "body": [
+      "\u003cspan class=\"text-warning\"\u003e${1:Warning text}\u003c/span\u003e"
+    ],
+    "description": "WET warning text colour",
+    "scope": "html"
+  },
+  "WET - Text colour danger": {
+    "prefix": "wet-text-colour-danger",
+    "body": [
+      "\u003cspan class=\"text-danger\"\u003e${1:Danger text}\u003c/span\u003e"
+    ],
+    "description": "WET danger text colour",
+    "scope": "html"
   },
   "WET - Datalist polyfill": {
     "prefix": "wet-datalist-polyfill",
@@ -1354,7 +970,7 @@
       "\u003c/datalist\u003e"
     ],
     "description": "WET datalist autocomplete example",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Equalize": {
     "prefix": "wet-equalize",
@@ -1365,7 +981,7 @@
       "\u003c/div\u003e"
     ],
     "description": "WET equalize example",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Expand and hide": {
     "prefix": "wet-expand-hide",
@@ -1376,7 +992,7 @@
       "\u003c/details\u003e"
     ],
     "description": "WET expand and hide details summary",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Grid system": {
     "prefix": "wet-grid-system",
@@ -1387,7 +1003,7 @@
       "\u003c/div\u003e"
     ],
     "description": "WET grid system example",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Headings": {
     "prefix": "wet-headings",
@@ -1396,7 +1012,7 @@
       "\u003ch3 class=\"h3 underline\"\u003e${3:Underlined heading}\u003c/h3\u003e"
     ],
     "description": "WET heading styles",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Images": {
     "prefix": "wet-images",
@@ -1404,7 +1020,7 @@
       "\u003cimg src=\"${1:/img/example.jpg}\" alt=\"${2:Descriptive alt text}\" class=\"img-responsive\" /\u003e"
     ],
     "description": "WET image example",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Jumbotron": {
     "prefix": "wet-jumbotron",
@@ -1415,7 +1031,7 @@
       "\u003c/div\u003e"
     ],
     "description": "WET jumbotron",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Keyboard": {
     "prefix": "wet-keyboard",
@@ -1423,7 +1039,7 @@
       "\u003ckbd\u003e${1:Ctrl+S}\u003c/kbd\u003e"
     ],
     "description": "WET keyboard example",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Margin proximity": {
     "prefix": "wet-margin-proximity",
@@ -1431,7 +1047,7 @@
       "\u003cdiv class=\"mrgn-tp-md mrgn-bttm-md\"\u003e${1:Content with margin spacing}\u003c/div\u003e"
     ],
     "description": "WET margin proximity spacing",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Meter": {
     "prefix": "wet-meter",
@@ -1439,7 +1055,7 @@
       "\u003cmeter min=\"0\" max=\"100\" value=\"${1:75}\"\u003e${1:75}%\u003c/meter\u003e"
     ],
     "description": "WET meter",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Modal popup": {
     "prefix": "wet-modal-popup",
@@ -1454,7 +1070,7 @@
       "\u003c/div\u003e"
     ],
     "description": "WET modal popup",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Multimedia player": {
     "prefix": "wet-multimedia-player",
@@ -1465,7 +1081,7 @@
       "\u003c/video\u003e"
     ],
     "description": "WET multimedia player",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Opacity": {
     "prefix": "wet-opacity",
@@ -1473,7 +1089,7 @@
       "\u003cdiv style=\"opacity:${1:0.5};\"\u003e${2:Content}\u003c/div\u003e"
     ],
     "description": "WET opacity example",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Panels": {
     "prefix": "wet-panels",
@@ -1484,7 +1100,7 @@
       "\u003c/section\u003e"
     ],
     "description": "WET panels",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Pills": {
     "prefix": "wet-pills",
@@ -1495,7 +1111,7 @@
       "\u003c/ul\u003e"
     ],
     "description": "WET pills navigation",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Quotations": {
     "prefix": "wet-quotations",
@@ -1506,7 +1122,7 @@
       "\u003c/blockquote\u003e"
     ],
     "description": "WET quotations",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Reflowing": {
     "prefix": "wet-reflowing",
@@ -1517,7 +1133,7 @@
       "\u003c/div\u003e"
     ],
     "description": "WET reflowing layout",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Secondary menu": {
     "prefix": "wet-secondary-menu",
@@ -1530,7 +1146,7 @@
       "\u003c/nav\u003e"
     ],
     "description": "WET secondary menu",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Session timeout": {
     "prefix": "wet-session-timeout",
@@ -1540,7 +1156,7 @@
       "\u003c/div\u003e"
     ],
     "description": "WET session timeout notice",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Share widget": {
     "prefix": "wet-share-widget",
@@ -1548,7 +1164,7 @@
       "\u003cdiv class=\"wb-share\" data-wb-share=\"{\\\"id\\\":\\\"${1:share}\\\"}\"\u003e\u003c/div\u003e"
     ],
     "description": "WET share widget",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   },
   "WET - Tabbed interface": {
     "prefix": "wet-tabbed-interface",
@@ -1567,6 +1183,6 @@
       "\u003c/div\u003e"
     ],
     "description": "WET tabbed interface",
-    "scope": "html,javascript,javascriptreact,typescript,typescriptreact,vue,njk,liquid"
+    "scope": "html"
   }
 }
