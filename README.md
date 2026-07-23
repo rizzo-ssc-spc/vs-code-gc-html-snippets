@@ -2,7 +2,21 @@
 
 A reusable snippet library for Government of Canada web development patterns across GCWeb, GCDS, and WET.
 
-This project is optimized for VS Code and VS Code-based editors, and can also be used in other IDEs with conversion or manual setup.
+## Beta status
+
+This snippet pack is currently in beta.
+
+- Snippets are actively updated as GCWeb, WET, and GCDS examples evolve
+- Some prefixes and snippet bodies may still change between versions
+- Feedback and contribution are welcome
+
+## Contributing
+
+- Open an issue for bugs, broken snippets, or standards drift
+- Propose snippet updates by sharing before/after examples
+- Include links to the official GCWeb, WET, or GCDS reference used
+
+This project is optimized for VS Code and VS Code-based editors, and may also be used in other IDEs with conversion or manual setup.
 
 ## What this repo includes
 
@@ -14,6 +28,7 @@ This project is optimized for VS Code and VS Code-based editors, and can also be
 
 - gc-web-snippets.code-snippets: the main snippet library in VS Code JSON format
 - README.md: installation and usage guide
+- snippets-test.html: local test page for trying prefixes quickly
 
 ## Quick start (VS Code)
 
@@ -22,7 +37,7 @@ This project is optimized for VS Code and VS Code-based editors, and can also be
 3. In VS Code, press Ctrl+Shift+P and run Snippets: Configure Snippets
 4. Choose HTML (global or workspace)
 5. Paste the snippet JSON and save
-6. Open an HTML file and test a prefix such as wet-datatables
+6. Open an HTML file and test a prefix such as wet-panels
 
 ## Installation details
 
@@ -50,9 +65,9 @@ Steps:
 3. Save
 4. Reload VS Code
 
-## Use in other IDEs and editors
+## Use in other IDEs and editors (not tested - beta)
 
-Yes, with format-specific setup.
+Needs format-specific setup.
 
 ### Compatibility at a glance
 
@@ -63,11 +78,11 @@ Yes, with format-specific setup.
 
 ### VS Code-based editors (Cursor, VSCodium, Windsurf)
 
-1. Copy the full content of gc-web-snippets.code-snippets
+1. Copy the full content of [gc-web-snippets.code-snippets](https://github.com/rizzo-ssc-spc/vs-code-gc-html-snippets/blob/main/gc-web-snippets.code-snippets)
 2. Open the editor snippet configuration command
 3. Open HTML snippets
 4. Paste, save, and reload
-5. Test using a prefix such as gcweb-page-title
+5. Test using a prefix such as wet-panels
 
 ### JetBrains IDEs
 
@@ -92,26 +107,54 @@ JetBrains does not read VS Code snippet JSON directly.
 
 Dreamweaver does not import VS Code JSON snippets directly.
 
-1. Open Window > Snippets
-2. Create a folder, for example GCWeb-WET-GCDS
-3. Choose New Snippet
-4. Enter a snippet name
-5. Select type:
-   - Insert Block
-   - Wrap Selection
-6. Paste the HTML snippet body
-7. Save and repeat for high-use snippets
+Recommended approach: start with a small "starter pack" of high-use snippets and expand over time.
+
+1. Open Dreamweaver and open your site/project first
+2. Open the Snippets panel (Window > Snippets)
+3. Create a folder for team snippets (for example GCWeb-WET-GCDS)
+4. In that folder, create a new snippet
+5. Set the snippet type:
+    - Insert Block: inserts a full HTML block at the cursor (best for most snippets)
+    - Wrap Selection: wraps selected text in markup (useful for patterns such as callouts)
+6. Give the snippet a clear name using the VS Code prefix as reference (for example "wet-alert")
+7. Copy one snippet body from gc-web-snippets.code-snippets and paste it into Dreamweaver snippet content
+8. Replace VS Code placeholder syntax with plain sample text before saving:
+    - Replace ${1:...}, ${2:...}, etc.
+    - Remove $0
+9. Save and test in an HTML page by inserting it from the Snippets panel
+10. Repeat for the next most-used snippet
+
+Suggested starter snippets for Dreamweaver teams:
+
+- wet-panels
+- wet-alert
+- wet-button
+- wet-text-colour
+- wet-overlay
+- gcds-details
+- gcds-card
 
 Dreamweaver notes:
 
 - Snippets are inserted from the Snippets panel
-- VS Code placeholders such as ${1:Header} are not interpreted; replace them with plain sample text
-- Start with high-use snippets first for faster setup
+- VS Code placeholders such as ${1:Header} are not interpreted by Dreamweaver
+- Choice placeholders such as ${1|default,primary,...|} are also not supported
+- Keep snippet names/prefix references consistent across your team for easier support
+- Assign one maintainer to update Dreamweaver snippets when this beta pack changes
+
+Dreamweaver troubleshooting:
+
+- Snippet inserts nothing or incomplete markup:
+   verify that VS Code placeholders were fully removed before saving
+- Team members see different snippet lists:
+   confirm everyone imported/created snippets in the same local Dreamweaver Snippets folder
+- Markup is inserted but formatting looks off:
+   use Dreamweaver code formatting after insertion and validate output HTML
 
 ## Verify installation
 
 1. Open or create an HTML file
-2. Type a prefix such as wet-panel, wet-datatables, or gcds-button
+2. Type a prefix such as wet-panels, wet-datatables, or gcds-details
 3. Trigger snippet insertion (usually Tab or Enter depending on editor)
 4. Confirm the HTML block is inserted
 
@@ -127,17 +170,24 @@ GCDS examples:
 
 - gcds-lang-toggle
 - gcds-sr-only
+- gcds-stepper
+- gcds-table
+- gcds-grid
+- gcds-notice
+- gcds-pagination
+- gcds-error-message
+- gcds-icon
 
 WET examples:
 
-- wet-datatables
-- wet-datatables-options
-- wet-panel
-- wet-feedback-form
+- wet-panels
+- wet-alert
+- wet-button
+- wet-text-colour
 - wet-overlay
 - wet-tabbed-interface
-- wet-prettify
-- wet-code-prettify
+- wet-datatables
+- wet-datatables-options
 
 Tip: use your editor's snippet search to browse all prefixes in gc-web-snippets.code-snippets.
 

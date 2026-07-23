@@ -5,14 +5,20 @@
       "\u003ctable class=\"table table-bordered\"\u003e",
       "\t\u003ccaption\u003e${1:Table summary}\u003c/caption\u003e",
       "\t\u003cthead\u003e",
-      "\t\t\u003ctr\u003e\u003cth scope=\"col\"\u003e${2:Header}\u003c/th\u003e\u003c/tr\u003e",
+      "\t\t\u003ctr class=\"active\"\u003e",
+      "\t\t\t\u003cth scope=\"col\"\u003e${2:Header 1}\u003c/th\u003e",
+      "\t\t\t\u003cth scope=\"col\"\u003e${3:Header 2}\u003c/th\u003e",
+      "\t\t\u003c/tr\u003e",
       "\t\u003c/thead\u003e",
       "\t\u003ctbody\u003e",
-      "\t\t\u003ctr\u003e\u003ctd\u003e${3:Cell}\u003c/td\u003e\u003c/tr\u003e",
+      "\t\t\u003ctr\u003e",
+      "\t\t\t\u003cth scope=\"row\"\u003e${4:Cell 1}\u003c/th\u003e",
+      "\t\t\t\u003ctd\u003e${5:Cell 2}\u003c/td\u003e",
+      "\t\t\u003c/tr\u003e",
       "\t\u003c/tbody\u003e",
       "\u003c/table\u003e"
     ],
-    "description": "WET table example",
+    "description": "WET table pattern aligned with guide examples",
     "scope": "html"
   },
   "GCDS - Language toggle": {
@@ -29,6 +35,149 @@
       "<gcds-sr-only tag=\"${1:span}\">${2:Screen reader only text}</gcds-sr-only>"
     ],
     "description": "GCDS screenreader-only text",
+    "scope": "html"
+  },
+  "GCDS - Header": {
+    "prefix": "gcds-header",
+    "body": [
+      "<gcds-header lang-href=\"${1:fr-url-here}\" skip-to-href=\"${2:#id-main-content-here}\">",
+      "\t<gcds-search slot=\"search\"></gcds-search>",
+      "\t<gcds-topic-menu slot=\"menu\"></gcds-topic-menu>",
+      "\t<gcds-breadcrumbs slot=\"breadcrumb\">",
+      "\t\t<gcds-breadcrumbs-item href=\"${3:/content/canadasite/en/shared-services.html}\">${4:Shared Services Canada}</gcds-breadcrumbs-item>",
+      "\t</gcds-breadcrumbs>",
+      "</gcds-header>"
+    ],
+    "description": "GCDS header with search, topic menu, and breadcrumbs",
+    "scope": "html"
+  },
+  "GCDS - Fieldset": {
+    "prefix": "gcds-fieldset",
+    "body": [
+      "<gcds-fieldset legend=\"${1:Legend}\" legend-size=\"${2:h3}\" hint=\"${3:Hint / Example message.}\">",
+      "\t<gcds-input input-id=\"${4:form-input}\" label=\"${5:Input label}\">",
+      "\t</gcds-input>",
+      "\t<gcds-select select-id=\"${6:form-select}\" label=\"${7:Select label}\">",
+      "\t\t<option value=\"${8:option-1}\">${9:Option 1}</option>",
+      "\t\t<option value=\"${10:option-2}\">${11:Option 2}</option>",
+      "\t\t<option value=\"${12:option-3}\">${13:Option 3}</option>",
+      "\t</gcds-select>",
+      "</gcds-fieldset>"
+    ],
+    "description": "GCDS fieldset with essential attributes (legend, legend-size), optional hint, and default slot form controls",
+    "scope": "html"
+  },
+  "GCDS - Details": {
+    "prefix": "gcds-details",
+    "body": [
+      "<gcds-details details-title=\"${1:Learn more about this topic}\"${2: open}>",
+      "\t<gcds-text margin-bottom=\"0\">${3:Additional information.}</gcds-text>",
+      "</gcds-details>"
+    ],
+    "description": "GCDS details with essential details-title, optional open attribute, and default slot content",
+    "scope": "html"
+  },
+  "GCDS - Card": {
+    "prefix": "gcds-card",
+    "body": [
+      "<gcds-card card-title=\"${1:Card title link}\" card-title-tag=\"${2:h3}\" badge=\"${3:Tag}\" href=\"${4:#}\" description=\"${5:Description or supporting text relating to the headline.}\" img-src=\"${6:/images/common/components/preview-card.svg}\" img-alt=\"${7:Descriptive image alt text}\" target=\"${8:_blank}\" rel=\"${9:noopener noreferrer}\">",
+      "\t${10:Description or supporting text relating to the headline.}",
+      "</gcds-card>"
+    ],
+    "description": "GCDS card with essential and optional attributes plus default slot content",
+    "scope": "html"
+  },
+  "GCDS - Container": {
+    "prefix": "gcds-container",
+    "body": [
+      "<gcds-container tag=\"${1:div}\" layout=\"${2:full}\" size=\"${3:full}\" alignment=\"${4:start}\" margin=\"${5:0}\" padding=\"${6:300}\"${7: border}>",
+      "\t${8:<p>Container</p>}",
+      "</gcds-container>"
+    ],
+    "description": "GCDS container with essential usage and optional attributes (tag, layout, size, alignment, margin, padding, border)",
+    "scope": "html"
+  },
+  "GCDS - Stepper": {
+    "prefix": "gcds-stepper",
+    "body": [
+      "<gcds-stepper current-step=\"${1:1}\" total-steps=\"${2:4}\" tag=\"${3:h2}\">",
+      "\t${4:Section title}",
+      "</gcds-stepper>"
+    ],
+    "description": "GCDS stepper with essential attributes (current-step, total-steps), optional tag, and default slot heading text",
+    "scope": "html"
+  },
+  "GCDS - Table": {
+    "prefix": "gcds-table",
+    "body": [
+      "<gcds-table columns='[{\"field\":\"${1:submission_id}\",\"header\":\"${2:ID}\",\"rowHeader\":true,\"sort\":true,\"sortDirection\":\"${3:asc}\"},{\"field\":\"${4:submitter_name}\",\"header\":\"${5:Name}\",\"sort\":true}]' data='[{\"${1:submission_id}\":\"${6:EXP-2026-001}\",\"${4:submitter_name}\":\"${7:John A. Smith}\"}]' filter sort pagination pagination-size=\"${8:10}\" pagination-size-options='${9:[10, 25, 50, 0]}' pagination-current-page=\"${10:1}\" filter-value=\"${11:}\">",
+      "\t<div slot=\"caption\">",
+      "\t\t<h5>${12:Table caption}</h5>",
+      "\t\t<p>${13:Detailed caption for the table}</p>",
+      "\t</div>",
+      "</gcds-table>"
+    ],
+    "description": "GCDS table with columns/data and optional filter, sort, pagination, and caption slot",
+    "scope": "html"
+  },
+  "GCDS - Grid": {
+    "prefix": "gcds-grid",
+    "body": [
+      "<gcds-grid tag=\"${1:div}\" display=\"${2:grid}\" container=\"${3:full}\" alignment=\"${4:start}\" columns=\"${5:1fr}\" columns-tablet=\"${6:1fr 1fr}\" columns-desktop=\"${7:1fr 1fr 1fr}\" gap=\"${8:400}\" gap-tablet=\"${9:500}\" gap-desktop=\"${10:800}\" align-content=\"${11:stretch}\" align-items=\"${12:stretch}\" justify-content=\"${13:start}\" justify-items=\"${14:stretch}\" place-content=\"${15:stretch}\" place-items=\"${16:stretch}\">",
+      "\t<p>${17:Grid item 1}</p>",
+      "\t<p>${18:Grid item 2}</p>",
+      "\t<p>${19:Grid item 3}</p>",
+      "</gcds-grid>"
+    ],
+    "description": "GCDS grid with responsive columns, gap controls, alignment options, and default slot items",
+    "scope": "html"
+  },
+  "GCDS - Notice": {
+    "prefix": "gcds-notice",
+    "body": [
+      "<gcds-notice notice-role=\"${1:success}\" notice-title=\"${2:Success notice title}\" notice-title-tag=\"${3:h2}\">",
+      "\t<gcds-text margin-bottom=\"0\">",
+      "\t\t${4:This is a success message.}",
+      "\t</gcds-text>",
+      "</gcds-notice>"
+    ],
+    "description": "GCDS notice with essential attributes (notice-role, notice-title, notice-title-tag) and default slot message",
+    "scope": "html"
+  },
+  "GCDS - Pagination": {
+    "prefix": "gcds-pagination",
+    "body": [
+      "<gcds-pagination label=\"${1:List pagination example}\" display=\"${2:list}\" total-pages=\"${3:15}\" current-page=\"${4:9}\" previous-href=\"${5:#}\" previous-label=\"${6:Title of page}\" next-href=\"${7:#}\" next-label=\"${8:3 of 3}\" url='${9:{\"queryStrings\": {\"querystring::offset\": 10}, \"fragment\": \"main\"}}'>",
+      "</gcds-pagination>"
+    ],
+    "description": "GCDS pagination with essential label and optional simple/list attributes including url object",
+    "scope": "html"
+  },
+  "GCDS - Error message": {
+    "prefix": "gcds-error-message",
+    "body": [
+      "<gcds-error-message message-id=\"${1:message-default}\">",
+      "\t${2:Error message.}",
+      "</gcds-error-message>"
+    ],
+    "description": "GCDS error message with essential message-id and default slot text",
+    "scope": "html"
+  },
+  "GCDS - Icon": {
+    "prefix": "gcds-icon",
+    "body": [
+      "<gcds-icon name=\"${1|arrow-up,arrow-down,arrow-up-down,info-circle,warning-triangle,exclamation-circle,checkmark-circle,chevron-left,chevron-right,chevron-up,chevron-down,close,download,email,external,filter,phone,search,sort,tune|}\" size=\"${2:inherit}\" margin-left=\"${3:0}\" margin-right=\"${4:0}\" label=\"${5:Icon description for non-decorative use}\">",
+      "</gcds-icon>"
+    ],
+    "description": "GCDS icon with essential name, optional size/margins/label, and a list of relevant icon names",
+    "scope": "html"
+  },
+  "GCDS - Footer": {
+    "prefix": "gcds-footer",
+    "body": [
+      "\u003cgcds-footer display=\"full\"\u003e\u003c/gcds-footer\u003e"
+    ],
+    "description": "GCDS footer with meta and links",
     "scope": "html"
   },
   "GCWeb - Alert info": {
@@ -203,86 +352,263 @@
     "description": "WET collapsible sections with expand and collapse all buttons",
     "scope": "html"
   },
-  "WET - Dismissible content": {
+  "WET - Dismissable content": {
     "prefix": "wet-dismissible-content",
     "body": [
-      "\u003csection class=\"alert alert-info\"\u003e",
-      "\t\u003cbutton type=\"button\" class=\"close\" data-dismiss=\"alert\"\u003e\u003cspan\u003e\u0026times;\u003c/span\u003e\u003c/button\u003e",
-      "\t\u003cp\u003e${1:Dismissible content}\u003c/p\u003e",
-      "\u003c/section\u003e"
+      "\u003cdiv class=\"wb-dismissable\"\u003e",
+      "\t\u003cp\u003e${1:Non-primary content that can be dismissed by users.}\u003c/p\u003e",
+      "\u003c/div\u003e"
     ],
-    "description": "Dismissible content pattern",
+    "description": "WET dismissable content plugin pattern",
     "scope": "html"
   },
   "WET - Equal height": {
     "prefix": "wet-equal-height",
     "body": [
-      "\u003cdiv class=\"row\"\u003e",
-      "\t\u003cdiv class=\"col-md-6 well\"\u003e${1:First card}\u003c/div\u003e",
-      "\t\u003cdiv class=\"col-md-6 well\"\u003e${2:Second card}\u003c/div\u003e",
+      "\u003cdiv class=\"wb-eqht\"\u003e",
+      "\t\u003csection\u003e",
+      "\t\t\u003ch3\u003e${1:Short container 1}\u003c/h3\u003e",
+      "\t\t\u003cp\u003e${2:Example content}\u003c/p\u003e",
+      "\t\u003c/section\u003e",
+      "\t\u003csection\u003e",
+      "\t\t\u003ch3\u003e${3:Medium container 1}\u003c/h3\u003e",
+      "\t\t\u003cp\u003e${4:Example content with a bit more text to demonstrate equalized heights.}\u003c/p\u003e",
+      "\t\u003c/section\u003e",
+      "\t\u003csection\u003e",
+      "\t\t\u003ch3\u003e${5:Long container 1}\u003c/h3\u003e",
+      "\t\t\u003cp\u003e${6:Longer example content to show equal height behavior across items on the same baseline.}\u003c/p\u003e",
+      "\t\u003c/section\u003e",
       "\u003c/div\u003e"
     ],
-    "description": "Equal-height card layout",
-    "scope": "html"
-  },
-  "WET - Exit script": {
-    "prefix": "wet-exit-script",
-    "body": [
-      "\u003ca href=\"${1:https://example.com}\" rel=\"external\"\u003e${2:Continue to external site}\u003c/a\u003e"
-    ],
-    "description": "Exit script link pattern",
-    "scope": "html"
-  },
-  "WET - Facebook embedded pages": {
-    "prefix": "wet-facebook",
-    "body": [
-      "\u003cdiv class=\"fb-page\" data-href=\"${1:https://www.facebook.com/example}\"\u003e\u003c/div\u003e"
-    ],
-    "description": "Facebook embed placeholder",
-    "scope": "html"
-  },
-  "WET - Favicon": {
-    "prefix": "wet-favicon",
-    "body": [
-      "\u003clink rel=\"icon\" href=\"${1:/img/favicon.ico}\" /\u003e"
-    ],
-    "description": "Favicon link",
+    "description": "WET equal height plugin pattern (wb-eqht)",
     "scope": "html"
   },
   "WET - Feedback form": {
     "prefix": "wet-feedback-form",
     "body": [
-      "\u003cform class=\"wb-fdbck\" action=\"${1:/feedback}\" method=\"post\"\u003e",
-      "\t\u003clabel for=\"${2:feedback}\"\u003e${3:Tell us what you think}\u003c/label\u003e",
-      "\t\u003ctextarea id=\"${2:feedback}\" name=\"feedback\" rows=\"4\"\u003e\u003c/textarea\u003e",
-      "\t\u003cbutton type=\"submit\" class=\"btn btn-primary\"\u003e${4:Send feedback}\u003c/button\u003e",
-      "\u003c/form\u003e"
+      "\u003cdiv class=\"wb-frmvld wb-fdbck nojs-hide\"\u003e",
+      "\t\u003cp\u003e${1:If you have difficulty with the following form, you can use any of our} \u003ca href=\"#osc-avs\"\u003e${2:other service channels}\u003c/a\u003e ${3:to contact us.}\u003c/p\u003e",
+      "\t\u003cform action=\"${4:#}\" method=\"get\" id=\"fdbck-frm\"\u003e",
+      "\t\t\u003cinput type=\"hidden\" name=\"language\" value=\"${5:en}\"\u003e",
+      "\t\t\u003cdiv id=\"type\"\u003e",
+      "\t\t\t\u003cdiv class=\"form-group\"\u003e",
+      "\t\t\t\t\u003clabel for=\"fbrsn\" class=\"required\"\u003e\u003cspan class=\"field-name\"\u003e${6:Reason for contacting us}\u003c/span\u003e \u003cstrong class=\"required\" aria-hidden=\"true\"\u003e(${7:required})\u003c/strong\u003e\u003c/label\u003e",
+      "\t\t\t\t\u003cselect class=\"form-control\" name=\"fbrsn\" id=\"fbrsn\" required=\"required\"\u003e",
+      "\t\t\t\t\t\u003coption value=\"\"\u003e${8:Select a reason}\u003c/option\u003e",
+      "\t\t\t\t\t\u003coption value=\"web\"\u003e${9:Critical problem with the website}\u003c/option\u003e",
+      "\t\t\t\t\t\u003coption value=\"improvement\"\u003e${10:Suggested improvement for the website}\u003c/option\u003e",
+      "\t\t\t\t\t\u003coption value=\"other\"\u003e${11:Other}\u003c/option\u003e",
+      "\t\t\t\t\u003c/select\u003e",
+      "\t\t\t\u003c/div\u003e",
+      "\t\t\t\u003cdiv class=\"form-group\"\u003e",
+      "\t\t\t\t\u003clabel for=\"fbsbj\"\u003e\u003cspan class=\"field-name\"\u003e${12:Subject}\u003c/span\u003e\u003c/label\u003e",
+      "\t\t\t\t\u003cinput class=\"form-control\" type=\"text\" id=\"fbsbj\" name=\"fbsbj\" maxlength=\"60\"\u003e",
+      "\t\t\t\u003c/div\u003e",
+      "\t\t\t\u003cdiv class=\"form-group\"\u003e",
+      "\t\t\t\t\u003clabel for=\"fbmsg\" class=\"required\"\u003e\u003cspan class=\"field-name\"\u003e${13:Message}\u003c/span\u003e \u003cstrong class=\"required\" aria-hidden=\"true\"\u003e(${7:required})\u003c/strong\u003e\u003c/label\u003e",
+      "\t\t\t\t\u003ctextarea class=\"form-control\" id=\"fbmsg\" name=\"fbmsg\" rows=\"5\" required=\"required\"\u003e\u003c/textarea\u003e",
+      "\t\t\t\u003c/div\u003e",
+      "\t\t\u003c/div\u003e",
+      "",
+      "\t\t\u003csection id=\"fbweb\"\u003e",
+      "\t\t\t\u003ch2\u003e${14:Website issues}\u003c/h2\u003e",
+      "\t\t\t\u003ca class=\"wb-show-onfocus\" href=\"#fbcntc\"\u003e${15:Skip to Contact Information}\u003c/a\u003e",
+      "\t\t\t\u003cdiv class=\"form-group\"\u003e",
+      "\t\t\t\t\u003clabel for=\"fbpg\"\u003e\u003cspan class=\"field-name\"\u003e${16:What page address (URL) or page description?}\u003c/span\u003e\u003c/label\u003e",
+      "\t\t\t\t\u003cinput class=\"form-control\" type=\"text\" id=\"fbpg\" name=\"fbpg\" maxlength=\"400\"\u003e",
+      "\t\t\t\u003c/div\u003e",
+      "\t\t\t\u003cdiv class=\"form-group\"\u003e",
+      "\t\t\t\t\u003clabel for=\"fbprb\"\u003e${17:What were you trying to do when you encountered the problem?}\u003c/label\u003e",
+      "\t\t\t\t\u003ctextarea class=\"form-control\" id=\"fbprb\" name=\"fbprb\" rows=\"5\"\u003e\u003c/textarea\u003e",
+      "\t\t\t\u003c/div\u003e",
+      "\t\t\u003c/section\u003e",
+      "",
+      "\t\t\u003csection id=\"fbcntc\"\u003e",
+      "\t\t\t\u003ch2 class=\"wb-inv\"\u003e${18:Follow-up}\u003c/h2\u003e",
+      "\t\t\t\u003cdiv class=\"checkbox\"\u003e\u003clabel for=\"fbcntc1\"\u003e\u003cinput type=\"checkbox\" name=\"fbcntc1\" id=\"fbcntc1\" value=\"yes\"\u003e ${19:Please contact me if you require further details.}\u003c/label\u003e\u003c/div\u003e",
+      "\t\t\t\u003cdiv class=\"checkbox\"\u003e\u003clabel for=\"fbcntc2\"\u003e\u003cinput type=\"checkbox\" name=\"fbcntc2\" id=\"fbcntc2\" value=\"yes\"\u003e ${20:Send me a response.}\u003c/label\u003e\u003c/div\u003e",
+      "\t\t\u003c/section\u003e",
+      "",
+      "\t\t\u003cdiv class=\"form-group\"\u003e\u003cinput type=\"submit\" name=\"fbsbmt\" id=\"fbsbmt\" value=\"${21:Submit feedback}\" class=\"btn btn-primary\"\u003e\u003c/div\u003e",
+      "\t\t\u003cdiv class=\"form-group\"\u003e\u003cinput type=\"reset\" value=\"${22:Reset page to defaults}\" class=\"btn btn-default\"\u003e\u003c/div\u003e",
+      "\t\u003c/form\u003e",
+      "\u003c/div\u003e"
     ],
-    "description": "Feedback form pattern",
+    "description": "WET feedback form starter pattern (wb-fdbck)",
     "scope": "html"
   },
   "WET - Feeds": {
     "prefix": "wet-feeds",
     "body": [
-      "\u003csection\u003e",
-      "\t\u003ch2 id=\"${1:feeds-title}\"\u003e${2:News feed}\u003c/h2\u003e",
-      "\t\u003cul\u003e",
-      "\t\t\u003cli\u003e\u003ca href=\"${3:/feed}\"\u003e${4:Feed item}\u003c/a\u003e\u003c/li\u003e",
+      "\u003csection class=\"wb-feeds limit-${1:5}\"\u003e",
+      "\t\u003ch3\u003e${2:Road News Releases and Safety Recalls}\u003c/h3\u003e",
+      "\t\u003cul class=\"feeds-cont\"\u003e",
+      "\t\t\u003cli\u003e",
+      "\t\t\t\u003ca href=\"${3:https://www.tc.gc.ca/mediaroom/rss/road.xml}\"\u003e${4:Road News Releases (All)}\u003c/a\u003e",
+      "\t\t\u003c/li\u003e",
+      "\t\t\u003cli\u003e",
+      "\t\t\t\u003ca href=\"${5:https://wwwapps.tc.gc.ca/Saf-Sec-Sur/7/VRDB-BDRV/search-recherche/rss.aspx?lang=eng}\"\u003e${6:Road Safety Recalls}\u003c/a\u003e",
+      "\t\t\u003c/li\u003e",
       "\t\u003c/ul\u003e",
       "\u003c/section\u003e"
     ],
-    "description": "Feed listing pattern",
+    "description": "WET feeds widget pattern (wb-feeds)",
     "scope": "html"
   },
-  "WET - Field flow": {
-    "prefix": "wet-fieldflow",
-    "body": [
-      "\u003cfieldset\u003e",
-      "\t\u003clegend\u003e${1:Choose a path}\u003c/legend\u003e",
-      "\t\u003clabel\u003e\u003cinput type=\"radio\" name=\"path\" value=\"a\" /\u003e ${2:Option A}\u003c/label\u003e",
-      "\u003c/fieldset\u003e"
+  "GCWeb - Fieldflow redirects": {
+    "prefix": [
+      "fieldflow-redirects",
+      "gcweb-fieldflow-redirects"
     ],
-    "description": "Field flow pattern",
+    "body": [
+      "\u003cdiv class=\"wb-fieldflow\"\u003e",
+      "\t\u003cp\u003e${1:Find the plugin for the action you need:}\u003c/p\u003e",
+      "\t\u003cul\u003e",
+      "\t\t\u003cli\u003e\u003ca href=\"${2:https://wet-boew.github.io/v4.0-ci/demos/data-ajax/data-ajax-en.html}\"\u003e${3:Inserting content}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\u003cli\u003e\u003ca href=\"${4:https://wet-boew.github.io/v4.0-ci/demos/lightbox/lightbox-en.html}\"\u003e${5:Photo gallery}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\u003cli\u003e\u003ca href=\"${6:https://wet-boew.github.io/v4.0-ci/demos/charts/charts-en.html}\"\u003e${7:Draw charts}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\u003cli\u003e\u003ca href=\"${8:https://wet-boew.github.io/v4.0-ci/demos/details/details-en.html}\"\u003e${9:Expand and collapse content}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\u003cli\u003e\u003ca href=\"${10:https://wet-boew.github.io/v4.0-ci/demos/equalheight/equalheight-en.html}\"\u003e${11:Set a consistent height}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\u003cli\u003e\u003ca href=\"${12:https://wet-boew.github.io/v4.0-ci/demos/overlay/overlay-en.html}\"\u003e${13:Popup content}\u003c/a\u003e\u003c/li\u003e",
+      "\t\u003c/ul\u003e",
+      "\u003c/div\u003e"
+    ],
+    "description": "GCWeb fieldflow redirect example",
+    "scope": "html"
+  },
+  "GCWeb - Fieldflow ajax": {
+    "prefix": [
+      "fieldflow-ajax",
+      "gcweb-fieldflow-ajax"
+    ],
+    "body": [
+      "\u003cdiv class=\"wb-fieldflow\"\u003e",
+      "\t\u003cp\u003e${1:Choose content to be ajaxed:}\u003c/p\u003e",
+      "\t\u003cul\u003e",
+      "\t\t\u003cli data-wb-fieldflow=\"${2:ajax/ajax-1.html}\"\u003e${3:(Set 1) Nunc sed mauris id nisi molestie porta at quis erat.}\u003c/li\u003e",
+      "\t\t\u003cli data-wb-fieldflow=\"${4:ajax/ajax-2.html}\"\u003e${5:(Set 2) Vestibulum pretium tortor vel facilisis sodales.}\u003c/li\u003e",
+      "\t\t\u003cli data-wb-fieldflow=\"${6:ajax/ajax-3.html}\"\u003e${7:(Set 3) Nunc sit amet dui ut justo efficitur dapibus.}\u003c/li\u003e",
+      "\t\u003c/ul\u003e",
+      "\u003c/div\u003e"
+    ],
+    "description": "GCWeb fieldflow ajax example",
+    "scope": "html"
+  },
+  "GCWeb - Fieldflow grouping": {
+    "prefix": [
+      "fieldflow-grouping",
+      "gcweb-fieldflow-grouping"
+    ],
+    "body": [
+      "\u003cdiv class=\"wb-fieldflow\"\u003e",
+      "\t\u003cp\u003e${1:Find the plugin for the action you need.}\u003c/p\u003e",
+      "\t\u003cul\u003e",
+      "\t\t\u003cli\u003e${2:Layout and rendering}",
+      "\t\t\t\u003cul\u003e",
+      "\t\t\t\t\u003cli\u003e\u003ca href=\"${3:https://wet-boew.github.io/v4.0-ci/demos/data-ajax/data-ajax-en.html}\"\u003e${4:Inserting content}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\t\t\u003cli\u003e\u003ca href=\"${5:https://wet-boew.github.io/v4.0-ci/demos/charts/charts-en.html}\"\u003e${6:Draw charts}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\t\t\u003cli\u003e\u003ca href=\"${7:https://wet-boew.github.io/v4.0-ci/demos/equalheight/equalheight-en.html}\"\u003e${8:Set a consistent height}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\t\u003c/ul\u003e",
+      "\t\t\u003c/li\u003e",
+      "\t\t\u003cli\u003e${9:Interactive}",
+      "\t\t\t\u003cul\u003e",
+      "\t\t\t\t\u003cli\u003e\u003ca href=\"${10:https://wet-boew.github.io/v4.0-ci/demos/details/details-en.html}\"\u003e${11:Expand and collapse content}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\t\t\u003cli\u003e\u003ca href=\"${12:https://wet-boew.github.io/v4.0-ci/demos/lightbox/lightbox-en.html}\"\u003e${13:Photo gallery}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\t\t\u003cli\u003e\u003ca href=\"${14:https://wet-boew.github.io/v4.0-ci/demos/overlay/overlay-en.html}\"\u003e${15:Popup content}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\t\u003c/ul\u003e",
+      "\t\t\u003c/li\u003e",
+      "\t\u003c/ul\u003e",
+      "\u003c/div\u003e"
+    ],
+    "description": "GCWeb fieldflow grouping example",
+    "scope": "html"
+  },
+  "GCWeb - Fieldflow nesting": {
+    "prefix": [
+      "fieldflow-nesting",
+      "gcweb-fieldflow-nesting"
+    ],
+    "body": [
+      "\u003cdiv class=\"wb-fieldflow\"\u003e",
+      "\t\u003cp\u003e${1:Find the plugin for the action you need.}\u003c/p\u003e",
+      "\t\u003cul\u003e",
+      "\t\t\u003cli\u003e+ ${2:Layout and rendering}",
+      "\t\t\t\u003cdiv class=\"wb-fieldflow-sub\"\u003e",
+      "\t\t\t\t\u003cp\u003e${3:It is for?..}\u003c/p\u003e",
+      "\t\t\t\t\u003cul\u003e",
+      "\t\t\t\t\t\u003cli\u003e\u003ca href=\"${4:https://wet-boew.github.io/v4.0-ci/demos/data-ajax/data-ajax-en.html}\"\u003e${5:Inserting content}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\t\t\t\u003cli\u003e\u003ca href=\"${6:https://wet-boew.github.io/v4.0-ci/demos/charts/charts-en.html}\"\u003e${7:Draw charts}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\t\t\u003c/ul\u003e",
+      "\t\t\t\u003c/div\u003e",
+      "\t\t\u003c/li\u003e",
+      "\t\t\u003cli\u003e+ ${8:Interactive}",
+      "\t\t\t\u003cdiv class=\"wb-fieldflow-sub\"\u003e",
+      "\t\t\t\t\u003cp class=\"wb-fieldflow-label\"\u003e${9:What kind of interaction?}\u003c/p\u003e",
+      "\t\t\t\t\u003cul\u003e",
+      "\t\t\t\t\t\u003cli\u003e\u003ca href=\"${10:https://wet-boew.github.io/v4.0-ci/demos/details/details-en.html}\"\u003e${11:Expand and collapse content}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\t\t\t\u003cli\u003e\u003ca href=\"${12:https://wet-boew.github.io/v4.0-ci/demos/lightbox/lightbox-en.html}\"\u003e${13:Photo gallery}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\t\t\t\u003cli\u003e\u003ca href=\"${14:https://wet-boew.github.io/v4.0-ci/demos/overlay/overlay-en.html}\"\u003e${15:Popup content}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\t\t\u003c/ul\u003e",
+      "\t\t\t\u003c/div\u003e",
+      "\t\t\u003c/li\u003e",
+      "\t\u003c/ul\u003e",
+      "\u003c/div\u003e"
+    ],
+    "description": "GCWeb fieldflow nesting with subsequent control",
+    "scope": "html"
+  },
+  "GCWeb - Fieldflow inline": {
+    "prefix": [
+      "fieldflow-inline",
+      "gcweb-fieldflow-inline"
+    ],
+    "body": [
+      "\u003cdiv class=\"wb-fieldflow\" data-wb-fieldflow='{\"inline\": true}'\u003e",
+      "\t\u003cp\u003e${1:Find the plugin for the action you need:}\u003c/p\u003e",
+      "\t\u003cul\u003e",
+      "\t\t\u003cli\u003e\u003ca href=\"${2:https://wet-boew.github.io/v4.0-ci/demos/data-ajax/data-ajax-en.html}\"\u003e${3:Inserting content}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\u003cli\u003e\u003ca href=\"${4:https://wet-boew.github.io/v4.0-ci/demos/lightbox/lightbox-en.html}\"\u003e${5:Photo gallery}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\u003cli\u003e\u003ca href=\"${6:https://wet-boew.github.io/v4.0-ci/demos/charts/charts-en.html}\"\u003e${7:Draw charts}\u003c/a\u003e\u003c/li\u003e",
+      "\t\u003c/ul\u003e",
+      "\u003c/div\u003e"
+    ],
+    "description": "GCWeb fieldflow inline button example",
+    "scope": "html"
+  },
+  "GCWeb - Fieldflow inline button color": {
+    "prefix": [
+      "fieldflow-inline-color",
+      "gcweb-fieldflow-inline-color"
+    ],
+    "body": [
+      "\u003cdiv class=\"wb-fieldflow\" data-wb-fieldflow='{\"inline\": true, \"btnStyle\": \"${1:success}\"}'\u003e",
+      "\t\u003cp\u003e${2:Find the plugin for the action you need:}\u003c/p\u003e",
+      "\t\u003cul\u003e",
+      "\t\t\u003cli\u003e\u003ca href=\"${3:https://wet-boew.github.io/v4.0-ci/demos/data-ajax/data-ajax-en.html}\"\u003e${4:Inserting content}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\u003cli\u003e\u003ca href=\"${5:https://wet-boew.github.io/v4.0-ci/demos/lightbox/lightbox-en.html}\"\u003e${6:Photo gallery}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\u003cli\u003e\u003ca href=\"${7:https://wet-boew.github.io/v4.0-ci/demos/charts/charts-en.html}\"\u003e${8:Draw charts}\u003c/a\u003e\u003c/li\u003e",
+      "\t\u003c/ul\u003e",
+      "\u003c/div\u003e"
+    ],
+    "description": "GCWeb fieldflow inline button color example",
+    "scope": "html"
+  },
+  "GCWeb - Fieldflow inline show label": {
+    "prefix": [
+      "fieldflow-inline-show-label",
+      "gcweb-fieldflow-inline-show-label"
+    ],
+    "body": [
+      "\u003cdiv class=\"wb-fieldflow\" data-wb-fieldflow='{\"inline\": true, \"showLabel\": true}'\u003e",
+      "\t\u003cp\u003e${1:Find the plugin for the action you need:}\u003c/p\u003e",
+      "\t\u003cul\u003e",
+      "\t\t\u003cli\u003e\u003ca href=\"${2:https://wet-boew.github.io/v4.0-ci/demos/data-ajax/data-ajax-en.html}\"\u003e${3:Inserting content}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\u003cli\u003e\u003ca href=\"${4:https://wet-boew.github.io/v4.0-ci/demos/lightbox/lightbox-en.html}\"\u003e${5:Photo gallery}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\u003cli\u003e\u003ca href=\"${6:https://wet-boew.github.io/v4.0-ci/demos/charts/charts-en.html}\"\u003e${7:Draw charts}\u003c/a\u003e\u003c/li\u003e",
+      "\t\u003c/ul\u003e",
+      "\u003c/div\u003e"
+    ],
+    "description": "GCWeb fieldflow inline example with visible label",
     "scope": "html"
   },
   "WET - Footnotes": {
@@ -299,20 +625,6 @@
     "description": "Accessible footnote pattern",
     "scope": "html"
   },
-  "WET - Form validation": {
-    "prefix": "wet-form-validation",
-    "body": [
-      "\u003cform novalidate\u003e",
-      "\t\u003cdiv class=\"form-group\"\u003e",
-      "\t\t\u003clabel for=\"${1:email}\"\u003e${2:Email address}\u003c/label\u003e",
-      "\t\t\u003cinput id=\"${1:email}\" name=\"email\" type=\"email\" required /\u003e",
-      "\t\t\u003cp id=\"${3:email-hint}\" class=\"help-block\"\u003e${4:Enter a valid address.}\u003c/p\u003e",
-      "\t\u003c/div\u003e",
-      "\u003c/form\u003e"
-    ],
-    "description": "Accessible form validation example",
-    "scope": "html"
-  },
   "WET - Date input": {
     "prefix": "wet-date-input",
     "body": [
@@ -325,10 +637,10 @@
   "WET - Range input": {
     "prefix": "wet-range-input",
     "body": [
-      "\u003clabel for=\"${1:range}\"\u003e${2:Range}\u003c/label\u003e",
-      "\u003cinput id=\"${1:range}\" name=\"${3:range}\" type=\"range\" min=\"0\" max=\"100\" value=\"50\" /\u003e"
+      "\u003clabel for=\"${1:html5shim-1}\"\u003e${2:Range: 0 to 100 in steps of 1}\u003c/label\u003e \u003cspan id=\"${1:html5shim-1}-out\"\u003e\u003c/span\u003e",
+      "\u003cinput name=\"${1:html5shim-1}\" id=\"${1:html5shim-1}\" type=\"range\" min=\"${3:0}\" max=\"${4:100}\" step=\"${5:1}\" title=\"${2:Range: 0 to 100 in steps of 1}\" value=\"${6:50}\" /\u003e"
     ],
-    "description": "Range slider input",
+    "description": "Input type=\"range\" polyfill (slider control)",
     "scope": "html"
   },
   "WET - DataTables": {
@@ -386,9 +698,34 @@
   "WET - MathML": {
     "prefix": "wet-mathml",
     "body": [
-      "\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\"\u003e\u003cmi\u003ex\u003c/mi\u003e\u003cmo\u003e+\u003c/mo\u003e\u003cmn\u003e1\u003c/mn\u003e\u003c/math\u003e"
+      "\u003cmath xmlns=\"http://www.w3.org/1998/Math/MathML\"\u003e",
+      "\t\u003cmrow\u003e",
+      "\t\t\u003cmi\u003ex\u003c/mi\u003e",
+      "\t\t\u003cmo\u003e=\u003c/mo\u003e",
+      "\t\t\u003cmfrac\u003e",
+      "\t\t\t\u003cmrow\u003e",
+      "\t\t\t\t\u003cmo\u003e&#x2212;\u003c/mo\u003e",
+      "\t\t\t\t\u003cmi\u003eb\u003c/mi\u003e",
+      "\t\t\t\t\u003cmo\u003e&#x00B1;\u003c/mo\u003e",
+      "\t\t\t\t\u003cmsqrt\u003e",
+      "\t\t\t\t\t\u003cmrow\u003e",
+      "\t\t\t\t\t\t\u003cmsup\u003e\u003cmi\u003eb\u003c/mi\u003e\u003cmn\u003e2\u003c/mn\u003e\u003c/msup\u003e",
+      "\t\t\t\t\t\t\u003cmo\u003e&#x2212;\u003c/mo\u003e",
+      "\t\t\t\t\t\t\u003cmn\u003e4\u003c/mn\u003e",
+      "\t\t\t\t\t\t\u003cmi\u003ea\u003c/mi\u003e",
+      "\t\t\t\t\t\t\u003cmi\u003ec\u003c/mi\u003e",
+      "\t\t\t\t\t\u003c/mrow\u003e",
+      "\t\t\t\t\u003c/msqrt\u003e",
+      "\t\t\t\u003c/mrow\u003e",
+      "\t\t\t\u003cmrow\u003e",
+      "\t\t\t\t\u003cmn\u003e2\u003c/mn\u003e",
+      "\t\t\t\t\u003cmi\u003ea\u003c/mi\u003e",
+      "\t\t\t\u003c/mrow\u003e",
+      "\t\t\u003c/mfrac\u003e",
+      "\t\u003c/mrow\u003e",
+      "\u003c/math\u003e"
     ],
-    "description": "MathML example",
+    "description": "MathML quadratic formula example",
     "scope": "html"
   },
   "WET - Menu": {
@@ -419,53 +756,178 @@
     "description": "WET audio-only multimedia player",
     "scope": "html"
   },
-  "WET - Multimedia video": {
-    "prefix": "wet-video",
+  "WET - Overlay left panel": {
+    "prefix": "wet-overlay-left-panel",
     "body": [
-      "\u003cvideo controls width=\"${1:640}\"\u003e",
-      "\t\u003csource src=\"${2:/media/video.mp4}\" type=\"video/mp4\" /\u003e",
-      "\u003c/video\u003e"
-    ],
-    "description": "Accessible video player",
-    "scope": "html"
-  },
-  "WET - Multimedia YouTube": {
-    "prefix": "wet-youtube",
-    "body": [
-      "\u003ciframe title=\"${1:YouTube video}\" src=\"${2:https://www.youtube.com/embed/ID}\" allowfullscreen\u003e\u003c/iframe\u003e"
-    ],
-    "description": "Embedded YouTube video",
-    "scope": "html"
-  },
-  "WET - Overlay": {
-    "prefix": "wet-overlay",
-    "body": [
-      "\u003cbutton type=\"button\" class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#${1:overlay-id}\"\u003e${2:Open dialog}\u003c/button\u003e",
-      "\u003cdiv class=\"modal fade\" id=\"${1:overlay-id}\" tabindex=\"-1\"\u003e",
-      "\t\u003cdiv class=\"modal-dialog\"\u003e",
-      "\t\t\u003cdiv class=\"modal-content\"\u003e",
-      "\t\t\t\u003cdiv class=\"modal-header\"\u003e",
-      "\t\t\t\t\u003ch2 id=\"${3:overlay-title}\" class=\"h3\"\u003e${4:Dialog title}\u003c/h2\u003e",
-      "\t\t\t\u003c/div\u003e",
-      "\t\t\t\u003cdiv class=\"modal-body\"\u003e${5:Dialog content}\u003c/div\u003e",
-      "\t\t\u003c/div\u003e",
+      "\u003cp\u003e\u003ca href=\"#${1:left-panel}\" aria-controls=\"${1:left-panel}\" class=\"overlay-lnk\" role=\"button\"\u003e${2:Left panel}\u003c/a\u003e\u003c/p\u003e",
+      "\u003csection id=\"${1:left-panel}\" class=\"wb-overlay modal-content overlay-def wb-panel-l\"\u003e",
+      "\t\u003cheader class=\"modal-header\"\u003e",
+      "\t\t\u003ch2 class=\"modal-title\"\u003e${2:Left panel}\u003c/h2\u003e",
+      "\t\u003c/header\u003e",
+      "\t\u003cdiv class=\"modal-body\"\u003e",
+      "\t\t\u003cul class=\"list-unstyled\"\u003e",
+      "\t\t\t\u003cli\u003e\u003ca href=\"#\"\u003e${3:Link 1}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\t\u003cli\u003e\u003ca href=\"#\"\u003e${4:Link 2}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\u003c/ul\u003e",
       "\t\u003c/div\u003e",
-      "\u003c/div\u003e"
+      "\u003c/section\u003e"
     ],
-    "description": "Accessible overlay or modal pattern",
+    "description": "WET overlay left panel working example",
     "scope": "html"
   },
-  "WET - Paginate": {
-    "prefix": "wet-paginate",
+  "WET - Overlay right panel": {
+    "prefix": "wet-overlay-right-panel",
     "body": [
-      "\u003cnav\u003e",
-      "\t\u003cul class=\"pager\"\u003e",
-      "\t\t\u003cli\u003e\u003ca href=\"${1:#}\"\u003ePrevious\u003c/a\u003e\u003c/li\u003e",
-      "\t\t\u003cli\u003e\u003ca href=\"${2:#}\"\u003eNext\u003c/a\u003e\u003c/li\u003e",
-      "\t\u003c/ul\u003e",
-      "\u003c/nav\u003e"
+      "\u003cp\u003e\u003ca href=\"#${1:right-panel}\" aria-controls=\"${1:right-panel}\" class=\"overlay-lnk\" role=\"button\"\u003e${2:Right panel}\u003c/a\u003e\u003c/p\u003e",
+      "\u003csection id=\"${1:right-panel}\" class=\"wb-overlay modal-content overlay-def wb-panel-r\"\u003e",
+      "\t\u003cheader class=\"modal-header\"\u003e",
+      "\t\t\u003ch2 class=\"modal-title\"\u003e${2:Right panel}\u003c/h2\u003e",
+      "\t\u003c/header\u003e",
+      "\t\u003cdiv class=\"modal-body\"\u003e",
+      "\t\t\u003cul class=\"list-unstyled\"\u003e",
+      "\t\t\t\u003cli\u003e\u003ca href=\"#\"\u003e${3:Link 1}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\t\u003cli\u003e\u003ca href=\"#\"\u003e${4:Link 2}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\u003c/ul\u003e",
+      "\t\u003c/div\u003e",
+      "\u003c/section\u003e"
     ],
-    "description": "Simple paginated navigation",
+    "description": "WET overlay right panel working example",
+    "scope": "html"
+  },
+  "WET - Overlay top bar": {
+    "prefix": "wet-overlay-top-bar",
+    "body": [
+      "\u003cp\u003e\u003ca href=\"#${1:top-bar}\" aria-controls=\"${1:top-bar}\" class=\"overlay-lnk\" role=\"button\"\u003e${2:Top bar}\u003c/a\u003e\u003c/p\u003e",
+      "\u003csection id=\"${1:top-bar}\" class=\"wb-overlay modal-content overlay-def wb-bar-t\"\u003e",
+      "\t\u003cheader\u003e",
+      "\t\t\u003ch2 class=\"modal-title\"\u003e${2:Top bar}\u003c/h2\u003e",
+      "\t\u003c/header\u003e",
+      "\t\u003cul class=\"list-inline\"\u003e",
+      "\t\t\u003cli\u003e\u003cbutton class=\"btn btn-default\" type=\"button\"\u003e${3:Button 1}\u003c/button\u003e\u003c/li\u003e",
+      "\t\t\u003cli\u003e\u003cbutton class=\"btn btn-default\" type=\"button\"\u003e${4:Button 2}\u003c/button\u003e\u003c/li\u003e",
+      "\t\t\u003cli\u003e\u003cbutton class=\"btn btn-default\" type=\"button\"\u003e${5:Button 3}\u003c/button\u003e\u003c/li\u003e",
+      "\t\u003c/ul\u003e",
+      "\u003c/section\u003e"
+    ],
+    "description": "WET overlay top bar working example",
+    "scope": "html"
+  },
+  "WET - Overlay bottom bar": {
+    "prefix": "wet-overlay-bottom-bar",
+    "body": [
+      "\u003cp\u003e\u003ca href=\"#${1:bottom-bar}\" aria-controls=\"${1:bottom-bar}\" class=\"overlay-lnk\" role=\"button\"\u003e${2:Bottom bar}\u003c/a\u003e\u003c/p\u003e",
+      "\u003csection id=\"${1:bottom-bar}\" class=\"wb-overlay modal-content overlay-def wb-bar-b\"\u003e",
+      "\t\u003cheader\u003e",
+      "\t\t\u003ch2 class=\"modal-title\"\u003e${2:Bottom bar}\u003c/h2\u003e",
+      "\t\u003c/header\u003e",
+      "\t\u003cul class=\"list-inline\"\u003e",
+      "\t\t\u003cli\u003e\u003cbutton class=\"btn btn-default\" type=\"button\"\u003e${3:Button 1}\u003c/button\u003e\u003c/li\u003e",
+      "\t\t\u003cli\u003e\u003cbutton class=\"btn btn-default\" type=\"button\"\u003e${4:Button 2}\u003c/button\u003e\u003c/li\u003e",
+      "\t\t\u003cli\u003e\u003cbutton class=\"btn btn-default\" type=\"button\"\u003e${5:Button 3}\u003c/button\u003e\u003c/li\u003e",
+      "\t\u003c/ul\u003e",
+      "\u003c/section\u003e"
+    ],
+    "description": "WET overlay bottom bar working example",
+    "scope": "html"
+  },
+  "WET - Overlay middle screen": {
+    "prefix": "wet-overlay-middle-screen",
+    "body": [
+      "\u003cp\u003e\u003ca href=\"#${1:mid-screen}\" aria-controls=\"${1:mid-screen}\" class=\"overlay-lnk\" role=\"button\"\u003e${2:Middle screen overlay}\u003c/a\u003e\u003c/p\u003e",
+      "\u003csection id=\"${1:mid-screen}\" class=\"wb-overlay modal-content overlay-def wb-popup-mid\"\u003e",
+      "\t\u003cheader class=\"modal-header\"\u003e",
+      "\t\t\u003ch2 class=\"modal-title\"\u003e${2:Middle screen overlay}\u003c/h2\u003e",
+      "\t\u003c/header\u003e",
+      "\t\u003cdiv class=\"modal-body\"\u003e",
+      "\t\t\u003col\u003e",
+      "\t\t\t\u003cli\u003e${3:Ordered item 1}\u003c/li\u003e",
+      "\t\t\t\u003cli\u003e${4:Ordered item 2}\u003c/li\u003e",
+      "\t\t\u003c/ol\u003e",
+      "\t\u003c/div\u003e",
+      "\u003c/section\u003e"
+    ],
+    "description": "WET middle screen overlay working example",
+    "scope": "html"
+  },
+  "WET - Overlay middle screen with background": {
+    "prefix": "wet-overlay-middle-screen-bg",
+    "body": [
+      "\u003cp\u003e\u003ca href=\"#${1:mid-screen-bg}\" aria-controls=\"${1:mid-screen-bg}\" class=\"overlay-lnk\" role=\"button\"\u003e${2:Middle screen overlay with background}\u003c/a\u003e\u003c/p\u003e",
+      "\u003csection id=\"${1:mid-screen-bg}\" class=\"wb-overlay modal-content overlay-def wb-popup-mid overlay-bg\"\u003e",
+      "\t\u003cheader class=\"modal-header\"\u003e",
+      "\t\t\u003ch2 class=\"modal-title\"\u003e${2:Middle screen overlay with background}\u003c/h2\u003e",
+      "\t\u003c/header\u003e",
+      "\t\u003cdiv class=\"modal-body\"\u003e",
+      "\t\t\u003col\u003e",
+      "\t\t\t\u003cli\u003e${3:Ordered item 1}\u003c/li\u003e",
+      "\t\t\t\u003cli\u003e${4:Ordered item 2}\u003c/li\u003e",
+      "\t\t\u003c/ol\u003e",
+      "\t\u003c/div\u003e",
+      "\u003c/section\u003e"
+    ],
+    "description": "WET middle screen overlay with background working example",
+    "scope": "html"
+  },
+  "WET - Overlay full screen": {
+    "prefix": "wet-overlay-full-screen",
+    "body": [
+      "\u003cp\u003e\u003ca href=\"#${1:full-screen}\" aria-controls=\"${1:full-screen}\" class=\"overlay-lnk\" role=\"button\"\u003e${2:Full-screen overlay}\u003c/a\u003e\u003c/p\u003e",
+      "\u003csection id=\"${1:full-screen}\" class=\"wb-overlay modal-content overlay-def wb-popup-full\"\u003e",
+      "\t\u003cheader class=\"modal-header\"\u003e",
+      "\t\t\u003ch2 class=\"modal-title\"\u003e${2:Full-screen overlay}\u003c/h2\u003e",
+      "\t\u003c/header\u003e",
+      "\t\u003cdiv class=\"modal-body\"\u003e",
+      "\t\t\u003col\u003e",
+      "\t\t\t\u003cli\u003e${3:Ordered item 1}\u003c/li\u003e",
+      "\t\t\t\u003cli\u003e${4:Ordered item 2}\u003c/li\u003e",
+      "\t\t\u003c/ol\u003e",
+      "\t\u003c/div\u003e",
+      "\u003c/section\u003e"
+    ],
+    "description": "WET full screen overlay working example",
+    "scope": "html"
+  },
+  "WET - Overlay full screen hidden header": {
+    "prefix": "wet-overlay-full-screen-hidden-header",
+    "body": [
+      "\u003cp\u003e\u003ca href=\"#${1:hidden-header}\" aria-controls=\"${1:hidden-header}\" class=\"overlay-lnk\" role=\"button\"\u003e${2:Full-screen overlay - Hidden header}\u003c/a\u003e\u003c/p\u003e",
+      "\u003csection id=\"${1:hidden-header}\" class=\"wb-overlay modal-content wb-popup-full hidden-hd\"\u003e",
+      "\t\u003cheader\u003e",
+      "\t\t\u003ch2 class=\"wb-inv\"\u003e${2:Full-screen overlay - Hidden header}\u003c/h2\u003e",
+      "\t\u003c/header\u003e",
+      "\t\u003cdiv class=\"modal-body\"\u003e",
+      "\t\t\u003col\u003e",
+      "\t\t\t\u003cli\u003e${3:Ordered item 1}\u003c/li\u003e",
+      "\t\t\t\u003cli\u003e${4:Ordered item 2}\u003c/li\u003e",
+      "\t\t\u003c/ol\u003e",
+      "\t\u003c/div\u003e",
+      "\u003c/section\u003e"
+    ],
+    "description": "WET full screen overlay with hidden header working example",
+    "scope": "html"
+  },
+  "WET - Pagination default": {
+    "prefix": "wet-pagination-default",
+    "body": [
+      "\u003cul class=\"pagination\"\u003e",
+      "\t\u003cli\u003e\u003ca href=\"${1:#}\" rel=\"prev\"\u003ePrevious\u003c/a\u003e\u003c/li\u003e",
+      "\t\u003cli\u003e\u003ca href=\"${2:#}\"\u003e1 \u003cspan class=\"wb-inv\"\u003eGo to Page 1\u003c/span\u003e\u003c/a\u003e\u003c/li\u003e",
+      "\t\u003cli\u003e\u003ca href=\"${3:#}\"\u003e2 \u003cspan class=\"wb-inv\"\u003eGo to Page 2\u003c/span\u003e\u003c/a\u003e\u003c/li\u003e",
+      "\t\u003cli\u003e\u003ca href=\"${4:#}\" rel=\"next\"\u003eNext\u003c/a\u003e\u003c/li\u003e",
+      "\u003c/ul\u003e"
+    ],
+    "description": "WET default pagination example",
+    "scope": "html"
+  },
+  "WET - Pagination simple pager": {
+    "prefix": "wet-pagination-simple-pager",
+    "body": [
+      "\u003cul class=\"pager\"\u003e",
+      "\t\u003cli\u003e\u003ca href=\"${1:#}\" rel=\"prev\"\u003ePrevious\u003c/a\u003e\u003c/li\u003e",
+      "\t\u003cli\u003e\u003ca href=\"${2:#}\" rel=\"next\"\u003eNext\u003c/a\u003e\u003c/li\u003e",
+      "\u003c/ul\u003e"
+    ],
+    "description": "WET simple pager example",
     "scope": "html"
   },
   "WET - Prettify": {
@@ -474,17 +936,6 @@
       "\u003cdiv class=\"wb-prettify all-pre hide\"\u003e\u003c/div\u003e"
     ],
     "description": "WET prettify loader",
-    "scope": "html"
-  },
-  "WET - Zebra striping": {
-    "prefix": "wet-zebra",
-    "body": [
-      "\u003ctable class=\"table table-striped\"\u003e",
-      "\t\u003cthead\u003e\u003ctr\u003e\u003cth\u003e${1:Header}\u003c/th\u003e\u003c/tr\u003e\u003c/thead\u003e",
-      "\t\u003ctbody\u003e\u003ctr\u003e\u003ctd\u003e${2:Value}\u003c/td\u003e\u003c/tr\u003e\u003c/tbody\u003e",
-      "\u003c/table\u003e"
-    ],
-    "description": "Zebra-striped table pattern",
     "scope": "html"
   },
   "WET - Alert info": {
@@ -517,12 +968,30 @@
     "description": "WET warning alert",
     "scope": "html"
   },
+  "WET - Alert": {
+    "prefix": "wet-alert",
+    "body": [
+      "\u003cdiv class=\"alert alert-${1|default,info,primary,warning,success,danger|}\"\u003e",
+      "\t\u003cp\u003e${2:Alert message.}\u003c/p\u003e",
+      "\u003c/div\u003e"
+    ],
+    "description": "WET alert with selectable colour variant",
+    "scope": "html"
+  },
   "WET - Badge": {
     "prefix": "wet-badge",
     "body": [
-      "\u003cspan class=\"badge\"\u003e${1:New}\u003c/span\u003e"
+      "\u003cspan class=\"badge badge-${1|default,info,primary,warning,success,danger|}\"\u003e${2:New}\u003c/span\u003e"
     ],
-    "description": "WET  badge",
+    "description": "WET badge with selectable colour variant",
+    "scope": "html"
+  },
+  "WET - Button": {
+    "prefix": "wet-button",
+    "body": [
+      "\u003cbutton type=\"button\" class=\"btn btn-${1|default,info,primary,warning,success,danger|}\"\u003e${2:Button}\u003c/button\u003e"
+    ],
+    "description": "WET button with selectable colour variant",
     "scope": "html"
   },
   "WET - Button primary": {
@@ -614,21 +1083,6 @@
     "description": "WET button toolbar",
     "scope": "html"
   },
-  "WET - Panel": {
-    "prefix": "wet-panel",
-    "body": [
-      "\u003csection class=\"panel panel-default\"\u003e",
-      "\t\u003cdiv class=\"panel-heading\"\u003e",
-      "\t\t\u003ch2 id=\"${1:panel-title}\" class=\"h3\"\u003e${2:Panel title}\u003c/h2\u003e",
-      "\t\u003c/div\u003e",
-      "\t\u003cdiv class=\"panel-body\"\u003e",
-      "\t\t\u003cp\u003e${3:Panel content}\u003c/p\u003e",
-      "\t\u003c/div\u003e",
-      "\u003c/section\u003e"
-    ],
-    "description": "WET panel component",
-    "scope": "html"
-  },
   "WET - Well": {
     "prefix": "wet-well",
     "body": [
@@ -654,8 +1108,7 @@
     "prefix": "wet-list-spaced",
     "body": [
       "\u003cul class=\"lst-spcd\"\u003e",
-      "\t\u003cli\u003e\u003ca href=\"${1:/item-1}\"\u003e${2:Item one}\u003c/a\u003e\u003c/li\u003e",
-      "\t\u003cli\u003e\u003ca href=\"${3:/item-2}\"\u003e${4:Item two}\u003c/a\u003e\u003c/li\u003e",
+      "\t\u003cli\u003e${2:Item one}\u003c/li\u003e",
       "\u003c/ul\u003e"
     ],
     "description": "WET spaced list",
@@ -672,13 +1125,35 @@
     "description": "WET list group",
     "scope": "html"
   },
+  "WET - List lower alpha": {
+    "prefix": "wet-list-lower-alpha",
+    "body": [
+      "\u003col class=\"lst-lwr-alph\"\u003e",
+      "\t\u003cli\u003e${1:List item 1a}\u003c/li\u003e",
+      "\t\u003cli\u003e${2:List item 1b}\u003c/li\u003e",
+      "\u003c/ol\u003e",
+    ],
+    "description": "WET lower alpha ordered list pattern",
+    "scope": "html"
+  },
+  "WET - List lower roman": {
+    "prefix": "wet-list-lower-roman",
+    "body": [
+      "\u003col class=\"lst-lwr-rmn\"\u003e",
+      "\t\u003cli\u003e${1:List item 1a}\u003c/li\u003e",
+      "\t\u003cli\u003e${2:List item 1b}\u003c/li\u003e",
+      "\u003c/ol\u003e",
+    ],
+    "description": "WET lower roman ordered list pattern",
+    "scope": "html"
+  },
   "WET - Table basic": {
     "prefix": "wet-table-basic",
     "body": [
       "\u003ctable class=\"table table-bordered\"\u003e",
       "\t\u003ccaption\u003e${1:Table summary}\u003c/caption\u003e",
       "\t\u003cthead\u003e",
-      "\t\t\u003ctr\u003e\u003cth scope=\"col\"\u003e${2:Header}\u003c/th\u003e\u003c/tr\u003e",
+      "\t\t\u003ctr class=\"active\"\u003e\u003cth scope=\"col\"\u003e${2:Header}\u003c/th\u003e\u003c/tr\u003e",
       "\t\u003c/thead\u003e",
       "\t\u003ctbody\u003e",
       "\t\t\u003ctr\u003e\u003ctd\u003e${3:Value}\u003c/td\u003e\u003c/tr\u003e",
@@ -704,10 +1179,9 @@
   "WET - Labels": {
     "prefix": "wet-labels",
     "body": [
-      "\u003cspan class=\"label label-default\"\u003e${1:Default}\u003c/span\u003e",
-      "\u003cspan class=\"label label-info\"\u003e${2:Info}\u003c/span\u003e"
+      "\u003cspan class=\"label label-${1|default,info,primary,warning,success,danger|}\"\u003e${2:label text}\u003c/span\u003e",
     ],
-    "description": "WET labels",
+    "description": "WET labels with selectable colour variant",
     "scope": "html"
   },
   "WET - Code": {
@@ -767,6 +1241,14 @@
     "description": "WET danger text colour",
     "scope": "html"
   },
+  "WET - Text colour": {
+    "prefix": "wet-text-colour",
+    "body": [
+      "\u003cspan class=\"text-${1|default,info,primary,warning,success,danger|}\"\u003e${2:Text}\u003c/span\u003e"
+    ],
+    "description": "WET text colour with selectable variant",
+    "scope": "html"
+  },
   "WET - Datalist polyfill": {
     "prefix": "wet-datalist-polyfill",
     "body": [
@@ -778,17 +1260,6 @@
       "\u003c/datalist\u003e"
     ],
     "description": "WET datalist autocomplete example",
-    "scope": "html"
-  },
-  "WET - Equalize": {
-    "prefix": "wet-equalize",
-    "body": [
-      "\u003cdiv class=\"row\" data-equalize=\"{\\\"target\\\":\\\".equal-item\\\"}\"\u003e",
-      "\t\u003cdiv class=\"col-md-6 equal-item\"\u003e${1:Left content}\u003c/div\u003e",
-      "\t\u003cdiv class=\"col-md-6 equal-item\"\u003e${2:Right content}\u003c/div\u003e",
-      "\u003c/div\u003e"
-    ],
-    "description": "WET equalize example",
     "scope": "html"
   },
   "WET - Expand and hide": {
@@ -813,28 +1284,38 @@
     "description": "WET grid system example",
     "scope": "html"
   },
-  "WET - Headings": {
-    "prefix": "wet-headings",
+  "WET - Images EN": {
+    "prefix": "wet-images-en",
     "body": [
-      "\u003ch2\u003e${1:Main heading} \u003csmall\u003e${2:Secondary text}\u003c/small\u003e\u003c/h2\u003e",
-      "\u003ch3 class=\"h3 underline\"\u003e${3:Underlined heading}\u003c/h3\u003e"
+      "\u003cfigure\u003e",
+      "\t\u003cimg src=\"${1:/img/example.jpg}\" class=\"img-responsive\" alt=\"${2:Descriptive alternative text.} Text version below.\" /\u003e",
+      "\u003c/figure\u003e",
+      "\u003cdetails\u003e",
+      "\t\u003csummary\u003e${3:Image title} - Text version\u003c/summary\u003e",
+      "\t\u003cp\u003e${4:Additional content}\u003c/p\u003e",
+      "\u003c/details\u003e"
     ],
-    "description": "WET heading styles",
+    "description": "WET image pattern aligned with guide examples",
     "scope": "html"
   },
-  "WET - Images": {
-    "prefix": "wet-images",
+  "WET - Images FR": {
+    "prefix": "wet-images-fr",
     "body": [
-      "\u003cimg src=\"${1:/img/example.jpg}\" alt=\"${2:Descriptive alt text}\" class=\"img-responsive\" /\u003e"
+      "\u003cfigure\u003e",
+      "\t\u003cimg src=\"${1:/img/example.jpg}\" class=\"img-responsive\" alt=\"${2:Descriptive alternative text.} La version textuelle suit.\" /\u003e",
+      "\u003c/figure\u003e",
+      "\u003cdetails\u003e",
+      "\t\u003csummary\u003e${3:Image title} - Version textuelle\u003c/summary\u003e",
+      "\t\u003cp\u003e${4:Additional content}\u003c/p\u003e",
+      "\u003c/details\u003e"
     ],
-    "description": "WET image example",
+    "description": "WET image pattern aligned with guide examples",
     "scope": "html"
   },
   "WET - Jumbotron": {
     "prefix": "wet-jumbotron",
     "body": [
       "\u003cdiv class=\"jumbotron\"\u003e",
-      "\t\u003ch1\u003e${1:Welcome}\u003c/h1\u003e",
       "\t\u003cp\u003e${2:Large introductory callout.}\u003c/p\u003e",
       "\u003c/div\u003e"
     ],
@@ -868,38 +1349,74 @@
   "WET - Modal popup": {
     "prefix": "wet-modal-popup",
     "body": [
-      "\u003cdiv class=\"modal fade\" tabindex=\"-1\"\u003e",
-      "\t\u003cdiv class=\"modal-dialog\"\u003e",
-      "\t\t\u003cdiv class=\"modal-content\"\u003e",
-      "\t\t\t\u003cdiv class=\"modal-header\"\u003e\u003ch2 id=\"modalTitle\"\u003e${1:Dialog title}\u003c/h2\u003e\u003c/div\u003e",
-      "\t\t\t\u003cdiv class=\"modal-body\"\u003e\u003cp\u003e${2:Dialog content}\u003c/p\u003e\u003c/div\u003e",
-      "\t\t\u003c/div\u003e",
+      "\u003ca class=\"wb-lbx lbx-modal\" title=\"${1:Example of a modal popup}\" href=\"#${2:inline_content_modal}\"\u003e${3:Modal popup}\u003c/a\u003e",
+      "\u003csection id=\"${2:inline_content_modal}\" class=\"mfp-hide modal-dialog modal-content overlay-def\"\u003e",
+      "\t\u003cheader class=\"modal-header\"\u003e",
+      "\t\t\u003ch2 class=\"modal-title\"\u003e${3:Modal popup}\u003c/h2\u003e",
+      "\t\u003c/header\u003e",
+      "\t\u003cdiv class=\"modal-body\"\u003e",
+      "\t\t\u003cp\u003e${4:Modal popup content.}\u003c/p\u003e",
       "\t\u003c/div\u003e",
-      "\u003c/div\u003e"
+      "\u003c/section\u003e"
     ],
-    "description": "WET modal popup",
+    "description": "WET modal popup example using Lightbox modal behavior",
     "scope": "html"
   },
   "WET - Multimedia player": {
-    "prefix": "wet-multimedia-player",
+    "prefix": "wet-video-multimedia-player",
     "body": [
-      "\u003cvideo controls class=\"img-responsive\"\u003e",
-      "\t\u003csource src=\"${1:/media/example.mp4}\" type=\"video/mp4\" /\u003e",
-      "\t${2:Your browser does not support the video tag.}",
-      "\u003c/video\u003e"
+      "\u003cfigure\u003e",
+      "\t\u003cp class=\"wb-mltmd\"\u003e",
+      "\t\t\u003cvideo poster=\"${1:[poster source]}\" title=\"${2:[video title]}\" class=\"img-responsive\"\u003e",
+      "\t\t\t\u003csource src=\"${3:[video source]}\" type=\"video/mp4\"\u003e",
+      "\t\t\t\u003ctrack data-type=\"text/html\" kind=\"captions\" label=\"English\" src=\"${4:[captions source]}\" srclang=\"en\"\u003e",
+      "\t\t\u003c/video\u003e",
+      "\t\u003c/p\u003e",
+      "\t\u003cdetails\u003e",
+      "\t\t\u003csummary\u003eTranscript\u003c/summary\u003e",
+      "\t\t\u003cp\u003e",
+      "\t\t\t${5:[Insert transcript]}",
+      "\t\t\u003c/p\u003e",
+      "\t\u003c/details\u003e",
+      "\u003c/figure\u003e"
     ],
-    "description": "WET multimedia player",
+    "description": "WET multimedia player aligned with guide examples - MySSC+",
+    "scope": "html"
+  },
+  "WET - Multimedia player transcript": {
+    "prefix": "wet-video-multimedia-player-youtube",
+    "body": [
+      "\u003cfigure class=\"mrgn-tp-lg\"\u003e",
+      "\t\u003cp class=\"wb-mltmd\" data-wb-mltmd=\"{&quot;fullscreenBtn&quot;: true, &quot;closedCaptions&quot;: true}\"\u003e",
+      "\t\t\u003cvideo class=\"img-responsive\" poster=\"${1:[poster source]}\" title=\"${2:[video title]}\"\u003e",
+      "\t\t\t\u003csource src=\"${3:[youtube video source]}\" type=\"video/mp4\"\u003e",
+      "\t\t\u003c/video\u003e",
+      "\t\u003c/p\u003e",
+      "\t\u003cdetails class=\"mrgn-tp-0 mrgn-bttm-lg\"\u003e",
+      "\t\t\u003csummary\u003eTranscript\u003c/summary\u003e",
+      "\t\t\u003cp\u003e",
+      "\t\t\t${4:[text of the transcript goes here]}",
+      "\t\t\u003c/p\u003e",
+      "\t\u003c/details\u003e",
+      "\u003c/figure\u003e"
+    ],
+    "description": "WET multimedia player with fullscreen, captions, and transcript - MySSC+",
     "scope": "html"
   },
   "WET - Panels": {
     "prefix": "wet-panels",
     "body": [
-      "\u003csection class=\"panel panel-default\"\u003e",
-      "\t\u003cdiv class=\"panel-heading\"\u003e\u003ch3 class=\"panel-title\"\u003e${1:Panel title}\u003c/h3\u003e\u003c/div\u003e",
-      "\t\u003cdiv class=\"panel-body\"\u003e${2:Panel content}\u003c/div\u003e",
-      "\u003c/section\u003e"
+      "\u003cdiv class=\"panel panel-${1|default,info,primary,warning,success,danger|}\"\u003e",
+      "\t\u003cheader class=\"panel-heading\"\u003e",
+      "\t\t\u003ch${2:3} class=\"panel-title\"\u003e${3:Panel title}\u003c/h${2:3}\u003e",
+      "\t\u003c/header\u003e",
+      "\t\u003cdiv class=\"panel-body\"\u003e",
+      "\t\t\u003cp\u003e${4:Panel content}\u003c/p\u003e",
+      "\t\u003c/div\u003e",
+      "${5:\t\u003cfooter class=\"panel-footer\"\u003e${6:Panel footer}\u003c/footer\u003e}",
+      "\u003c/div\u003e"
     ],
-    "description": "WET panels",
+    "description": "WET panel with selectable colour variant, heading, and optional footer",
     "scope": "html"
   },
   "WET - Pills": {
@@ -913,47 +1430,90 @@
     "description": "WET pills navigation",
     "scope": "html"
   },
+  "WET - Progress bar": {
+    "prefix": "wet-progress-bar",
+    "body": [
+      "\u003cprogress value=\"${1:25}\" max=\"${2:100}\"\u003e\u003cspan class=\"wb-inv\"\u003e${3:25%}\u003c/span\u003e\u003c/progress\u003e"
+    ],
+    "description": "WET progress bar aligned with guide examples",
+    "scope": "html"
+  },
   "WET - Quotations": {
     "prefix": "wet-quotations",
     "body": [
       "\u003cblockquote\u003e",
-      "\t\u003cp\u003e${1:Quotable content}\u003c/p\u003e",
+      "\t\u003cp\u003e${1:Quoted content}\u003c/p\u003e",
       "\t\u003cfooter\u003e${2:Author}\u003c/footer\u003e",
       "\u003c/blockquote\u003e"
     ],
-    "description": "WET quotations",
+    "description": "WET blockquote pattern aligned with guide examples",
+    "scope": "html"
+  },
+  "WET - Definition list": {
+    "prefix": "wet-definition-list",
+    "body": [
+      "\u003cdl${1: class=\"dl-horizontal\"}\u003e",
+      "\t\u003cdt\u003e${2:Definition term 1}\u003c/dt\u003e",
+      "\t\u003cdd\u003e${3:Definition text 1}\u003c/dd\u003e",
+      "\t\u003cdt\u003e${4:Definition term 2}\u003c/dt\u003e",
+      "\t\u003cdd\u003e${5:Definition text 2}\u003c/dd\u003e",
+      "\u003c/dl\u003e"
+    ],
+    "description": "WET definition list pattern from web publishing guide",
+    "scope": "html"
+  },
+  "WET - Download link": {
+    "prefix": "wet-download-link",
+    "body": [
+      "\u003ca href=\"${1:/documents/file.pdf}\"\u003e",
+      "\t${2:Document title}",
+      "\t\u003cspan style=\"white-space: nowrap;\"\u003e(\u003cabbr title=\"Portable Document Format\"\u003ePDF\u003c/abbr\u003e, ${3:624} \u003cabbr title=\"kilobytes\"\u003eKB\u003c/abbr\u003e)\u003c/span\u003e",
+      "\u003c/a\u003e"
+    ],
+    "description": "WET download link pattern aligned with guide examples",
     "scope": "html"
   },
   "WET - Reflowing": {
     "prefix": "wet-reflowing",
     "body": [
       "\u003cdiv class=\"row\"\u003e",
-      "\t\u003cdiv class=\"col-xs-12 col-sm-6\"\u003e${1:Primary}\u003c/div\u003e",
-      "\t\u003cdiv class=\"col-xs-12 col-sm-6\"\u003e${2:Secondary}\u003c/div\u003e",
+      "\t\u003cdiv class=\"col-md-4 pull-right\"\u003e",
+      "\t\t\u003cdiv class=\"well mrgn-bttm-md\"\u003e",
+      "\t\t\t\u003cp\u003e${1:Grid content}\u003c/p\u003e",
+      "\t\t\u003c/div\u003e",
+      "\t\u003c/div\u003e",
+      "\t\u003cdiv class=\"mrgn-lft-md mrgn-rght-md\"\u003e",
+      "\t\t\u003cp\u003e${2:Reflowing content around grids.}\u003c/p\u003e",
+      "\t\u003c/div\u003e",
       "\u003c/div\u003e"
     ],
-    "description": "WET reflowing layout",
+    "description": "WET reflowing content around grids (pull-right example)",
     "scope": "html"
   },
   "WET - Secondary menu": {
     "prefix": "wet-secondary-menu",
     "body": [
-      "\u003cnav\u003e",
-      "\t\u003cul class=\"list-group\"\u003e",
-      "\t\t\u003cli class=\"list-group-item\"\u003e\u003ca href=\"${1:/page-one}\"\u003e${2:Page one}\u003c/a\u003e\u003c/li\u003e",
-      "\t\t\u003cli class=\"list-group-item\"\u003e\u003ca href=\"${3:/page-two}\"\u003e${4:Page two}\u003c/a\u003e\u003c/li\u003e",
+      "\u003cnav role=\"navigation\" id=\"${1:wb-sec}\" typeof=\"SiteNavigationElement\" class=\"visible-md visible-lg\"\u003e",
+      "\t\u003ch2\u003e${2:Section menu}\u003c/h2\u003e",
+      "\t\u003cul class=\"list-group menu list-unstyled\"\u003e",
+      "\t\t\u003cli\u003e",
+      "\t\t\t\u003ch3 class=\"wb-navcurr\"\u003e${3:Content page - Secondary menu}\u003c/h3\u003e",
+      "\t\t\t\u003cul class=\"list-group menu list-unstyled\"\u003e",
+      "\t\t\t\t\u003cli\u003e\u003ca class=\"list-group-item\" href=\"${4:#}\"\u003e${5:Item 1}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\t\t\u003cli\u003e\u003ca class=\"list-group-item\" href=\"${6:#}\"\u003e${7:Item 2}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\t\t\u003cli\u003e\u003ca class=\"list-group-item\" href=\"${8:#}\"\u003e${9:Item 3}\u003c/a\u003e\u003c/li\u003e",
+      "\t\t\t\u003c/ul\u003e",
+      "\t\t\u003c/li\u003e",
       "\t\u003c/ul\u003e",
       "\u003c/nav\u003e"
     ],
-    "description": "WET secondary menu",
+    "description": "WET secondary menu default pattern from design guide",
     "scope": "html"
   },
   "WET - Session timeout": {
     "prefix": "wet-session-timeout",
     "body": [
-      "\u003cdiv class=\"alert alert-warning\"\u003e",
-      "\t\u003cp\u003e${1:Your session will expire soon.}\u003c/p\u003e",
-      "\u003c/div\u003e"
+      "\u003cspan class=\"wb-sessto\" data-wb-sessto='{\"inactivity\": ${1:30000}, \"logouturl\": \"${2:session-timeout-expired-en.html}\"}'\u003e\u003c/span\u003e"
     ],
     "description": "WET session timeout notice",
     "scope": "html"
@@ -961,7 +1521,7 @@
   "WET - Share widget": {
     "prefix": "wet-share-widget",
     "body": [
-      "\u003cdiv class=\"wb-share\" data-wb-share=\"{\\\"id\\\":\\\"${1:share}\\\"}\"\u003e\u003c/div\u003e"
+      "\u003cdiv class=\"wb-share\" data-wb-share='{\"filter\":[\"linkedin\", \"youtube\"],\"type\":\"${1:video}\",\"title\":\"${2:video title}\",\"url\":\"${3:https://video.url}\",\"pnlId\":\"pnl${4:5}\"}'\u003e\u003c/div\u003e"
     ],
     "description": "WET share widget",
     "scope": "html"
@@ -971,16 +1531,18 @@
     "body": [
       "\u003cdiv class=\"wb-tabs\"\u003e",
       "\t\u003cdiv class=\"tabpanels\"\u003e",
-      "\t\t\u003cdetails open\u003e",
-      "\t\t\t\u003csummary\u003e${1:Tab 1}\u003c/summary\u003e",
-      "\t\t\t\u003cp\u003e${2:Content for tab 1.}\u003c/p\u003e",
+      "\t\t\u003cdetails id=\"${1:tab1}\"\u003e",
+      "\t\t\t\u003csummary\u003e${2:Tab 1}\u003c/summary\u003e",
+      "\t\t\t\u003cp\u003e${3:Content for tab 1.}\u003c/p\u003e",
       "\t\t\u003c/details\u003e",
-      "\t\t\u003cdetails\u003e",
-      "\t\t\t\u003csummary\u003e${3:Tab 2}\u003c/summary\u003e",
-      "\t\t\t\u003cp\u003e${4:Content for tab 2.}\u003c/p\u003e",
+      "\t\t\u003cdetails id=\"${6:tab2}\"\u003e",
+      "\t\t\t\u003csummary\u003e${7:Tab 2}\u003c/summary\u003e",
+      "\t\t\t\u003cp\u003e${8:Content for tab 2.}\u003c/p\u003e",
       "\t\t\u003c/details\u003e",
       "\t\u003c/div\u003e",
-      "\u003c/div\u003e"
+      "\u003c/div\u003e",
+      "",
+      "\u003cp class=\"mrgn-tp-md\"\u003e\u003ca href=\"#${6:tab2}\" class=\"wb-tabs-ext\"\u003e${9:Show the second panel - anchor}\u003c/a\u003e\u003c/p\u003e",
     ],
     "description": "WET tabbed interface",
     "scope": "html"
