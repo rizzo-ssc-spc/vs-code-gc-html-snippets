@@ -330,8 +330,8 @@
     "body": [
       "\u003cdiv id=\"${2:lt-tog}\"\u003e",
       "\t\u003cdiv class=\"btn-group mrgn-tp-md mrgn-bttm-md\"\u003e",
-      "\t\t\u003cbutton type=\"button\" class=\"btn btn-default wb-toggle\" data-toggle=\"{\\\"selector\\\": \\\"details\\\", \\\"parent\\\": \\\"#${2:lt-tog}\\\", \\\"print\\\": \\\"on\\\", \\\"type\\\": \\\"on\\\"}\"\u003e${3:Expand all}\u003c/button\u003e",
-      "\t\t\u003cbutton type=\"button\" class=\"btn btn-default wb-toggle\" data-toggle=\"{\\\"selector\\\": \\\"details\\\", \\\"parent\\\": \\\"#${2:lt-tog}\\\", \\\"type\\\": \\\"off\\\"}\"\u003e${4:Collapse all}\u003c/button\u003e",
+      "\t\t\u003cbutton type=\"button\" class=\"btn btn-btn-${1|default,info,primary,warning,success,danger,link|} wb-toggle\" data-toggle=\"{\\\"selector\\\": \\\"details\\\", \\\"parent\\\": \\\"#${2:lt-tog}\\\", \\\"print\\\": \\\"on\\\", \\\"type\\\": \\\"on\\\"}\"\u003e${3:Expand all}\u003c/button\u003e",
+      "\t\t\u003cbutton type=\"button\" class=\"btn btn-btn-${1|default,info,primary,warning,success,danger,link|} wb-toggle\" data-toggle=\"{\\\"selector\\\": \\\"details\\\", \\\"parent\\\": \\\"#${2:lt-tog}\\\", \\\"type\\\": \\\"off\\\"}\"\u003e${4:Collapse all}\u003c/button\u003e",
       "\t\u003c/div\u003e",
       "",
       "\t\u003cdetails\u003e",
@@ -430,7 +430,7 @@
       "\t\t\u003c/section\u003e",
       "",
       "\t\t\u003cdiv class=\"form-group\"\u003e\u003cinput type=\"submit\" name=\"fbsbmt\" id=\"fbsbmt\" value=\"${21:Submit feedback}\" class=\"btn btn-primary\"\u003e\u003c/div\u003e",
-      "\t\t\u003cdiv class=\"form-group\"\u003e\u003cinput type=\"reset\" value=\"${22:Reset page to defaults}\" class=\"btn btn-default\"\u003e\u003c/div\u003e",
+      "\t\t\u003cdiv class=\"form-group\"\u003e\u003cinput type=\"reset\" value=\"${22:Reset page to defaults}\" class=\"btn btn-btn-${1|default,info,primary,warning,success,danger,link|}\"\u003e\u003c/div\u003e",
       "\t\u003c/form\u003e",
       "\u003c/div\u003e"
     ],
@@ -803,9 +803,9 @@
       "\t\t\u003ch2 class=\"modal-title\"\u003e${2:Top bar}\u003c/h2\u003e",
       "\t\u003c/header\u003e",
       "\t\u003cul class=\"list-inline\"\u003e",
-      "\t\t\u003cli\u003e\u003cbutton class=\"btn btn-default\" type=\"button\"\u003e${3:Button 1}\u003c/button\u003e\u003c/li\u003e",
-      "\t\t\u003cli\u003e\u003cbutton class=\"btn btn-default\" type=\"button\"\u003e${4:Button 2}\u003c/button\u003e\u003c/li\u003e",
-      "\t\t\u003cli\u003e\u003cbutton class=\"btn btn-default\" type=\"button\"\u003e${5:Button 3}\u003c/button\u003e\u003c/li\u003e",
+      "\t\t\u003cli\u003e\u003cbutton class=\"btn btn-btn-${1|default,info,primary,warning,success,danger,link|}\" type=\"button\"\u003e${3:Button 1}\u003c/button\u003e\u003c/li\u003e",
+      "\t\t\u003cli\u003e\u003cbutton class=\"btn btn-btn-${1|default,info,primary,warning,success,danger,link|}\" type=\"button\"\u003e${4:Button 2}\u003c/button\u003e\u003c/li\u003e",
+      "\t\t\u003cli\u003e\u003cbutton class=\"btn btn-btn-${1|default,info,primary,warning,success,danger,link|}\" type=\"button\"\u003e${5:Button 3}\u003c/button\u003e\u003c/li\u003e",
       "\t\u003c/ul\u003e",
       "\u003c/section\u003e"
     ],
@@ -821,9 +821,9 @@
       "\t\t\u003ch2 class=\"modal-title\"\u003e${2:Bottom bar}\u003c/h2\u003e",
       "\t\u003c/header\u003e",
       "\t\u003cul class=\"list-inline\"\u003e",
-      "\t\t\u003cli\u003e\u003cbutton class=\"btn btn-default\" type=\"button\"\u003e${3:Button 1}\u003c/button\u003e\u003c/li\u003e",
-      "\t\t\u003cli\u003e\u003cbutton class=\"btn btn-default\" type=\"button\"\u003e${4:Button 2}\u003c/button\u003e\u003c/li\u003e",
-      "\t\t\u003cli\u003e\u003cbutton class=\"btn btn-default\" type=\"button\"\u003e${5:Button 3}\u003c/button\u003e\u003c/li\u003e",
+      "\t\t\u003cli\u003e\u003cbutton class=\"btn btn-btn-${1|default,info,primary,warning,success,danger,link|}\" type=\"button\"\u003e${3:Button 1}\u003c/button\u003e\u003c/li\u003e",
+      "\t\t\u003cli\u003e\u003cbutton class=\"btn btn-btn-${1|default,info,primary,warning,success,danger,link|}\" type=\"button\"\u003e${4:Button 2}\u003c/button\u003e\u003c/li\u003e",
+      "\t\t\u003cli\u003e\u003cbutton class=\"btn btn-btn-${1|default,info,primary,warning,success,danger,link|}\" type=\"button\"\u003e${5:Button 3}\u003c/button\u003e\u003c/li\u003e",
       "\t\u003c/ul\u003e",
       "\u003c/section\u003e"
     ],
@@ -989,94 +989,38 @@
   "WET - Button": {
     "prefix": "wet-button",
     "body": [
-      "\u003cbutton type=\"button\" class=\"btn btn-${1|default,info,primary,warning,success,danger|}\"\u003e${2:Button}\u003c/button\u003e"
+      "\u003cbutton type=\"button\" class=\"btn btn-${1|default,info,primary,warning,success,danger,link|}\"\u003e${2:Button}\u003c/button\u003e"
     ],
     "description": "WET button with selectable colour variant",
     "scope": "html"
   },
-  "WET - Button primary": {
-    "prefix": "wet-button-primary",
-    "body": [
-      "\u003cbutton type=\"button\" class=\"btn btn-primary\"\u003e${1:Primary}\u003c/button\u003e"
-    ],
-    "description": "WET primary button",
-    "scope": "html"
-  },
-  "WET - Button default": {
-    "prefix": "wet-button-default",
-    "body": [
-      "\u003cbutton type=\"button\" class=\"btn btn-default\"\u003e${1:Default}\u003c/button\u003e"
-    ],
-    "description": "WET default button",
-    "scope": "html"
-  },
-  "WET - Button link": {
-    "prefix": "wet-button-link",
-    "body": [
-      "\u003cbutton type=\"button\" class=\"btn btn-link\"\u003e${1:Link}\u003c/button\u003e"
-    ],
-    "description": "WET link-style button",
-    "scope": "html"
-  },
-  "WET - Button success": {
-    "prefix": "wet-button-success",
-    "body": [
-      "\u003cbutton type=\"button\" class=\"btn btn-success\"\u003e${1:Success}\u003c/button\u003e"
-    ],
-    "description": "WET success button",
-    "scope": "html"
-  },
-  "WET - Button info": {
-    "prefix": "wet-button-info",
-    "body": [
-      "\u003cbutton type=\"button\" class=\"btn btn-info\"\u003e${1:Info}\u003c/button\u003e"
-    ],
-    "description": "WET info button",
-    "scope": "html"
-  },
-  "WET - Button warning": {
-    "prefix": "wet-button-warning",
-    "body": [
-      "\u003cbutton type=\"button\" class=\"btn btn-warning\"\u003e${1:Warning}\u003c/button\u003e"
-    ],
-    "description": "WET warning button",
-    "scope": "html"
-  },
-  "WET - Button danger": {
-    "prefix": "wet-button-danger",
-    "body": [
-      "\u003cbutton type=\"button\" class=\"btn btn-danger\"\u003e${1:Danger}\u003c/button\u003e"
-    ],
-    "description": "WET danger button",
-    "scope": "html"
-  },
   "WET - Button group": {
-    "prefix": "wet-btn-group",
+    "prefix": "wet-button-group",
     "body": [
       "\u003cdiv class=\"btn-group\"\u003e",
-      "\t\u003cbutton type=\"button\" class=\"btn btn-default\"\u003e${2:Left}\u003c/button\u003e",
-      "\t\u003cbutton type=\"button\" class=\"btn btn-default\"\u003e${3:Middle}\u003c/button\u003e",
-      "\t\u003cbutton type=\"button\" class=\"btn btn-default\"\u003e${4:Right}\u003c/button\u003e",
+      "\t\u003cbutton type=\"button\" class=\"btn btn-btn-${1|default,info,primary,warning,success,danger,link|}\"\u003e${2:Left}\u003c/button\u003e",
+      "\t\u003cbutton type=\"button\" class=\"btn btn-btn-${1|default,info,primary,warning,success,danger,link|}\"\u003e${3:Middle}\u003c/button\u003e",
+      "\t\u003cbutton type=\"button\" class=\"btn btn-btn-${1|default,info,primary,warning,success,danger,link|}\"\u003e${4:Right}\u003c/button\u003e",
       "\u003c/div\u003e"
     ],
     "description": "WET button group",
     "scope": "html"
   },
   "WET - Button toolbar": {
-    "prefix": "wet-btn-toolbar",
+    "prefix": "wet-button-toolbar",
     "body": [
       "\u003cul class=\"btn-toolbar list-inline\" role=\"toolbar\"\u003e",
       "\t\u003cli class=\"btn-group\"\u003e",
-      "\t\t\u003cbutton type=\"button\" class=\"btn btn-default\"\u003e${1:1}\u003c/button\u003e",
-      "\t\t\u003cbutton type=\"button\" class=\"btn btn-default\"\u003e${2:2}\u003c/button\u003e",
-      "\t\t\u003cbutton type=\"button\" class=\"btn btn-default\"\u003e${3:3}\u003c/button\u003e",
+      "\t\t\u003cbutton type=\"button\" class=\"btn btn-btn-${1|default,info,primary,warning,success,danger,link|}\"\u003e${2:1}\u003c/button\u003e",
+      "\t\t\u003cbutton type=\"button\" class=\"btn btn-btn-${1|default,info,primary,warning,success,danger,link|}\"\u003e${3:2}\u003c/button\u003e",
+      "\t\t\u003cbutton type=\"button\" class=\"btn btn-btn-${1|default,info,primary,warning,success,danger,link|}\"\u003e${4:3}\u003c/button\u003e",
       "\t\u003c/li\u003e",
       "\t\u003cli class=\"btn-group\"\u003e",
-      "\t\t\u003cbutton type=\"button\" class=\"btn btn-default\"\u003e${4:4}\u003c/button\u003e",
-      "\t\t\u003cbutton type=\"button\" class=\"btn btn-default\"\u003e${5:5}\u003c/button\u003e",
+      "\t\t\u003cbutton type=\"button\" class=\"btn btn-btn-${1|default,info,primary,warning,success,danger,link|}\"\u003e${5:4}\u003c/button\u003e",
+      "\t\t\u003cbutton type=\"button\" class=\"btn btn-btn-${1|default,info,primary,warning,success,danger,link|}\"\u003e${6:5}\u003c/button\u003e",
       "\t\u003c/li\u003e",
       "\t\u003cli class=\"btn-group\"\u003e",
-      "\t\t\u003cbutton type=\"button\" class=\"btn btn-default\"\u003e${6:6}\u003c/button\u003e",
+      "\t\t\u003cbutton type=\"button\" class=\"btn btn-btn-${1|default,info,primary,warning,success,danger,link|}\"\u003e${7:6}\u003c/button\u003e",
       "\t\u003c/li\u003e",
       "\u003c/ul\u003e"
     ],
@@ -1201,52 +1145,28 @@
     "description": "WET prettified code sample",
     "scope": "html"
   },
-  "WET - Text colour primary": {
-    "prefix": "wet-text-colour-primary",
-    "body": [
-      "\u003cspan class=\"text-primary\"\u003e${1:Primary text}\u003c/span\u003e"
-    ],
-    "description": "WET primary text colour",
-    "scope": "html"
-  },
-  "WET - Text colour success": {
-    "prefix": "wet-text-colour-success",
-    "body": [
-      "\u003cspan class=\"text-success\"\u003e${1:Success text}\u003c/span\u003e"
-    ],
-    "description": "WET success text colour",
-    "scope": "html"
-  },
-  "WET - Text colour info": {
-    "prefix": "wet-text-colour-info",
-    "body": [
-      "\u003cspan class=\"text-info\"\u003e${1:Info text}\u003c/span\u003e"
-    ],
-    "description": "WET info text colour",
-    "scope": "html"
-  },
-  "WET - Text colour warning": {
-    "prefix": "wet-text-colour-warning",
-    "body": [
-      "\u003cspan class=\"text-warning\"\u003e${1:Warning text}\u003c/span\u003e"
-    ],
-    "description": "WET warning text colour",
-    "scope": "html"
-  },
-  "WET - Text colour danger": {
-    "prefix": "wet-text-colour-danger",
-    "body": [
-      "\u003cspan class=\"text-danger\"\u003e${1:Danger text}\u003c/span\u003e"
-    ],
-    "description": "WET danger text colour",
-    "scope": "html"
-  },
   "WET - Text colour": {
     "prefix": "wet-text-colour",
     "body": [
       "\u003cspan class=\"text-${1|default,info,primary,warning,success,danger|}\"\u003e${2:Text}\u003c/span\u003e"
     ],
     "description": "WET text colour with selectable variant",
+    "scope": "html"
+  },
+    "SSC - Text colour": {
+    "prefix": "ssc-text-colour",
+    "body": [
+      "\u003cspan class=\"text-${1|blue,cyan,gray,magenta,pink,purple,slate,violet|}-${2|light,regular,dark|}\"\u003e${3:Text}\u003c/span\u003e"
+    ],
+    "description": "SSC text colour palette with selectable variant",
+    "scope": "html"
+  },
+      "SSC - Background colour": {
+    "prefix": "ssc-background-colour",
+    "body": [
+      "\u003cspan class=\"bg-${1|blue,cyan,gray,magenta,pink,purple,slate,violet|}-${2|light,regular,dark|}\"\u003e${3:Text}\u003c/span\u003e"
+    ],
+    "description": "SSC background colour palette with selectable variant",
     "scope": "html"
   },
   "WET - Datalist polyfill": {
