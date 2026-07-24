@@ -43,14 +43,17 @@ This project is optimized for VS Code and VS Code-based editors, and may also be
 
 ### Option A (recommended): configure snippets from VS Code UI
 
-1. Press Ctrl+Shift+P
-2. Run Snippets: Configure Snippets
-3. Choose either:
+1. Open [gc-web-snippets.code-snippets](https://github.com/rizzo-ssc-spc/vs-code-gc-html-snippets/blob/main/gc-web-snippets.code-snippets)
+2. Copy all content
+3. Open the VS Code
+4. Press Ctrl+Shift+P
+5. Run Snippets: Configure Snippets
+6. Choose either:
    - New Global Snippets file
    - New Snippets file for workspace
-4. Select HTML
-5. Paste the content of gc-web-snippets.code-snippets
-6. Save and reload VS Code if prompted
+7. Select HTML
+8. Paste the content of [gc-web-snippets.code-snippets](https://github.com/rizzo-ssc-spc/vs-code-gc-html-snippets/blob/main/gc-web-snippets.code-snippets)
+9. Save and reload VS Code if prompted
 
 ### Option B: copy directly to the snippets file
 
@@ -88,20 +91,24 @@ Needs format-specific setup.
 
 JetBrains does not read VS Code snippet JSON directly.
 
-1. Convert VS Code snippets JSON to Live Templates XML
-2. In the IDE, open Settings > Editor > Live Templates
-3. Create a group such as GCWeb-WET-GCDS
-4. Import the converted XML
-5. Set the template context to HTML
-6. Save and test abbreviations
+1. Open [gc-web-snippets.code-snippets](https://github.com/rizzo-ssc-spc/vs-code-gc-html-snippets/blob/main/gc-web-snippets.code-snippets)
+2. Copy all content
+3. Convert VS Code snippets JSON to Live Templates XML
+4. In the IDE, open Settings > Editor > Live Templates
+5. Create a group such as GCWeb-WET-GCDS
+6. Import the converted XML
+7. Set the template context to HTML
+8. Save and test abbreviations
 
 ### Sublime Text
 
-1. Convert snippets to Sublime format
-2. Open Preferences > Browse Packages
-3. Create a folder such as User/GCWebSnippets
-4. Add converted snippet file(s)
-5. Restart Sublime Text and test triggers
+1. Open [gc-web-snippets.code-snippets](https://github.com/rizzo-ssc-spc/vs-code-gc-html-snippets/blob/main/gc-web-snippets.code-snippets)
+2. Copy all content
+3. Convert snippets to Sublime format
+4. Open Preferences > Browse Packages
+5. Create a folder such as User/GCWebSnippets
+6. Add converted snippet file(s)
+7. Restart Sublime Text and test triggers
 
 ### Adobe Dreamweaver
 
@@ -114,42 +121,21 @@ Recommended approach: start with a small "starter pack" of high-use snippets and
 3. Create a folder for team snippets (for example GCWeb-WET-GCDS)
 4. In that folder, create a new snippet
 5. Set the snippet type:
-    - Insert Block: inserts a full HTML block at the cursor (best for most snippets)
-    - Wrap Selection: wraps selected text in markup (useful for patterns such as callouts)
+   - Insert Block: inserts a full HTML block at the cursor (best for most snippets)
+   - Wrap Selection: wraps selected text in markup (useful for patterns such as callouts)
 6. Give the snippet a clear name using the VS Code prefix as reference (for example "wet-alert")
-7. Copy one snippet body from gc-web-snippets.code-snippets and paste it into Dreamweaver snippet content
+7. Copy one snippet body from [gc-web-snippets.code-snippets](https://github.com/rizzo-ssc-spc/vs-code-gc-html-snippets/blob/main/gc-web-snippets.code-snippets) and paste it into Dreamweaver snippet content
 8. Replace VS Code placeholder syntax with plain sample text before saving:
-    - Replace ${1:...}, ${2:...}, etc.
-    - Remove $0
+   - Replace ${1:...}, ${2:...}, etc.
+   - Remove $0
 9. Save and test in an HTML page by inserting it from the Snippets panel
 10. Repeat for the next most-used snippet
-
-Suggested starter snippets for Dreamweaver teams:
-
-- wet-panels
-- wet-alert
-- wet-button
-- wet-text-colour
-- wet-overlay
-- gcds-details
-- gcds-card
 
 Dreamweaver notes:
 
 - Snippets are inserted from the Snippets panel
 - VS Code placeholders such as ${1:Header} are not interpreted by Dreamweaver
 - Choice placeholders such as ${1|default,primary,...|} are also not supported
-- Keep snippet names/prefix references consistent across your team for easier support
-- Assign one maintainer to update Dreamweaver snippets when this beta pack changes
-
-Dreamweaver troubleshooting:
-
-- Snippet inserts nothing or incomplete markup:
-   verify that VS Code placeholders were fully removed before saving
-- Team members see different snippet lists:
-   confirm everyone imported/created snippets in the same local Dreamweaver Snippets folder
-- Markup is inserted but formatting looks off:
-   use Dreamweaver code formatting after insertion and validate output HTML
 
 ## Verify installation
 
@@ -201,7 +187,7 @@ The snippet file uses VS Code tab stops:
 
 ## Authoring and maintenance guidance
 
-- Keep gc-web-snippets.code-snippets as the source of truth
+- Keep [gc-web-snippets.code-snippets](https://github.com/rizzo-ssc-spc/vs-code-gc-html-snippets/blob/main/gc-web-snippets.code-snippets) as the source of truth
 - Validate generated HTML before publishing
 - Re-check patterns against current GCWeb, WET, and GCDS documentation
 - Keep prefixes stable across tools when converting to other IDE formats
