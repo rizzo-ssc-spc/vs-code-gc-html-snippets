@@ -909,7 +909,7 @@
   "WET - Alert": {
     "prefix": "wet-alert",
     "body": [
-      "\u003cdiv class=\"alert alert-${1|info,primary,warning,success,danger|}\"\u003e",
+      "\u003cdiv class=\"alert alert-${1|info,warning,success,danger|}\"\u003e",
       "\t\u003cp\u003e${2:Alert message.}\u003c/p\u003e",
       "\u003c/div\u003e"
     ],
