@@ -180,47 +180,15 @@
     "description": "GCDS footer with meta and links",
     "scope": "html"
   },
-  "GCWeb - Alert info": {
-    "prefix": "gcweb-alert-info",
+    "GCWeb - Alert": {
+    "prefix": "gcweb-alert",
     "body": [
-      "\u003csection class=\"alert alert-info\"\u003e",
-      "\t\u003ch2\u003e${1:Alert title}\u003c/h2\u003e",
-      "\t\u003cp\u003e${2:Informational message.}\u003c/p\u003e",
+      "\u003csection class=\"alert alert-${1|info,warning,success,danger|}\"\u003e",
+      "\t\u003ch2\u003e${2:Alert title}\u003c/h2\u003e",
+      "\t\u003cp\u003e${3:Please review the information before continuing.}\u003c/p\u003e",
       "\u003c/section\u003e"
     ],
-    "description": "GCWeb informational alert",
-    "scope": "html"
-  },
-  "GCWeb - Alert warning": {
-    "prefix": "gcweb-alert-warning",
-    "body": [
-      "\u003csection class=\"alert alert-warning\"\u003e",
-      "\t\u003ch2\u003e${1:Warning}\u003c/h2\u003e",
-      "\t\u003cp\u003e${2:Please review the information before continuing.}\u003c/p\u003e",
-      "\u003c/section\u003e"
-    ],
-    "description": "GCWeb warning alert",
-    "scope": "html"
-  },
-  "GCWeb - Alert danger": {
-    "prefix": "gcweb-alert-danger",
-    "body": [
-      "\u003csection class=\"alert alert-danger\"\u003e",
-      "\t\u003ch2\u003e${1:Important}\u003c/h2\u003e",
-      "\t\u003cp\u003e${2:There was a problem with your request.}\u003c/p\u003e",
-      "\u003c/section\u003e"
-    ],
-    "description": "GCWeb danger alert",
-    "scope": "html"
-  },
-  "GCWeb - Alert link": {
-    "prefix": "gcweb-alert-link",
-    "body": [
-      "\u003csection class=\"alert alert-info\"\u003e",
-      "\t\u003cp\u003e${1:For more information, visit} \u003ca href=\"${2:https://www.canada.ca}\" class=\"alert-link\"\u003e${3:Canada.ca}\u003c/a\u003e.\u003c/p\u003e",
-      "\u003c/section\u003e"
-    ],
-    "description": "GCWeb alert with link",
+    "description": "GCWeb alert",
     "scope": "html"
   },
   "WET - Archived information EN": {
@@ -936,36 +904,6 @@
       "\u003cdiv class=\"wb-prettify all-pre hide\"\u003e\u003c/div\u003e"
     ],
     "description": "WET prettify loader",
-    "scope": "html"
-  },
-  "WET - Alert info": {
-    "prefix": "wet-alert-info",
-    "body": [
-      "\u003cdiv class=\"alert alert-info\"\u003e",
-      "\t\u003cp\u003e${1:Helpful information for the user.}\u003c/p\u003e",
-      "\u003c/div\u003e"
-    ],
-    "description": "WET informational alert",
-    "scope": "html"
-  },
-  "WET - Alert success": {
-    "prefix": "wet-alert-success",
-    "body": [
-      "\u003cdiv class=\"alert alert-success\"\u003e",
-      "\t\u003cp\u003e${1:Success message for completed actions.}\u003c/p\u003e",
-      "\u003c/div\u003e"
-    ],
-    "description": "WET success alert",
-    "scope": "html"
-  },
-  "WET - Alert warning": {
-    "prefix": "wet-alert-warning",
-    "body": [
-      "\u003cdiv class=\"alert alert-warning\"\u003e",
-      "\t\u003cp\u003e${1:Warning message requiring attention.}\u003c/p\u003e",
-      "\u003c/div\u003e"
-    ],
-    "description": "WET warning alert",
     "scope": "html"
   },
   "WET - Alert": {
